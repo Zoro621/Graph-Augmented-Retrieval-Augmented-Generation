@@ -1,0 +1,2565 @@
+{
+  "experiment_info": {
+    "timestamp": "20251124_211152",
+    "dataset": "fever",
+    "num_queries": 50,
+    "model": "gpt-4o-mini",
+    "configuration": {
+      "use_spacy": false,
+      "consistency_threshold": 0.7,
+      "k_retrieve": 4
+    }
+  },
+  "baseline_results": [
+    {
+      "query": "Nikolaj Coster-Waldau worked with the Fox Broadcasting Company.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Nikolaj_Coster-Waldau",
+        "Fox_Broadcasting_Company",
+        "Ryan_Seacrest",
+        "Prisoners_of_War_-LRB-TV_series-RRB-"
+      ],
+      "time": 2.9117488861083984,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Roman Atwood is a content creator.",
+      "answer": "Yes, Roman Atwood is a content creator.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Roman_Atwood",
+        "Andy_Roddick",
+        "Chris_Hemsworth",
+        "Ryan_Seacrest"
+      ],
+      "time": 3.5882248878479004,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "History of art includes architecture, dance, sculpture, music, painting, poetry literature, theatre, narrative, film, photography and graphic arts.",
+      "answer": "The history of art encompasses various forms of creative expression, including architecture, dance, sculpture, music, painting, poetry, literature, theatre, narrative, film, photography, and graphic arts.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "History_of_art",
+        "Michael_Giacchino",
+        "Tupac_Shakur",
+        "Grace_Jones"
+      ],
+      "time": 3.0686919689178467,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Adrienne Bailon is an accountant.",
+      "answer": "I don't know.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Adrienne_Bailon",
+        "Grace_Jones",
+        "Ryan_Seacrest",
+        "Tupac_Shakur"
+      ],
+      "time": 1.2555203437805176,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "System of a Down briefly disbanded in limbo.",
+      "answer": "I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Tupac_Shakur",
+        "Ryan_Seacrest",
+        "Cyndi_Lauper",
+        "Prisoners_of_War_-LRB-TV_series-RRB-"
+      ],
+      "time": 1.2662014961242676,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Homeland is an American television spy thriller based on the Israeli television series Prisoners of War.",
+      "answer": "Yes, Homeland is an American television spy thriller that is indeed based on the Israeli television series Prisoners of War.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Homeland_-LRB-TV_series-RRB-",
+        "Prisoners_of_War_-LRB-TV_series-RRB-",
+        "Stranger_Things",
+        "The_Hunger_Games_-LRB-film-RRB-"
+      ],
+      "time": 1.4294135570526123,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Beautiful reached number two on the Billboard Hot 100 in 2003.",
+      "answer": "I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Grace_Jones",
+        "Ryan_Seacrest",
+        "Tupac_Shakur",
+        "Cyndi_Lauper"
+      ],
+      "time": 2.1507980823516846,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Neal Schon was named in 1954.",
+      "answer": "I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Robert_J._O'Neill_-LRB-U.S._Navy_SEAL-RRB-",
+        "Willie_Nelson",
+        "Grace_Jones",
+        "Francis_Ford_Coppola"
+      ],
+      "time": 1.6979405879974365,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "The Boston Celtics play their home games at TD Garden.",
+      "answer": "The Boston Celtics play their home games at TD Garden.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Boston_Celtics",
+        "Andy_Roddick",
+        "United_States",
+        "Mother_Teresa"
+      ],
+      "time": 1.4860775470733643,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "The Ten Commandments is an epic film.",
+      "answer": "The Ten Commandments is indeed considered an epic film.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "The_Ten_Commandments_-LRB-1956_film-RRB-",
+        "The_Hunger_Games_-LRB-film-RRB-",
+        "Francis_Ford_Coppola",
+        "Stranger_than_Fiction_-LRB-2006_film-RRB-"
+      ],
+      "time": 2.170947790145874,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Tetris has sold millions of physical copies.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "The_Hunger_Games_-LRB-film-RRB-",
+        "Michael_Giacchino",
+        "Cyndi_Lauper",
+        "Tupac_Shakur"
+      ],
+      "time": 1.3440003395080566,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Cyndi Lauper won the Best New Artist award at the 27th Grammy Awards in 1985.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Cyndi_Lauper",
+        "Grace_Jones",
+        "Ryan_Seacrest",
+        "Tupac_Shakur"
+      ],
+      "time": 1.1839570999145508,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "There is a movie called The Hunger Games.",
+      "answer": "Yes, there is a movie called The Hunger Games.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "The_Hunger_Games_-LRB-film-RRB-",
+        "Prisoners_of_War_-LRB-TV_series-RRB-",
+        "Furia_-LRB-film-RRB-",
+        "Stranger_than_Fiction_-LRB-2006_film-RRB-"
+      ],
+      "time": 1.135317325592041,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Ryan Gosling has been to a country in Africa.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Ryan_Gosling",
+        "Ryan_Seacrest",
+        "Grace_Jones",
+        "Francis_Ford_Coppola"
+      ],
+      "time": 1.733314037322998,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Stranger Things is set in Bloomington, Indiana.",
+      "answer": "I don't know.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Stranger_Things",
+        "Stranger_than_Fiction_-LRB-2006_film-RRB-",
+        "Midwestern_United_States",
+        "United_States"
+      ],
+      "time": 0.9951739311218262,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Ryan Seacrest is a person.",
+      "answer": "Yes, Ryan Seacrest is a person.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Ryan_Seacrest",
+        "Ryan_Gosling",
+        "Robert_J._O'Neill_-LRB-U.S._Navy_SEAL-RRB-",
+        "Grace_Jones"
+      ],
+      "time": 1.3560926914215088,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Puerto Rico is not an unincorporated territory of the United States.",
+      "answer": "The statement \"Puerto Rico is not an unincorporated territory of the United States\" is incorrect. Puerto Rico is indeed an unincorporated territory of the United States.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Puerto_Rico",
+        "United_States",
+        "Robert_J._O'Neill_-LRB-U.S._Navy_SEAL-RRB-",
+        "Midwestern_United_States"
+      ],
+      "time": 1.735502004623413,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Michael Giacchino composed the score for Doctor Strange.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Michael_Giacchino",
+        "Stranger_Things",
+        "Francis_Ford_Coppola",
+        "Stranger_than_Fiction_-LRB-2006_film-RRB-"
+      ],
+      "time": 1.2416934967041016,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Stranger than Fiction is a film.",
+      "answer": "Yes, Stranger than Fiction is a film.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Stranger_than_Fiction_-LRB-2006_film-RRB-",
+        "Stranger_Things",
+        "The_Hunger_Games_-LRB-film-RRB-",
+        "The_Silence_of_the_Lambs_-LRB-film-RRB-"
+      ],
+      "time": 1.378112554550171,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Chris Hemsworth appeared in A Perfect Getaway.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Chris_Hemsworth",
+        "The_Hunger_Games_-LRB-film-RRB-",
+        "Ryan_Gosling",
+        "Nikolaj_Coster-Waldau"
+      ],
+      "time": 1.1406221389770508,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Selena recorded music.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Ryan_Seacrest",
+        "Willie_Nelson",
+        "Grace_Jones",
+        "Tupac_Shakur"
+      ],
+      "time": 1.0792603492736816,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "John Wick: Chapter 2 was theatrically released in the Oregon.",
+      "answer": "I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "The_Hunger_Games_-LRB-film-RRB-",
+        "Saratoga_-LRB-film-RRB-",
+        "Stranger_than_Fiction_-LRB-2006_film-RRB-",
+        "Furia_-LRB-film-RRB-"
+      ],
+      "time": 1.389667272567749,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Robert J. O'Neill was born April 10, 1976.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Robert_J._O'Neill_-LRB-U.S._Navy_SEAL-RRB-",
+        "Ryan_Seacrest",
+        "Ryan_Gosling",
+        "Andy_Roddick"
+      ],
+      "time": 1.1453466415405273,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Afghanistan is the source of the Kushan dynasty.",
+      "answer": "I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Tupac_Shakur",
+        "United_States",
+        "History_of_art",
+        "Nikolaj_Coster-Waldau"
+      ],
+      "time": 1.830641746520996,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Marilyn Monroe worked with Warner Brothers.",
+      "answer": "I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "The_Jim_Henson_Company",
+        "Saratoga_-LRB-film-RRB-",
+        "J._Howard_Marshall",
+        "Francis_Ford_Coppola"
+      ],
+      "time": 1.4837126731872559,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "The Silence of the Lambs was a film starring Scott Glenn.",
+      "answer": "The Silence of the Lambs did not star Scott Glenn; it starred Jodie Foster and Anthony Hopkins.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "The_Silence_of_the_Lambs_-LRB-film-RRB-",
+        "Grace_Jones",
+        "Francis_Ford_Coppola",
+        "The_Hunger_Games_-LRB-film-RRB-"
+      ],
+      "time": 1.5715558528900146,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Peggy Sue Got Married is a Egyptian film released in 1986.",
+      "answer": "The statement is incorrect. \"Peggy Sue Got Married\" is not an Egyptian film; it is an American film released in 1986, directed by Francis Ford Coppola.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Peggy_Sue_Got_Married",
+        "Grace_Jones",
+        "The_Ten_Commandments_-LRB-1956_film-RRB-",
+        "Francis_Ford_Coppola"
+      ],
+      "time": 1.8246142864227295,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Andy Roddick lost 5 Master Series between 2002 and 2010.",
+      "answer": "I don't know.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Andy_Roddick",
+        "Roman_Atwood",
+        "Ryan_Seacrest",
+        "Ryan_Gosling"
+      ],
+      "time": 1.7426152229309082,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "As the Vietnam War raged in 1969, Yoko Ono and her husband John Lennon did not have two week-long Bed-Ins for Peace.",
+      "answer": "The statement is incorrect. Yoko Ono and John Lennon did indeed have two week-long Bed-Ins for Peace in 1969 as a form of nonviolent protest against the Vietnam War.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Francis_Ford_Coppola",
+        "Mother_Teresa",
+        "Grace_Jones",
+        "Prisoners_of_War_-LRB-TV_series-RRB-"
+      ],
+      "time": 1.7777278423309326,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Tupac Shakur was born Lesane Parish Crooks.",
+      "answer": "Yes, Tupac Shakur was born Lesane Parish Crooks.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Tupac_Shakur",
+        "Cyndi_Lauper",
+        "Grace_Jones",
+        "Mother_Teresa"
+      ],
+      "time": 1.2224452495574951,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Harold Ramis was a veteran.",
+      "answer": "I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "The_Jim_Henson_Company",
+        "The_Silence_of_the_Lambs_-LRB-film-RRB-",
+        "Francis_Ford_Coppola",
+        "Saratoga_-LRB-film-RRB-"
+      ],
+      "time": 5.370391845703125,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "The Jim Henson Company produced The Muppet Movie, The Dark Crystal, and Labyrinth.",
+      "answer": "The context provided does not contain information about The Jim Henson Company producing The Muppet Movie, The Dark Crystal, and Labyrinth. Therefore, I don't know if that statement is true or not.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "The_Jim_Henson_Company",
+        "The_Silence_of_the_Lambs_-LRB-film-RRB-",
+        "The_Hunger_Games_-LRB-film-RRB-",
+        "Francis_Ford_Coppola"
+      ],
+      "time": 2.4125311374664307,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "United Nations was relocated to the United States in 1945.",
+      "answer": "I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "United_States",
+        "Midwestern_United_States",
+        "The_Ten_Commandments_-LRB-1956_film-RRB-",
+        "Robert_J._O'Neill_-LRB-U.S._Navy_SEAL-RRB-"
+      ],
+      "time": 1.639460563659668,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Whoopi Goldberg co-produced an American dance tournament.",
+      "answer": "I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Fox_Broadcasting_Company",
+        "The_Jim_Henson_Company",
+        "Ryan_Seacrest",
+        "Tupac_Shakur"
+      ],
+      "time": 0.978421688079834,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Slovenia uses the euro.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "United_States",
+        "Saratoga_-LRB-film-RRB-",
+        "Puerto_Rico",
+        "Mother_Teresa"
+      ],
+      "time": 1.0740671157836914,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Iowa is a part of the Midwestern United States.",
+      "answer": "Yes, Iowa is a part of the Midwestern United States.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Midwestern_United_States",
+        "United_States",
+        "Boston_Celtics",
+        "Newfoundland_and_Labrador"
+      ],
+      "time": 2.539026975631714,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Keith Urban is a person who sings.",
+      "answer": "I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Ryan_Seacrest",
+        "Willie_Nelson",
+        "Cyndi_Lauper",
+        "Roman_Atwood"
+      ],
+      "time": 1.4606988430023193,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Hotell is owned by Lisa Langseth.",
+      "answer": "I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Nikolaj_Coster-Waldau",
+        "Cyndi_Lauper",
+        "Ryan_Seacrest",
+        "Michael_Giacchino"
+      ],
+      "time": 1.203277826309204,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Saratoga is an American film from 1937.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Saratoga_-LRB-film-RRB-",
+        "The_Ten_Commandments_-LRB-1956_film-RRB-",
+        "The_Hunger_Games_-LRB-film-RRB-",
+        "Furia_-LRB-film-RRB-"
+      ],
+      "time": 1.7689118385314941,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "J. Howard Marshall was a baby.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "J._Howard_Marshall",
+        "Malcolm_Young",
+        "The_Jim_Henson_Company",
+        "Grace_Jones"
+      ],
+      "time": 1.3545889854431152,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Grace Jones is a dancer.",
+      "answer": "I don't know.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Grace_Jones",
+        "Tupac_Shakur",
+        "Ryan_Seacrest",
+        "Adrienne_Bailon"
+      ],
+      "time": 1.2352712154388428,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Lisbon has a population larger than 1.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "United_States",
+        "Puerto_Rico",
+        "Boston_Celtics",
+        "The_Hunger_Games_-LRB-film-RRB-"
+      ],
+      "time": 1.1997253894805908,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Willie Nelson dropped out of college after three years.",
+      "answer": "I don't know.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Willie_Nelson",
+        "Francis_Ford_Coppola",
+        "Grace_Jones",
+        "Malcolm_Young"
+      ],
+      "time": 1.3687820434570312,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Malcolm Young was the co-founder of Australian hard rock band AC/DC.",
+      "answer": "Yes, Malcolm Young was the co-founder of the Australian hard rock band AC/DC.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Malcolm_Young",
+        "Andy_Roddick",
+        "Willie_Nelson",
+        "Grace_Jones"
+      ],
+      "time": 1.548055648803711,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Nice & Slow is a jazz single.",
+      "answer": "I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Grace_Jones",
+        "Willie_Nelson",
+        "Malcolm_Young",
+        "Tupac_Shakur"
+      ],
+      "time": 1.0251693725585938,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Newfoundland and Labrador is the most linguistically homogeneous of Canada.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Newfoundland_and_Labrador",
+        "United_States",
+        "Saratoga_-LRB-film-RRB-",
+        "Homeland_-LRB-TV_series-RRB-"
+      ],
+      "time": 1.006650686264038,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Furia is adapted from a short story by Anna Politkovskaya.",
+      "answer": "I don't know.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Furia_-LRB-film-RRB-",
+        "The_Hunger_Games_-LRB-film-RRB-",
+        "Prisoners_of_War_-LRB-TV_series-RRB-",
+        "Francis_Ford_Coppola"
+      ],
+      "time": 1.0939722061157227,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "One state of the United States has Russia to its west.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "United_States",
+        "Midwestern_United_States",
+        "Puerto_Rico",
+        "Homeland_-LRB-TV_series-RRB-"
+      ],
+      "time": 1.2132196426391602,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Sophie Turner was born in the 1990s.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Sophie_Turner",
+        "Ryan_Gosling",
+        "Grace_Jones",
+        "Nikolaj_Coster-Waldau"
+      ],
+      "time": 1.0938713550567627,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Mother Teresa was made a saint by the church.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Mother_Teresa",
+        "Grace_Jones",
+        "Francis_Ford_Coppola",
+        "The_Ten_Commandments_-LRB-1956_film-RRB-"
+      ],
+      "time": 0.9823133945465088,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    }
+  ],
+  "ga_rag_results": [
+    {
+      "query": "Nikolaj Coster-Waldau worked with the Fox Broadcasting Company.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Nikolaj_Coster-Waldau",
+        "Fox_Broadcasting_Company",
+        "Ryan_Seacrest",
+        "Prisoners_of_War_-LRB-TV_series-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Nikolaj Coster-Waldau",
+          "relation": "has_profession",
+          "object": "actor"
+        },
+        {
+          "subject": "Fox_Broadcasting_Company",
+          "relation": "is_a",
+          "object": "broadcasting_company"
+        },
+        {
+          "subject": "Prisoners_of_War",
+          "relation": "is_a",
+          "object": "TV_series"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 6,
+        "num_edges": 3,
+        "num_triplets_total": 3,
+        "num_triplets_ranked": 3,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 7.735188007354736
+    },
+    {
+      "query": "Roman Atwood is a content creator.",
+      "answer": "[Warning: Low consistency (0.00)] Yes, Roman Atwood is a content creator.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Roman_Atwood",
+        "Andy_Roddick",
+        "Chris_Hemsworth",
+        "Ryan_Seacrest"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_triplets_total": 0,
+        "num_triplets_ranked": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 1.3923723697662354
+    },
+    {
+      "query": "History of art includes architecture, dance, sculpture, music, painting, poetry literature, theatre, narrative, film, photography and graphic arts.",
+      "answer": "[Warning: Low consistency (0.00)] The history of art encompasses various forms of creative expression, including architecture, dance, sculpture, music, painting, poetry, literature, theatre, narrative, film, photography, and graphic arts.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "History_of_art",
+        "Michael_Giacchino",
+        "Tupac_Shakur",
+        "Grace_Jones"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_triplets_total": 0,
+        "num_triplets_ranked": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 1.7582221031188965
+    },
+    {
+      "query": "Adrienne Bailon is an accountant.",
+      "answer": "[Warning: Low consistency (0.00)] I don't know.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Adrienne_Bailon",
+        "Grace_Jones",
+        "Ryan_Seacrest",
+        "Tupac_Shakur"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_triplets_total": 0,
+        "num_triplets_ranked": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 1.0013158321380615
+    },
+    {
+      "query": "System of a Down briefly disbanded in limbo.",
+      "answer": "I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Tupac_Shakur",
+        "Ryan_Seacrest",
+        "Cyndi_Lauper",
+        "Prisoners_of_War_-LRB-TV_series-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Prisoners_of_War",
+          "relation": "is_a",
+          "object": "TV_series"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 2,
+        "num_edges": 1,
+        "num_triplets_total": 1,
+        "num_triplets_ranked": 1,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 3.6310646533966064
+    },
+    {
+      "query": "Homeland is an American television spy thriller based on the Israeli television series Prisoners of War.",
+      "answer": "Homeland is an American television spy thriller based on the Israeli television series Prisoners of War.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Homeland_-LRB-TV_series-RRB-",
+        "Prisoners_of_War_-LRB-TV_series-RRB-",
+        "Stranger_Things",
+        "The_Hunger_Games_-LRB-film-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Homeland",
+          "relation": "is_a",
+          "object": "TV series"
+        },
+        {
+          "subject": "Prisoners of War",
+          "relation": "is_a",
+          "object": "TV series"
+        },
+        {
+          "subject": "The Hunger Games",
+          "relation": "is_a",
+          "object": "film"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 5,
+        "num_edges": 3,
+        "num_triplets_total": 3,
+        "num_triplets_ranked": 3,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 8.432225704193115
+    },
+    {
+      "query": "Beautiful reached number two on the Billboard Hot 100 in 2003.",
+      "answer": "[Warning: Low consistency (0.00)] I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Grace_Jones",
+        "Ryan_Seacrest",
+        "Tupac_Shakur",
+        "Cyndi_Lauper"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_triplets_total": 0,
+        "num_triplets_ranked": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 1.1437568664550781
+    },
+    {
+      "query": "Neal Schon was named in 1954.",
+      "answer": "I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Robert_J._O'Neill_-LRB-U.S._Navy_SEAL-RRB-",
+        "Willie_Nelson",
+        "Grace_Jones",
+        "Francis_Ford_Coppola"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Robert J. O'Neill",
+          "relation": "has_profession",
+          "object": "U.S. Navy SEAL"
+        },
+        {
+          "subject": "Francis Ford Coppola",
+          "relation": "is_a",
+          "object": "film director"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 4,
+        "num_edges": 2,
+        "num_triplets_total": 2,
+        "num_triplets_ranked": 2,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 5.340811729431152
+    },
+    {
+      "query": "The Boston Celtics play their home games at TD Garden.",
+      "answer": "[Warning: Low consistency (0.00)] The Boston Celtics play their home games at TD Garden.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Boston_Celtics",
+        "Andy_Roddick",
+        "United_States",
+        "Mother_Teresa"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_triplets_total": 0,
+        "num_triplets_ranked": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 1.4165573120117188
+    },
+    {
+      "query": "The Ten Commandments is an epic film.",
+      "answer": "The Ten Commandments is an epic film.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "The_Ten_Commandments_-LRB-1956_film-RRB-",
+        "The_Hunger_Games_-LRB-film-RRB-",
+        "Francis_Ford_Coppola",
+        "Stranger_than_Fiction_-LRB-2006_film-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "The Ten Commandments",
+          "relation": "released_in",
+          "object": "1956"
+        },
+        {
+          "subject": "The Hunger Games",
+          "relation": "is_a",
+          "object": "film"
+        },
+        {
+          "subject": "Francis Ford Coppola",
+          "relation": "has_profession",
+          "object": "filmmaker"
+        },
+        {
+          "subject": "Stranger than Fiction",
+          "relation": "released_in",
+          "object": "2006"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 8,
+        "num_edges": 4,
+        "num_triplets_total": 4,
+        "num_triplets_ranked": 4,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 9.675161600112915
+    },
+    {
+      "query": "Tetris has sold millions of physical copies.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "The_Hunger_Games_-LRB-film-RRB-",
+        "Michael_Giacchino",
+        "Cyndi_Lauper",
+        "Tupac_Shakur"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "The Hunger Games",
+          "relation": "is_a",
+          "object": "film"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 2,
+        "num_edges": 1,
+        "num_triplets_total": 1,
+        "num_triplets_ranked": 1,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 3.5641098022460938
+    },
+    {
+      "query": "Cyndi Lauper won the Best New Artist award at the 27th Grammy Awards in 1985.",
+      "answer": "[Warning: Low consistency (0.00)] I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Cyndi_Lauper",
+        "Grace_Jones",
+        "Ryan_Seacrest",
+        "Tupac_Shakur"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_triplets_total": 0,
+        "num_triplets_ranked": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 1.048062801361084
+    },
+    {
+      "query": "There is a movie called The Hunger Games.",
+      "answer": "Yes, there is a movie called The Hunger Games.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "The_Hunger_Games_-LRB-film-RRB-",
+        "Prisoners_of_War_-LRB-TV_series-RRB-",
+        "Furia_-LRB-film-RRB-",
+        "Stranger_than_Fiction_-LRB-2006_film-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "The Hunger Games",
+          "relation": "is_a",
+          "object": "film"
+        },
+        {
+          "subject": "Prisoners_of_War",
+          "relation": "is_a",
+          "object": "TV_series"
+        },
+        {
+          "subject": "Furia",
+          "relation": "is_a",
+          "object": "film"
+        },
+        {
+          "subject": "Stranger than Fiction",
+          "relation": "released_in",
+          "object": "2006"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 7,
+        "num_edges": 4,
+        "num_triplets_total": 4,
+        "num_triplets_ranked": 4,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 11.719902276992798
+    },
+    {
+      "query": "Ryan Gosling has been to a country in Africa.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Ryan_Gosling",
+        "Ryan_Seacrest",
+        "Grace_Jones",
+        "Francis_Ford_Coppola"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Francis_Ford_Coppola",
+          "relation": "is_a",
+          "object": "film_director"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 2,
+        "num_edges": 1,
+        "num_triplets_total": 1,
+        "num_triplets_ranked": 1,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 4.750065088272095
+    },
+    {
+      "query": "Stranger Things is set in Bloomington, Indiana.",
+      "answer": "I don't know.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Stranger_Things",
+        "Stranger_than_Fiction_-LRB-2006_film-RRB-",
+        "Midwestern_United_States",
+        "United_States"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Stranger than Fiction",
+          "relation": "released_in",
+          "object": "2006"
+        },
+        {
+          "subject": "Midwestern_United_States",
+          "relation": "is_a_region_of",
+          "object": "United_States"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 4,
+        "num_edges": 2,
+        "num_triplets_total": 2,
+        "num_triplets_ranked": 2,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 5.560739278793335
+    },
+    {
+      "query": "Ryan Seacrest is a person.",
+      "answer": "Robert J. O'Neill is a U.S. Navy SEAL. Ryan Seacrest is a person.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Ryan_Seacrest",
+        "Ryan_Gosling",
+        "Grace_Jones",
+        "Robert_J._O'Neill_-LRB-U.S._Navy_SEAL-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Robert J. O'Neill",
+          "relation": "has_profession",
+          "object": "U.S. Navy SEAL"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 2,
+        "num_edges": 1,
+        "num_triplets_total": 1,
+        "num_triplets_ranked": 1,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 4.713838815689087
+    },
+    {
+      "query": "Puerto Rico is not an unincorporated territory of the United States.",
+      "answer": "Puerto Rico is an unincorporated territory of the United States.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Puerto_Rico",
+        "United_States",
+        "Robert_J._O'Neill_-LRB-U.S._Navy_SEAL-RRB-",
+        "Midwestern_United_States"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Robert J. O'Neill",
+          "relation": "has_profession",
+          "object": "U.S. Navy SEAL"
+        },
+        {
+          "subject": "Midwestern_United_States",
+          "relation": "is_a_region_of",
+          "object": "United_States"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 4,
+        "num_edges": 2,
+        "num_triplets_total": 2,
+        "num_triplets_ranked": 2,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 5.58553147315979
+    },
+    {
+      "query": "Michael Giacchino composed the score for Doctor Strange.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Michael_Giacchino",
+        "Stranger_Things",
+        "Francis_Ford_Coppola",
+        "Stranger_than_Fiction_-LRB-2006_film-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Francis_Ford_Coppola",
+          "relation": "has_profession",
+          "object": "filmmaker"
+        },
+        {
+          "subject": "Stranger than Fiction",
+          "relation": "released_in",
+          "object": "2006"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 4,
+        "num_edges": 2,
+        "num_triplets_total": 2,
+        "num_triplets_ranked": 2,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 5.385370492935181
+    },
+    {
+      "query": "Stranger than Fiction is a film.",
+      "answer": "Stranger than Fiction is a film.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Stranger_than_Fiction_-LRB-2006_film-RRB-",
+        "Stranger_Things",
+        "The_Hunger_Games_-LRB-film-RRB-",
+        "The_Silence_of_the_Lambs_-LRB-film-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Stranger than Fiction",
+          "relation": "released_in",
+          "object": "2006"
+        },
+        {
+          "subject": "The Hunger Games",
+          "relation": "is_a",
+          "object": "film"
+        },
+        {
+          "subject": "The Silence of the Lambs",
+          "relation": "is_a",
+          "object": "film"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 5,
+        "num_edges": 3,
+        "num_triplets_total": 3,
+        "num_triplets_ranked": 3,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 8.293699979782104
+    },
+    {
+      "query": "Chris Hemsworth appeared in A Perfect Getaway.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Chris_Hemsworth",
+        "The_Hunger_Games_-LRB-film-RRB-",
+        "Ryan_Gosling",
+        "Nikolaj_Coster-Waldau"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "The Hunger Games",
+          "relation": "is_a",
+          "object": "film"
+        },
+        {
+          "subject": "Nikolaj Coster-Waldau",
+          "relation": "has_profession",
+          "object": "actor"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 4,
+        "num_edges": 2,
+        "num_triplets_total": 2,
+        "num_triplets_ranked": 2,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 6.404740571975708
+    },
+    {
+      "query": "Selena recorded music.",
+      "answer": "[Warning: Low consistency (0.00)] I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Ryan_Seacrest",
+        "Willie_Nelson",
+        "Grace_Jones",
+        "Tupac_Shakur"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_triplets_total": 0,
+        "num_triplets_ranked": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 1.3125581741333008
+    },
+    {
+      "query": "John Wick: Chapter 2 was theatrically released in the Oregon.",
+      "answer": "I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "The_Hunger_Games_-LRB-film-RRB-",
+        "Saratoga_-LRB-film-RRB-",
+        "Stranger_than_Fiction_-LRB-2006_film-RRB-",
+        "Furia_-LRB-film-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "The Hunger Games",
+          "relation": "is_a",
+          "object": "film"
+        },
+        {
+          "subject": "Stranger than Fiction",
+          "relation": "released_in",
+          "object": "2006"
+        },
+        {
+          "subject": "Furia",
+          "relation": "is_a",
+          "object": "film"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 5,
+        "num_edges": 3,
+        "num_triplets_total": 3,
+        "num_triplets_ranked": 3,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 7.583840847015381
+    },
+    {
+      "query": "Robert J. O'Neill was born April 10, 1976.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Robert_J._O'Neill_-LRB-U.S._Navy_SEAL-RRB-",
+        "Ryan_Seacrest",
+        "Ryan_Gosling",
+        "Andy_Roddick"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Robert J. O'Neill",
+          "relation": "has_profession",
+          "object": "U.S. Navy SEAL"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 2,
+        "num_edges": 1,
+        "num_triplets_total": 1,
+        "num_triplets_ranked": 1,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 4.635365724563599
+    },
+    {
+      "query": "Afghanistan is the source of the Kushan dynasty.",
+      "answer": "I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Tupac_Shakur",
+        "United_States",
+        "History_of_art",
+        "Nikolaj_Coster-Waldau"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Nikolaj Coster-Waldau",
+          "relation": "has_profession",
+          "object": "actor"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 2,
+        "num_edges": 1,
+        "num_triplets_total": 1,
+        "num_triplets_ranked": 1,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 4.754270792007446
+    },
+    {
+      "query": "Marilyn Monroe worked with Warner Brothers.",
+      "answer": "I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "The_Jim_Henson_Company",
+        "Saratoga_-LRB-film-RRB-",
+        "J._Howard_Marshall",
+        "Francis_Ford_Coppola"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "The Jim Henson Company",
+          "relation": "has_profession",
+          "object": "puppetry"
+        },
+        {
+          "subject": "The Jim Henson Company",
+          "relation": "created",
+          "object": "The Muppets"
+        },
+        {
+          "subject": "Saratoga",
+          "relation": "is_a",
+          "object": "film"
+        },
+        {
+          "subject": "Francis_Ford_Coppola",
+          "relation": "is_a",
+          "object": "film_director"
+        },
+        {
+          "subject": "The Jim Henson Company",
+          "relation": "located_in",
+          "object": "Los Angeles"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.77,
+      "metadata": {
+        "num_nodes": 8,
+        "num_edges": 5,
+        "num_triplets_total": 5,
+        "num_triplets_ranked": 5,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 7.304911851882935
+    },
+    {
+      "query": "The Silence of the Lambs was a film starring Scott Glenn.",
+      "answer": "The Silence of the Lambs is a film, but the validated knowledge does not confirm that it starred Scott Glenn. Therefore, I cannot provide a factual answer regarding the cast.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "The_Silence_of_the_Lambs_-LRB-film-RRB-",
+        "Grace_Jones",
+        "Francis_Ford_Coppola",
+        "The_Hunger_Games_-LRB-film-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "The Silence of the Lambs",
+          "relation": "is_a",
+          "object": "film"
+        },
+        {
+          "subject": "Francis_Ford_Coppola",
+          "relation": "is_a",
+          "object": "film_director"
+        },
+        {
+          "subject": "The Hunger Games",
+          "relation": "is_a",
+          "object": "film"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 5,
+        "num_edges": 3,
+        "num_triplets_total": 3,
+        "num_triplets_ranked": 3,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 8.184655904769897
+    },
+    {
+      "query": "Peggy Sue Got Married is a Egyptian film released in 1986.",
+      "answer": "Peggy Sue Got Married is not an Egyptian film; it is a film directed by Francis Ford Coppola released in 1986.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Peggy_Sue_Got_Married",
+        "Grace_Jones",
+        "The_Ten_Commandments_-LRB-1956_film-RRB-",
+        "Francis_Ford_Coppola"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Peggy Sue Got Married",
+          "relation": "is_a",
+          "object": "film"
+        },
+        {
+          "subject": "The Ten Commandments",
+          "relation": "released",
+          "object": "1956"
+        },
+        {
+          "subject": "Francis_Ford_Coppola",
+          "relation": "has_profession",
+          "object": "filmmaker"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 6,
+        "num_edges": 3,
+        "num_triplets_total": 3,
+        "num_triplets_ranked": 3,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 8.65367579460144
+    },
+    {
+      "query": "Andy Roddick lost 5 Master Series between 2002 and 2010.",
+      "answer": "[Warning: Low consistency (0.00)] I don't know.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Andy_Roddick",
+        "Roman_Atwood",
+        "Ryan_Seacrest",
+        "Ryan_Gosling"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_triplets_total": 0,
+        "num_triplets_ranked": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 1.218125820159912
+    },
+    {
+      "query": "As the Vietnam War raged in 1969, Yoko Ono and her husband John Lennon did not have two week-long Bed-Ins for Peace.",
+      "answer": "The statement about Yoko Ono and John Lennon not having two week-long Bed-Ins for Peace is incorrect; they did hold two such events in 1969.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Francis_Ford_Coppola",
+        "Mother_Teresa",
+        "Grace_Jones",
+        "Prisoners_of_War_-LRB-TV_series-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Francis_Ford_Coppola",
+          "relation": "is_a",
+          "object": "film_director"
+        },
+        {
+          "subject": "Prisoners_of_War",
+          "relation": "is_a",
+          "object": "TV_series"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 4,
+        "num_edges": 2,
+        "num_triplets_total": 2,
+        "num_triplets_ranked": 2,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 7.124955892562866
+    },
+    {
+      "query": "Tupac Shakur was born Lesane Parish Crooks.",
+      "answer": "[Warning: Low consistency (0.00)] Yes, Tupac Shakur was born Lesane Parish Crooks.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Tupac_Shakur",
+        "Cyndi_Lauper",
+        "Grace_Jones",
+        "Mother_Teresa"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_triplets_total": 0,
+        "num_triplets_ranked": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 1.3187315464019775
+    },
+    {
+      "query": "Harold Ramis was a veteran.",
+      "answer": "I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "The_Jim_Henson_Company",
+        "The_Silence_of_the_Lambs_-LRB-film-RRB-",
+        "Francis_Ford_Coppola",
+        "Saratoga_-LRB-film-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "The Jim Henson Company",
+          "relation": "has_name",
+          "object": "The Jim Henson Company"
+        },
+        {
+          "subject": "The Silence of the Lambs",
+          "relation": "is_a",
+          "object": "film"
+        },
+        {
+          "subject": "Francis_Ford_Coppola",
+          "relation": "is_a",
+          "object": "film_director"
+        },
+        {
+          "subject": "Saratoga",
+          "relation": "is_a",
+          "object": "film"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.78125,
+      "metadata": {
+        "num_nodes": 6,
+        "num_edges": 4,
+        "num_triplets_total": 4,
+        "num_triplets_ranked": 4,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 8.759533643722534
+    },
+    {
+      "query": "The Jim Henson Company produced The Muppet Movie, The Dark Crystal, and Labyrinth.",
+      "answer": "The Jim Henson Company produced The Muppet Movie, The Dark Crystal, and Labyrinth.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "The_Jim_Henson_Company",
+        "The_Silence_of_the_Lambs_-LRB-film-RRB-",
+        "The_Hunger_Games_-LRB-film-RRB-",
+        "Francis_Ford_Coppola"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "The Jim Henson Company",
+          "relation": "has_name",
+          "object": "The Jim Henson Company"
+        },
+        {
+          "subject": "The Silence of the Lambs",
+          "relation": "is_a",
+          "object": "film"
+        },
+        {
+          "subject": "The Hunger Games",
+          "relation": "is_a",
+          "object": "film"
+        },
+        {
+          "subject": "Francis_Ford_Coppola",
+          "relation": "is_a",
+          "object": "film_director"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.78125,
+      "metadata": {
+        "num_nodes": 6,
+        "num_edges": 4,
+        "num_triplets_total": 4,
+        "num_triplets_ranked": 4,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 9.813961267471313
+    },
+    {
+      "query": "United Nations was relocated to the United States in 1945.",
+      "answer": "I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "United_States",
+        "Midwestern_United_States",
+        "The_Ten_Commandments_-LRB-1956_film-RRB-",
+        "Robert_J._O'Neill_-LRB-U.S._Navy_SEAL-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Midwestern_United_States",
+          "relation": "is_a_region_of",
+          "object": "United_States"
+        },
+        {
+          "subject": "The Ten Commandments",
+          "relation": "released_in",
+          "object": "1956"
+        },
+        {
+          "subject": "Robert J. O'Neill",
+          "relation": "has_profession",
+          "object": "U.S. Navy SEAL"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 6,
+        "num_edges": 3,
+        "num_triplets_total": 3,
+        "num_triplets_ranked": 3,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 8.70094633102417
+    },
+    {
+      "query": "Whoopi Goldberg co-produced an American dance tournament.",
+      "answer": "I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Fox_Broadcasting_Company",
+        "The_Jim_Henson_Company",
+        "Ryan_Seacrest",
+        "Tupac_Shakur"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Fox_Broadcasting_Company",
+          "relation": "is_a",
+          "object": "broadcasting_company"
+        },
+        {
+          "subject": "The Jim Henson Company",
+          "relation": "has_profession",
+          "object": "puppetry"
+        },
+        {
+          "subject": "The Jim Henson Company",
+          "relation": "created",
+          "object": "The Muppets"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 5,
+        "num_edges": 3,
+        "num_triplets_total": 3,
+        "num_triplets_ranked": 3,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 7.056838512420654
+    },
+    {
+      "query": "Slovenia uses the euro.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "United_States",
+        "Saratoga_-LRB-film-RRB-",
+        "Puerto_Rico",
+        "Mother_Teresa"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Saratoga",
+          "relation": "is_a",
+          "object": "film"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 2,
+        "num_edges": 1,
+        "num_triplets_total": 1,
+        "num_triplets_ranked": 1,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 4.415298938751221
+    },
+    {
+      "query": "Iowa is a part of the Midwestern United States.",
+      "answer": "Iowa is indeed a part of the Midwestern United States.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Midwestern_United_States",
+        "United_States",
+        "Boston_Celtics",
+        "Newfoundland_and_Labrador"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Midwestern_United_States",
+          "relation": "is_a_region_of",
+          "object": "United_States"
+        },
+        {
+          "subject": "Newfoundland and Labrador",
+          "relation": "is_a",
+          "object": "province of Canada"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 4,
+        "num_edges": 2,
+        "num_triplets_total": 2,
+        "num_triplets_ranked": 2,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 5.448946714401245
+    },
+    {
+      "query": "Keith Urban is a person who sings.",
+      "answer": "[Warning: Low consistency (0.00)] I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Ryan_Seacrest",
+        "Willie_Nelson",
+        "Cyndi_Lauper",
+        "Roman_Atwood"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_triplets_total": 0,
+        "num_triplets_ranked": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 1.0572021007537842
+    },
+    {
+      "query": "Hotell is owned by Lisa Langseth.",
+      "answer": "I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Nikolaj_Coster-Waldau",
+        "Cyndi_Lauper",
+        "Ryan_Seacrest",
+        "Michael_Giacchino"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Nikolaj Coster-Waldau",
+          "relation": "has_profession",
+          "object": "actor"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 2,
+        "num_edges": 1,
+        "num_triplets_total": 1,
+        "num_triplets_ranked": 1,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 4.110525369644165
+    },
+    {
+      "query": "Saratoga is an American film from 1937.",
+      "answer": "Saratoga is a film, but the context does not specify its release year. Therefore, I cannot confirm that it is an American film from 1937 based on the provided information.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Saratoga_-LRB-film-RRB-",
+        "The_Ten_Commandments_-LRB-1956_film-RRB-",
+        "The_Hunger_Games_-LRB-film-RRB-",
+        "Furia_-LRB-film-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Saratoga",
+          "relation": "is_a",
+          "object": "film"
+        },
+        {
+          "subject": "The Ten Commandments",
+          "relation": "released",
+          "object": "1956"
+        },
+        {
+          "subject": "The Hunger Games",
+          "relation": "is_a",
+          "object": "film"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 5,
+        "num_edges": 3,
+        "num_triplets_total": 3,
+        "num_triplets_ranked": 3,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 7.643590688705444
+    },
+    {
+      "query": "J. Howard Marshall was a baby.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "J._Howard_Marshall",
+        "Malcolm_Young",
+        "The_Jim_Henson_Company",
+        "Grace_Jones"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "The Jim Henson Company",
+          "relation": "has_founder",
+          "object": "Jim Henson"
+        },
+        {
+          "subject": "The Jim Henson Company",
+          "relation": "is_a",
+          "object": "entertainment_company"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 3,
+        "num_edges": 2,
+        "num_triplets_total": 2,
+        "num_triplets_ranked": 2,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 5.0058369636535645
+    },
+    {
+      "query": "Grace Jones is a dancer.",
+      "answer": "[Warning: Low consistency (0.00)] I don't know.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Grace_Jones",
+        "Tupac_Shakur",
+        "Ryan_Seacrest",
+        "Adrienne_Bailon"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_triplets_total": 0,
+        "num_triplets_ranked": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 2.006939172744751
+    },
+    {
+      "query": "Lisbon has a population larger than 1.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "United_States",
+        "Puerto_Rico",
+        "Boston_Celtics",
+        "The_Hunger_Games_-LRB-film-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "The Hunger Games",
+          "relation": "is_a",
+          "object": "film"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 2,
+        "num_edges": 1,
+        "num_triplets_total": 1,
+        "num_triplets_ranked": 1,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 3.523261547088623
+    },
+    {
+      "query": "Willie Nelson dropped out of college after three years.",
+      "answer": "I don't know.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Willie_Nelson",
+        "Francis_Ford_Coppola",
+        "Grace_Jones",
+        "Malcolm_Young"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Francis Ford Coppola",
+          "relation": "has_profession",
+          "object": "filmmaker"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 2,
+        "num_edges": 1,
+        "num_triplets_total": 1,
+        "num_triplets_ranked": 1,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 3.866251230239868
+    },
+    {
+      "query": "Malcolm Young was the co-founder of Australian hard rock band AC/DC.",
+      "answer": "[Warning: Low consistency (0.00)] Yes, Malcolm Young was the co-founder of the Australian hard rock band AC/DC.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Malcolm_Young",
+        "Andy_Roddick",
+        "Willie_Nelson",
+        "Grace_Jones"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_triplets_total": 0,
+        "num_triplets_ranked": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 1.304987907409668
+    },
+    {
+      "query": "Nice & Slow is a jazz single.",
+      "answer": "[Warning: Low consistency (0.00)] I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Grace_Jones",
+        "Willie_Nelson",
+        "Malcolm_Young",
+        "Tupac_Shakur"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_triplets_total": 0,
+        "num_triplets_ranked": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 1.2030184268951416
+    },
+    {
+      "query": "Newfoundland and Labrador is the most linguistically homogeneous of Canada.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Newfoundland_and_Labrador",
+        "United_States",
+        "Saratoga_-LRB-film-RRB-",
+        "Homeland_-LRB-TV_series-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Newfoundland and Labrador",
+          "relation": "is_a",
+          "object": "province of Canada"
+        },
+        {
+          "subject": "Saratoga",
+          "relation": "is_a",
+          "object": "film"
+        },
+        {
+          "subject": "Homeland",
+          "relation": "is_a",
+          "object": "TV series"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 6,
+        "num_edges": 3,
+        "num_triplets_total": 3,
+        "num_triplets_ranked": 3,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 8.480870008468628
+    },
+    {
+      "query": "Furia is adapted from a short story by Anna Politkovskaya.",
+      "answer": "I don't know.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Furia_-LRB-film-RRB-",
+        "The_Hunger_Games_-LRB-film-RRB-",
+        "Prisoners_of_War_-LRB-TV_series-RRB-",
+        "Francis_Ford_Coppola"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Furia",
+          "relation": "is_a",
+          "object": "film"
+        },
+        {
+          "subject": "The Hunger Games",
+          "relation": "is_a",
+          "object": "film"
+        },
+        {
+          "subject": "Prisoners_of_War",
+          "relation": "is_a",
+          "object": "TV_series"
+        },
+        {
+          "subject": "Francis_Ford_Coppola",
+          "relation": "is_a",
+          "object": "film_director"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 7,
+        "num_edges": 4,
+        "num_triplets_total": 4,
+        "num_triplets_ranked": 4,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 8.52964162826538
+    },
+    {
+      "query": "One state of the United States has Russia to its west.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "United_States",
+        "Midwestern_United_States",
+        "Puerto_Rico",
+        "Homeland_-LRB-TV_series-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Midwestern_United_States",
+          "relation": "is_a_region_of",
+          "object": "United_States"
+        },
+        {
+          "subject": "Homeland",
+          "relation": "is_a",
+          "object": "TV series"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 4,
+        "num_edges": 2,
+        "num_triplets_total": 2,
+        "num_triplets_ranked": 2,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 5.119692325592041
+    },
+    {
+      "query": "Sophie Turner was born in the 1990s.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Sophie_Turner",
+        "Ryan_Gosling",
+        "Grace_Jones",
+        "Nikolaj_Coster-Waldau"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Nikolaj Coster-Waldau",
+          "relation": "has_profession",
+          "object": "actor"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 2,
+        "num_edges": 1,
+        "num_triplets_total": 1,
+        "num_triplets_ranked": 1,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 4.269645929336548
+    },
+    {
+      "query": "Mother Teresa was made a saint by the church.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Mother_Teresa",
+        "Grace_Jones",
+        "Francis_Ford_Coppola",
+        "The_Ten_Commandments_-LRB-1956_film-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Francis_Ford_Coppola",
+          "relation": "is_a",
+          "object": "film_director"
+        },
+        {
+          "subject": "The Ten Commandments",
+          "relation": "released_in",
+          "object": "1956"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "metadata": {
+        "num_nodes": 4,
+        "num_edges": 2,
+        "num_triplets_total": 2,
+        "num_triplets_ranked": 2,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "gpt-4o-mini"
+      },
+      "time": 5.1326234340667725
+    }
+  ],
+  "comparison": {
+    "baseline": {
+      "factual_accuracy": 0.0,
+      "logical_consistency": 0.5,
+      "hallucination_rate": 0.1984918963164399,
+      "response_coherence": 0.7733333333333331,
+      "graph_completeness": 0.0,
+      "avg_response_time": 1.6181069135665893
+    },
+    "graph_augmented": {
+      "factual_accuracy": 0.0,
+      "logical_consistency": 0.87,
+      "hallucination_rate": 0.21830722185184662,
+      "response_coherence": 0.8333333333333331,
+      "graph_completeness": 0.05733333333333333,
+      "avg_response_time": 5.121868824958801
+    },
+    "improvements_pct": {
+      "factual_accuracy": 0,
+      "logical_consistency": 74.0,
+      "hallucination_rate": -9.982939305399507,
+      "response_coherence": 7.758620689655182,
+      "graph_completeness": 0,
+      "avg_response_time": 216.53463575341326
+    },
+    "summary": {
+      "accuracy_gain": 0,
+      "consistency_gain": 74.0,
+      "hallucination_reduction": -9.982939305399507
+    }
+  }
+}

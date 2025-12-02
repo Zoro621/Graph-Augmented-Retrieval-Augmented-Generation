@@ -1,0 +1,718 @@
+{
+  "experiment_info": {
+    "timestamp": "20251125_012710",
+    "dataset": "fever",
+    "num_queries": 10,
+    "model": "gpt-4o-mini",
+    "configuration": {
+      "use_spacy": false,
+      "consistency_threshold": 0.7,
+      "k_retrieve": 4
+    }
+  },
+  "baseline_results": [
+    {
+      "query": "Nikolaj Coster-Waldau worked with the Fox Broadcasting Company.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Nikolaj_Coster-Waldau",
+        "Fox_Broadcasting_Company",
+        "Prisoners_of_War_-LRB-TV_series-RRB-",
+        "Homeland_-LRB-TV_series-RRB-"
+      ],
+      "time": 1.6985876560211182,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Roman Atwood is a content creator.",
+      "answer": "Yes, Roman Atwood is a content creator.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Roman_Atwood",
+        "Nikolaj_Coster-Waldau",
+        "Prisoners_of_War_-LRB-TV_series-RRB-",
+        "Adrienne_Bailon"
+      ],
+      "time": 1.3506579399108887,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "History of art includes architecture, dance, sculpture, music, painting, poetry literature, theatre, narrative, film, photography and graphic arts.",
+      "answer": "The history of art encompasses various forms of creative expression, including architecture, dance, sculpture, music, painting, poetry, literature, theatre, narrative, film, photography, and graphic arts.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "History_of_art",
+        "The_Ten_Commandments_-LRB-1956_film-RRB-",
+        "Roman_Atwood",
+        "Homeland_-LRB-TV_series-RRB-"
+      ],
+      "time": 1.7891249656677246,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Adrienne Bailon is an accountant.",
+      "answer": "I don't know.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Adrienne_Bailon",
+        "Roman_Atwood",
+        "Nikolaj_Coster-Waldau",
+        "Prisoners_of_War_-LRB-TV_series-RRB-"
+      ],
+      "time": 1.5368094444274902,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "System of a Down briefly disbanded in limbo.",
+      "answer": "I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Prisoners_of_War_-LRB-TV_series-RRB-",
+        "The_Ten_Commandments_-LRB-1956_film-RRB-",
+        "Roman_Atwood",
+        "Homeland_-LRB-TV_series-RRB-"
+      ],
+      "time": 1.6580710411071777,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Homeland is an American television spy thriller based on the Israeli television series Prisoners of War.",
+      "answer": "Yes, Homeland is an American television spy thriller based on the Israeli television series Prisoners of War.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Homeland_-LRB-TV_series-RRB-",
+        "Prisoners_of_War_-LRB-TV_series-RRB-",
+        "Fox_Broadcasting_Company",
+        "Nikolaj_Coster-Waldau"
+      ],
+      "time": 1.4623913764953613,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Beautiful reached number two on the Billboard Hot 100 in 2003.",
+      "answer": "I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Adrienne_Bailon",
+        "Fox_Broadcasting_Company",
+        "Boston_Celtics",
+        "Roman_Atwood"
+      ],
+      "time": 1.1924822330474854,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Neal Schon was named in 1954.",
+      "answer": "I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "The_Ten_Commandments_-LRB-1956_film-RRB-",
+        "Nikolaj_Coster-Waldau",
+        "Fox_Broadcasting_Company",
+        "Roman_Atwood"
+      ],
+      "time": 1.3962535858154297,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "The Boston Celtics play their home games at TD Garden.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Boston_Celtics",
+        "Homeland_-LRB-TV_series-RRB-",
+        "Roman_Atwood",
+        "Adrienne_Bailon"
+      ],
+      "time": 1.2285363674163818,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "The Ten Commandments is an epic film.",
+      "answer": "The Ten Commandments is indeed an epic film.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "The_Ten_Commandments_-LRB-1956_film-RRB-",
+        "Roman_Atwood",
+        "Prisoners_of_War_-LRB-TV_series-RRB-",
+        "Nikolaj_Coster-Waldau"
+      ],
+      "time": 1.2240126132965088,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    }
+  ],
+  "ga_rag_results": [
+    {
+      "query": "Nikolaj Coster-Waldau worked with the Fox Broadcasting Company.",
+      "answer": "I cannot confirm based on the validated facts.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Nikolaj_Coster-Waldau",
+        "Fox_Broadcasting_Company",
+        "Prisoners_of_War_-LRB-TV_series-RRB-",
+        "Homeland_-LRB-TV_series-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Nikolaj Coster-Waldau",
+          "relation": "has_profession",
+          "object": "actor"
+        },
+        {
+          "subject": "Prisoners of War",
+          "relation": "is_a",
+          "object": "TV series"
+        },
+        {
+          "subject": "Homeland",
+          "relation": "is_a",
+          "object": "TV series"
+        },
+        {
+          "subject": "Fox_Broadcasting_Company",
+          "relation": "is_a",
+          "object": "broadcasting_company"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.79375,
+      "metadata": {
+        "num_nodes": 7,
+        "num_edges": 4,
+        "num_triplets_total": 4,
+        "num_triplets_ranked": 4,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 0,
+        "avg_triplets_per_doc": 1.0,
+        "inferred_triplets": 3,
+        "model": "gpt-4o-mini"
+      },
+      "time": 13.829110860824585
+    },
+    {
+      "query": "Roman Atwood is a content creator.",
+      "answer": "I cannot confirm based on the validated facts.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Roman_Atwood",
+        "Nikolaj_Coster-Waldau",
+        "Prisoners_of_War_-LRB-TV_series-RRB-",
+        "Adrienne_Bailon"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Nikolaj Coster-Waldau",
+          "relation": "has_profession",
+          "object": "actor"
+        },
+        {
+          "subject": "Prisoners of War",
+          "relation": "is_a",
+          "object": "TV series"
+        },
+        {
+          "subject": "Prisoners of War",
+          "relation": "has_genre",
+          "object": "TV series"
+        },
+        {
+          "subject": "Nikolaj Coster-Waldau",
+          "relation": "is_a",
+          "object": "performer"
+        },
+        {
+          "subject": "Nikolaj Coster-Waldau",
+          "relation": "appears_in",
+          "object": "Prisoners of War"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.75,
+      "metadata": {
+        "num_nodes": 5,
+        "num_edges": 5,
+        "num_triplets_total": 5,
+        "num_triplets_ranked": 5,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 2,
+        "avg_triplets_per_doc": 0.5,
+        "inferred_triplets": 3,
+        "model": "gpt-4o-mini"
+      },
+      "time": 6.587878465652466
+    },
+    {
+      "query": "History of art includes architecture, dance, sculpture, music, painting, poetry literature, theatre, narrative, film, photography and graphic arts.",
+      "answer": "I cannot confirm based on the validated facts.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "History_of_art",
+        "The_Ten_Commandments_-LRB-1956_film-RRB-",
+        "Roman_Atwood",
+        "Homeland_-LRB-TV_series-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "The Ten Commandments",
+          "relation": "was_released_in",
+          "object": "1956"
+        },
+        {
+          "subject": "Homeland",
+          "relation": "is_a",
+          "object": "TV series"
+        },
+        {
+          "subject": "The Ten Commandments",
+          "relation": "is_a",
+          "object": "film"
+        },
+        {
+          "subject": "Homeland",
+          "relation": "is_a",
+          "object": "drama"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7562500000000001,
+      "metadata": {
+        "num_nodes": 6,
+        "num_edges": 4,
+        "num_triplets_total": 4,
+        "num_triplets_ranked": 4,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 2,
+        "avg_triplets_per_doc": 0.5,
+        "inferred_triplets": 3,
+        "model": "gpt-4o-mini"
+      },
+      "time": 8.943619012832642
+    },
+    {
+      "query": "Adrienne Bailon is an accountant.",
+      "answer": "I cannot confirm based on the validated facts.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Adrienne_Bailon",
+        "Roman_Atwood",
+        "Nikolaj_Coster-Waldau",
+        "Prisoners_of_War_-LRB-TV_series-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Nikolaj Coster-Waldau",
+          "relation": "has_profession",
+          "object": "actor"
+        },
+        {
+          "subject": "Prisoners of War",
+          "relation": "is_a",
+          "object": "TV series"
+        },
+        {
+          "subject": "Nikolaj Coster-Waldau",
+          "relation": "appears_in",
+          "object": "Prisoners of War"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.75,
+      "metadata": {
+        "num_nodes": 4,
+        "num_edges": 3,
+        "num_triplets_total": 3,
+        "num_triplets_ranked": 3,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 4,
+        "avg_triplets_per_doc": 0.5,
+        "inferred_triplets": 1,
+        "model": "gpt-4o-mini"
+      },
+      "time": 3.8794338703155518
+    },
+    {
+      "query": "System of a Down briefly disbanded in limbo.",
+      "answer": "I cannot confirm based on the validated facts.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Prisoners_of_War_-LRB-TV_series-RRB-",
+        "The_Ten_Commandments_-LRB-1956_film-RRB-",
+        "Roman_Atwood",
+        "Homeland_-LRB-TV_series-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Prisoners of War",
+          "relation": "is_a",
+          "object": "TV series"
+        },
+        {
+          "subject": "The Ten Commandments",
+          "relation": "released",
+          "object": "1956"
+        },
+        {
+          "subject": "Homeland",
+          "relation": "is_a",
+          "object": "TV series"
+        },
+        {
+          "subject": "Prisoners of War",
+          "relation": "is_a",
+          "object": "drama"
+        },
+        {
+          "subject": "Homeland",
+          "relation": "is_a",
+          "object": "drama"
+        },
+        {
+          "subject": "The Ten Commandments",
+          "relation": "is_a",
+          "object": "film"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7625,
+      "metadata": {
+        "num_nodes": 7,
+        "num_edges": 6,
+        "num_triplets_total": 6,
+        "num_triplets_ranked": 6,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 4,
+        "avg_triplets_per_doc": 0.75,
+        "inferred_triplets": 3,
+        "model": "gpt-4o-mini"
+      },
+      "time": 5.4869866371154785
+    },
+    {
+      "query": "Homeland is an American television spy thriller based on the Israeli television series Prisoners of War.",
+      "answer": "I cannot confirm based on the validated facts.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Homeland_-LRB-TV_series-RRB-",
+        "Prisoners_of_War_-LRB-TV_series-RRB-",
+        "Fox_Broadcasting_Company",
+        "Nikolaj_Coster-Waldau"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Homeland",
+          "relation": "is_a",
+          "object": "TV series"
+        },
+        {
+          "subject": "Prisoners of War",
+          "relation": "is_a",
+          "object": "TV series"
+        },
+        {
+          "subject": "Fox_Broadcasting_Company",
+          "relation": "is_a",
+          "object": "broadcasting_company"
+        },
+        {
+          "subject": "Nikolaj Coster-Waldau",
+          "relation": "has_profession",
+          "object": "actor"
+        },
+        {
+          "subject": "Nikolaj Coster-Waldau",
+          "relation": "has_appeared_in",
+          "object": "TV_series"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.75,
+      "metadata": {
+        "num_nodes": 8,
+        "num_edges": 5,
+        "num_triplets_total": 5,
+        "num_triplets_ranked": 5,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 4,
+        "avg_triplets_per_doc": 1.0,
+        "inferred_triplets": 3,
+        "model": "gpt-4o-mini"
+      },
+      "time": 6.058205842971802
+    },
+    {
+      "query": "Beautiful reached number two on the Billboard Hot 100 in 2003.",
+      "answer": "I cannot confirm based on the validated facts.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Adrienne_Bailon",
+        "Fox_Broadcasting_Company",
+        "Boston_Celtics",
+        "Roman_Atwood"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Fox_Broadcasting_Company",
+          "relation": "is_a",
+          "object": "broadcasting_company"
+        },
+        {
+          "subject": "Fox_Broadcasting_Company",
+          "relation": "is_a",
+          "object": "company"
+        },
+        {
+          "subject": "Fox_Broadcasting_Company",
+          "relation": "operates_in",
+          "object": "broadcasting_industry"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7583333333333333,
+      "metadata": {
+        "num_nodes": 4,
+        "num_edges": 3,
+        "num_triplets_total": 3,
+        "num_triplets_ranked": 3,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 3,
+        "avg_triplets_per_doc": 0.25,
+        "inferred_triplets": 3,
+        "model": "gpt-4o-mini"
+      },
+      "time": 6.567101955413818
+    },
+    {
+      "query": "Neal Schon was named in 1954.",
+      "answer": "I cannot confirm based on the validated facts.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "The_Ten_Commandments_-LRB-1956_film-RRB-",
+        "Nikolaj_Coster-Waldau",
+        "Fox_Broadcasting_Company",
+        "Roman_Atwood"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "The Ten Commandments",
+          "relation": "released",
+          "object": "1956"
+        },
+        {
+          "subject": "Nikolaj Coster-Waldau",
+          "relation": "has_profession",
+          "object": "actor"
+        },
+        {
+          "subject": "Fox_Broadcasting_Company",
+          "relation": "is_a",
+          "object": "broadcasting_company"
+        },
+        {
+          "subject": "The Ten Commandments",
+          "relation": "is_a",
+          "object": "film"
+        },
+        {
+          "subject": "Nikolaj Coster-Waldau",
+          "relation": "is_a",
+          "object": "celebrity"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7549999999999999,
+      "metadata": {
+        "num_nodes": 8,
+        "num_edges": 5,
+        "num_triplets_total": 5,
+        "num_triplets_ranked": 5,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 4,
+        "avg_triplets_per_doc": 0.75,
+        "inferred_triplets": 3,
+        "model": "gpt-4o-mini"
+      },
+      "time": 5.82452130317688
+    },
+    {
+      "query": "The Boston Celtics play their home games at TD Garden.",
+      "answer": "I cannot confirm based on the validated facts.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Boston_Celtics",
+        "Homeland_-LRB-TV_series-RRB-",
+        "Roman_Atwood",
+        "Adrienne_Bailon"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Homeland",
+          "relation": "is_a",
+          "object": "TV series"
+        },
+        {
+          "subject": "Homeland",
+          "relation": "is_a",
+          "object": "television program"
+        },
+        {
+          "subject": "Homeland",
+          "relation": "has_genre",
+          "object": "thriller"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7416666666666667,
+      "metadata": {
+        "num_nodes": 4,
+        "num_edges": 3,
+        "num_triplets_total": 3,
+        "num_triplets_ranked": 3,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 4,
+        "avg_triplets_per_doc": 0.25,
+        "inferred_triplets": 3,
+        "model": "gpt-4o-mini"
+      },
+      "time": 4.8975629806518555
+    },
+    {
+      "query": "The Ten Commandments is an epic film.",
+      "answer": "I cannot confirm based on the validated facts.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "The_Ten_Commandments_-LRB-1956_film-RRB-",
+        "Roman_Atwood",
+        "Prisoners_of_War_-LRB-TV_series-RRB-",
+        "Nikolaj_Coster-Waldau"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "The Ten Commandments",
+          "relation": "released",
+          "object": "1956"
+        },
+        {
+          "subject": "Prisoners of War",
+          "relation": "is_a",
+          "object": "TV series"
+        },
+        {
+          "subject": "Nikolaj Coster-Waldau",
+          "relation": "has_profession",
+          "object": "actor"
+        },
+        {
+          "subject": "Nikolaj Coster-Waldau",
+          "relation": "is_a",
+          "object": "person"
+        },
+        {
+          "subject": "The Ten Commandments",
+          "relation": "is_a",
+          "object": "film"
+        },
+        {
+          "subject": "Prisoners of War",
+          "relation": "has_profession",
+          "object": "actor"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7583333333333333,
+      "metadata": {
+        "num_nodes": 8,
+        "num_edges": 6,
+        "num_triplets_total": 6,
+        "num_triplets_ranked": 6,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 4,
+        "avg_triplets_per_doc": 0.75,
+        "inferred_triplets": 3,
+        "model": "gpt-4o-mini"
+      },
+      "time": 5.091256141662598
+    }
+  ],
+  "comparison": {
+    "baseline": {
+      "factual_accuracy": 0.73,
+      "logical_consistency": 0.5,
+      "hallucination_rate": 0.35205627705627707,
+      "response_coherence": 0.8,
+      "graph_completeness": 0.0,
+      "avg_response_time": 1.4536927223205567
+    },
+    "graph_augmented": {
+      "factual_accuracy": 0.1,
+      "logical_consistency": 1.0,
+      "hallucination_rate": 1.0,
+      "response_coherence": 1.0,
+      "graph_completeness": 0.1463,
+      "avg_response_time": 6.716567707061768
+    },
+    "improvements_pct": {
+      "factual_accuracy": -86.3013698630137,
+      "logical_consistency": 100.0,
+      "hallucination_rate": -184.04549646480172,
+      "response_coherence": 24.999999999999993,
+      "graph_completeness": 0,
+      "avg_response_time": 362.03489939331786
+    },
+    "summary": {
+      "accuracy_gain": -86.3013698630137,
+      "consistency_gain": 100.0,
+      "hallucination_reduction": -184.04549646480172
+    }
+  }
+}

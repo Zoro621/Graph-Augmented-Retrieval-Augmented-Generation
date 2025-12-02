@@ -1,0 +1,21 @@
+Query_ID,Query,Baseline_Accuracy,GA_RAG_Accuracy,Baseline_Consistency,GA_RAG_Consistency,Baseline_Hallucination,GA_RAG_Hallucination,Baseline_Time,GA_RAG_Time
+1,Nikolaj Coster-Waldau worked with the Fox Broadcas...,0.300,0.300,0.500,1.000,0.000,0.000,1.39s,20.97s
+2,Roman Atwood is a content creator....,0.000,0.000,0.500,1.000,0.200,0.200,1.70s,13.15s
+3,"History of art includes architecture, dance, sculp...",0.000,0.000,0.500,1.000,0.633,0.711,2.41s,32.12s
+4,Adrienne Bailon is an accountant....,0.000,0.300,0.500,1.000,0.529,0.000,5.69s,18.41s
+5,System of a Down briefly disbanded in limbo....,0.300,0.300,0.500,1.000,0.000,0.000,1.05s,11.35s
+6,Homeland is an American television spy thriller ba...,1.000,1.000,0.500,1.000,0.636,0.636,1.76s,6.80s
+7,Beautiful reached number two on the Billboard Hot ...,0.300,0.300,0.500,1.000,0.000,0.000,1.26s,18.74s
+8,Neal Schon was named in 1954....,0.300,0.300,0.500,1.000,0.000,0.000,1.10s,11.33s
+9,The Boston Celtics play their home games at TD Gar...,1.000,1.000,0.500,1.000,0.000,0.000,1.27s,14.57s
+10,The Ten Commandments is an epic film....,1.000,1.000,0.500,1.000,0.400,0.400,1.23s,8.91s
+11,Tetris has sold millions of physical copies....,0.300,0.300,0.500,1.000,0.000,0.000,3.15s,9.78s
+12,Cyndi Lauper won the Best New Artist award at the ...,0.300,0.300,0.500,1.000,0.000,0.000,0.89s,9.57s
+13,There is a movie called The Hunger Games....,1.000,1.000,0.500,1.000,0.600,0.600,1.42s,6.64s
+14,Ryan Gosling has been to a country in Africa....,0.300,0.300,0.500,1.000,0.000,0.000,0.96s,24.65s
+15,"Stranger Things is set in Bloomington, Indiana....",0.300,0.300,0.500,1.000,0.000,0.000,1.55s,9.80s
+16,Ryan Seacrest is a person....,0.000,0.000,0.500,1.000,0.158,0.158,3.00s,4.44s
+17,Puerto Rico is not an unincorporated territory of ...,0.000,0.000,0.500,1.000,0.235,0.235,2.11s,13.97s
+18,Michael Giacchino composed the score for Doctor St...,0.300,0.300,0.500,1.000,0.000,0.000,1.25s,2.77s
+19,Stranger than Fiction is a film....,1.000,1.000,0.500,1.000,0.000,0.000,1.20s,4.87s
+20,Chris Hemsworth appeared in A Perfect Getaway....,0.300,0.300,0.500,1.000,0.000,0.000,0.99s,6.02s

@@ -1,0 +1,26 @@
+================================================================================
+GRAPH-AUGMENTED RAG EXPERIMENT SUMMARY
+================================================================================
+
+Experiment Date: 20251121_203947
+Dataset: sample
+Number of Queries: 8
+Model: deepseek/deepseek-chat
+
+AVERAGE METRICS:
+--------------------------------------------------------------------------------
+Metric                         Baseline        GA-RAG          Improvement    
+--------------------------------------------------------------------------------
+factual_accuracy               0.464           0.478           +3.0%
+logical_consistency            0.500           1.000           +100.0%
+hallucination_rate             0.376           0.389           -3.5%
+response_coherence             1.000           1.000           +0.0%
+graph_completeness             0.000           0.667           +0.0%
+avg_response_time              2.668           5.732           +114.8%
+
+================================================================================
+KEY FINDINGS:
+--------------------------------------------------------------------------------
+• Accuracy Gain: +3.0%
+• Consistency Gain: +100.0%
+• Hallucination Reduction: -3.5%

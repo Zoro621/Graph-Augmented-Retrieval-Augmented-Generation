@@ -1,0 +1,384 @@
+{
+  "experiment_info": {
+    "timestamp": "20251125_201720",
+    "dataset": "fever",
+    "num_queries": 2,
+    "model": "gpt-4o-mini",
+    "configuration": {
+      "use_spacy": false,
+      "consistency_threshold": 0.7,
+      "k_retrieve": 4
+    }
+  },
+  "baseline_results": [
+    {
+      "query": "Nikolaj Coster-Waldau worked with the Fox Broadcasting Company.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Nikolaj William Coster-Waldau is a Danish actor. He had his breakthrough role in Denmark with the film Nightwatch in 1994. He played Jaime Lannister in the HBO fantasy drama series Game of Thrones, for which he received two Primetime Emmy Award nominations for Outstanding Supporting Actor in a Drama Series.",
+        "Fox Broadcasting Company, LLC is an American commercial broadcast television network serving as the flagship namesake property of Fox Corporation and operated through Fox Entertainment. Fox is based at Fox Corporation's corporate headquarters at 1211 Avenue of the Americas in Midtown Manhattan, New York City, and it hosts additional offices at the Fox Network Center in Los Angeles and at the Fox Media Center in Tempe, Arizona. The channel was launched by News Corporation on October 9, 1986 as a",
+        "by News Corporation on October 9, 1986 as a competitor to the Big Three television networks, which are the American Broadcasting Company (ABC), the Columbia Broadcasting System (CBS), and the National Broadcasting Company (NBC).",
+        "He became the second YouTuber after Germán Garmendia to receive two Diamond Play Buttons for his first two channels."
+      ],
+      "time": 1.7589950561523438,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Roman Atwood is a content creator.",
+      "answer": "Yes, Roman Atwood is a content creator, known for his vlogs and prank videos on YouTube.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Roman Bernard Atwood is an American YouTube personality and prankster. He is best known for his vlogs, where he posts updates about his life. His vlogging channel, \"RomanAtwoodVlogs\", has a total of 5 billion views and 15 million subscribers. He also has another YouTube channel called \"RomanAtwood\", where he used to post prank videos. The channel has been inactive since 2016. His pranks have gained over 1.4 billion views and 10.4 million subscribers. He became the second YouTuber after Germán",
+        "He became the second YouTuber after Germán Garmendia to receive two Diamond Play Buttons for his first two channels.",
+        "Nikolaj William Coster-Waldau is a Danish actor. He had his breakthrough role in Denmark with the film Nightwatch in 1994. He played Jaime Lannister in the HBO fantasy drama series Game of Thrones, for which he received two Primetime Emmy Award nominations for Outstanding Supporting Actor in a Drama Series.",
+        "by News Corporation on October 9, 1986 as a competitor to the Big Three television networks, which are the American Broadcasting Company (ABC), the Columbia Broadcasting System (CBS), and the National Broadcasting Company (NBC)."
+      ],
+      "time": 1.7207295894622803,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    }
+  ],
+  "ga_rag_results": [
+    {
+      "query": "Nikolaj Coster-Waldau worked with the Fox Broadcasting Company.",
+      "answer": "[Graph coverage low (4 facts)] I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Nikolaj William Coster-Waldau is a Danish actor. He had his breakthrough role in Denmark with the film Nightwatch in 1994. He played Jaime Lannister in the HBO fantasy drama series Game of Thrones, for which he received two Primetime Emmy Award nominations for Outstanding Supporting Actor in a Drama Series.",
+        "Fox Broadcasting Company, LLC is an American commercial broadcast television network serving as the flagship namesake property of Fox Corporation and operated through Fox Entertainment. Fox is based at Fox Corporation's corporate headquarters at 1211 Avenue of the Americas in Midtown Manhattan, New York City, and it hosts additional offices at the Fox Network Center in Los Angeles and at the Fox Media Center in Tempe, Arizona. The channel was launched by News Corporation on October 9, 1986 as a",
+        "by News Corporation on October 9, 1986 as a competitor to the Big Three television networks, which are the American Broadcasting Company (ABC), the Columbia Broadcasting System (CBS), and the National Broadcasting Company (NBC).",
+        "He became the second YouTuber after Germán Garmendia to receive two Diamond Play Buttons for his first two channels.",
+        "Roman Bernard Atwood is an American YouTube personality and prankster. He is best known for his vlogs, where he posts updates about his life. His vlogging channel, \"RomanAtwoodVlogs\", has a total of 5 billion views and 15 million subscribers. He also has another YouTube channel called \"RomanAtwood\", where he used to post prank videos. The channel has been inactive since 2016. His pranks have gained over 1.4 billion views and 10.4 million subscribers. He became the second YouTuber after Germán"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Nikolaj William Coster-Waldau",
+          "relation": "has_profession",
+          "object": "actor"
+        },
+        {
+          "subject": "Nikolaj William Coster-Waldau",
+          "relation": "played",
+          "object": "Jaime Lannister"
+        },
+        {
+          "subject": "Fox Broadcasting Company, LLC",
+          "relation": "is_a",
+          "object": "American commercial broadcast television network"
+        },
+        {
+          "subject": "Fox Broadcasting Company, LLC",
+          "relation": "operated_through",
+          "object": "Fox Entertainment"
+        },
+        {
+          "subject": "Fox Broadcasting Company, LLC",
+          "relation": "located_in",
+          "object": "1211 Avenue of the Americas, Midtown Manhattan, New York City"
+        },
+        {
+          "subject": "Fox Broadcasting Company",
+          "relation": "is",
+          "object": "an American commercial broadcast television network"
+        },
+        {
+          "subject": "News Corporation",
+          "relation": "created",
+          "object": "competitor to the Big Three television networks"
+        },
+        {
+          "subject": "Big Three television networks",
+          "relation": "includes",
+          "object": "American Broadcasting Company"
+        },
+        {
+          "subject": "Nikolaj William Coster-Waldau",
+          "relation": "had_breakthrough_role_in",
+          "object": "Denmark"
+        },
+        {
+          "subject": "Nikolaj William Coster-Waldau",
+          "relation": "received",
+          "object": "two Primetime Emmy Award nominations for Outstanding Supporting Actor in a Drama Series"
+        }
+      ],
+      "ranked_triplets": [
+        {
+          "subject": "Fox Broadcasting Company, LLC",
+          "relation": "located_in",
+          "object": "1211 Avenue of the Americas, Midtown Manhattan, New York City",
+          "confidence": 0.95,
+          "relevance_score": 1.5884,
+          "source": "Fox Broadcasting Company, LLC is an American commercial broadcast television network serving as the "
+        },
+        {
+          "subject": "Nikolaj William Coster-Waldau",
+          "relation": "has_profession",
+          "object": "actor",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "Nikolaj William Coster-Waldau is a Danish actor. He had his breakthrough role in Denmark with the fi"
+        },
+        {
+          "subject": "Nikolaj William Coster-Waldau",
+          "relation": "played",
+          "object": "Jaime Lannister",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "Nikolaj William Coster-Waldau is a Danish actor. He had his breakthrough role in Denmark with the fi"
+        },
+        {
+          "subject": "Fox Broadcasting Company, LLC",
+          "relation": "is_a",
+          "object": "American commercial broadcast television network",
+          "confidence": 0.95,
+          "relevance_score": 1.3898499999999998,
+          "source": "Fox Broadcasting Company, LLC is an American commercial broadcast television network serving as the "
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.77,
+      "factual_grounding_score": 0.0,
+      "metadata": {
+        "num_nodes": 15,
+        "num_edges": 10,
+        "num_triplets_total": 10,
+        "num_triplets_ranked": 4,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 0,
+        "avg_triplets_per_doc": 3.3333333333333335,
+        "inferred_triplets": 0,
+        "coverage_ok": false,
+        "answer_source": "baseline",
+        "grounding_backoff": false,
+        "retrieval_expansion": {
+          "extra_docs": 1,
+          "entities_used": [
+            "Waldau"
+          ],
+          "candidate_entities": [
+            "Waldau",
+            "Fox Broadcasting",
+            "Company",
+            "Fox Corporation"
+          ]
+        },
+        "graph_viz_path": "results\\figures\\knowledge_graphs\\nikolaj_coster_waldau_worked_with_the_fox_broadcasting_compa_20251125_201619.png",
+        "model": "gpt-4o-mini",
+        "context_filter": {
+          "kept": 4,
+          "dropped": 0,
+          "precision": 1.0,
+          "fallback_used": false,
+          "query_terms": [
+            "broadcasting",
+            "company",
+            "coster",
+            "fox",
+            "nikolaj",
+            "waldau",
+            "william",
+            "worked"
+          ]
+        },
+        "context_filter_precision": 1.0,
+        "question_term_coverage": 0.8571428571428571,
+        "node_term_coverage": 0.8571428571428571,
+        "triplet_density": 0.6666666666666666,
+        "query_terms_used": [
+          "broadcasting",
+          "company",
+          "coster",
+          "fox",
+          "nikolaj",
+          "waldau",
+          "william",
+          "worked"
+        ]
+      },
+      "time": 32.60187888145447
+    },
+    {
+      "query": "Roman Atwood is a content creator.",
+      "answer": "[Graph coverage low (4 facts)] Yes, Roman Atwood is a content creator, known for his vlogs and prank videos on YouTube.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Roman Bernard Atwood is an American YouTube personality and prankster. He is best known for his vlogs, where he posts updates about his life. His vlogging channel, \"RomanAtwoodVlogs\", has a total of 5 billion views and 15 million subscribers. He also has another YouTube channel called \"RomanAtwood\", where he used to post prank videos. The channel has been inactive since 2016. His pranks have gained over 1.4 billion views and 10.4 million subscribers. He became the second YouTuber after Germán",
+        "He became the second YouTuber after Germán Garmendia to receive two Diamond Play Buttons for his first two channels.",
+        "Nikolaj William Coster-Waldau is a Danish actor. He had his breakthrough role in Denmark with the film Nightwatch in 1994. He played Jaime Lannister in the HBO fantasy drama series Game of Thrones, for which he received two Primetime Emmy Award nominations for Outstanding Supporting Actor in a Drama Series.",
+        "by News Corporation on October 9, 1986 as a competitor to the Big Three television networks, which are the American Broadcasting Company (ABC), the Columbia Broadcasting System (CBS), and the National Broadcasting Company (NBC)."
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Roman Bernard Atwood",
+          "relation": "has_profession",
+          "object": "YouTube personality"
+        },
+        {
+          "subject": "Roman Bernard Atwood",
+          "relation": "has_channel",
+          "object": "RomanAtwoodVlogs"
+        },
+        {
+          "subject": "RomanAtwoodVlogs",
+          "relation": "has_views",
+          "object": "5 billion"
+        },
+        {
+          "subject": "Roman Bernard Atwood",
+          "relation": "is a",
+          "object": "YouTube personality"
+        }
+      ],
+      "ranked_triplets": [
+        {
+          "subject": "Roman Bernard Atwood",
+          "relation": "is a",
+          "object": "YouTube personality",
+          "confidence": 0.95,
+          "relevance_score": 1.881,
+          "source": "Roman Bernard Atwood is an American YouTube personality and prankster. He is best known for his vlog"
+        },
+        {
+          "subject": "Roman Bernard Atwood",
+          "relation": "has_profession",
+          "object": "YouTube personality",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "Roman Bernard Atwood is an American YouTube personality and prankster. He is best known for his vlog"
+        },
+        {
+          "subject": "Roman Bernard Atwood",
+          "relation": "has_channel",
+          "object": "RomanAtwoodVlogs",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "Roman Bernard Atwood is an American YouTube personality and prankster. He is best known for his vlog"
+        },
+        {
+          "subject": "RomanAtwoodVlogs",
+          "relation": "has_views",
+          "object": "5 billion",
+          "confidence": 0.95,
+          "relevance_score": 1.045,
+          "source": "Roman Bernard Atwood is an American YouTube personality and prankster. He is best known for his vlog"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "factual_grounding_score": 0.0,
+      "metadata": {
+        "num_nodes": 4,
+        "num_edges": 4,
+        "num_triplets_total": 4,
+        "num_triplets_ranked": 4,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 0,
+        "avg_triplets_per_doc": 4.0,
+        "inferred_triplets": 0,
+        "coverage_ok": false,
+        "answer_source": "baseline",
+        "grounding_backoff": false,
+        "retrieval_expansion": {
+          "extra_docs": 0,
+          "entities_used": [],
+          "candidate_entities": [
+            "His",
+            "YouTuber",
+            "Roman Atwood",
+            "Roman Bernard"
+          ]
+        },
+        "graph_viz_path": "results\\figures\\knowledge_graphs\\roman_atwood_is_a_content_creator_20251125_201638.png",
+        "model": "gpt-4o-mini",
+        "context_filter": {
+          "kept": 4,
+          "dropped": 0,
+          "precision": 1.0,
+          "fallback_used": false,
+          "query_terms": [
+            "atwood",
+            "bernard",
+            "content",
+            "creator",
+            "personality",
+            "roman",
+            "romanatwoodvlogs",
+            "youtube"
+          ]
+        },
+        "context_filter_precision": 1.0,
+        "question_term_coverage": 0.5,
+        "node_term_coverage": 0.5,
+        "triplet_density": 1.0,
+        "query_terms_used": [
+          "atwood",
+          "bernard",
+          "content",
+          "creator",
+          "personality",
+          "roman",
+          "romanatwoodvlogs",
+          "youtube"
+        ]
+      },
+      "time": 18.712043523788452
+    }
+  ],
+  "comparison": {
+    "baseline": {
+      "factual_accuracy": 0.0,
+      "logical_consistency": 0.5,
+      "hallucination_rate": 0.1,
+      "response_coherence": 0.8333333333333333,
+      "graph_completeness": 0.0,
+      "avg_response_time": 1.739862322807312,
+      "factual_grounding": 0.0,
+      "graph_coverage": 0.0,
+      "context_precision": 0.0,
+      "bleu": 0.0,
+      "rouge_l": 0.0
+    },
+    "graph_augmented": {
+      "factual_accuracy": 0.0,
+      "logical_consistency": 1.0,
+      "hallucination_rate": 0.21428571428571427,
+      "response_coherence": 1.0,
+      "graph_completeness": 0.1995,
+      "avg_response_time": 25.65696120262146,
+      "factual_grounding": 0.0,
+      "graph_coverage": 0.6785714285714286,
+      "context_precision": 1.0,
+      "bleu": 0.0,
+      "rouge_l": 0.0
+    },
+    "improvements_pct": {
+      "factual_accuracy": 0,
+      "logical_consistency": 100.0,
+      "hallucination_rate": -114.28571428571426,
+      "response_coherence": 20.00000000000001,
+      "graph_completeness": 0,
+      "avg_response_time": 1374.6546819419195,
+      "factual_grounding": 0,
+      "graph_coverage": 0,
+      "context_precision": 0,
+      "bleu": 0,
+      "rouge_l": 0
+    },
+    "summary": {
+      "accuracy_gain": 0,
+      "consistency_gain": 100.0,
+      "hallucination_reduction": -114.28571428571426
+    }
+  }
+}

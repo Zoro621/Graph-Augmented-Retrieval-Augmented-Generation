@@ -1,0 +1,6 @@
+Query_ID,Query,Baseline_Accuracy,GA_RAG_Accuracy,Baseline_Consistency,GA_RAG_Consistency,Baseline_Hallucination,GA_RAG_Hallucination,Baseline_Time,GA_RAG_Time
+1,Nikolaj Coster-Waldau worked with the Fox Broadcas...,0.000,0.000,0.500,1.000,0.000,0.000,1.79s,42.68s
+2,Roman Atwood is a content creator....,0.000,0.000,0.500,1.000,0.182,0.400,3.93s,20.88s
+3,"History of art includes architecture, dance, sculp...",0.000,0.000,0.500,1.000,0.605,0.711,5.49s,14.63s
+4,Adrienne Bailon is an accountant....,0.000,0.000,0.500,1.000,0.381,0.458,2.05s,5.52s
+5,System of a Down briefly disbanded in limbo....,1.000,1.000,0.500,1.000,0.000,0.000,1.49s,4.74s

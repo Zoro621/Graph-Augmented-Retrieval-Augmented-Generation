@@ -1,0 +1,26 @@
+================================================================================
+GRAPH-AUGMENTED RAG EXPERIMENT SUMMARY
+================================================================================
+
+Experiment Date: 20251125_013826
+Dataset: fever
+Number of Queries: 5
+Model: gpt-4o-mini
+
+AVERAGE METRICS:
+--------------------------------------------------------------------------------
+Metric                         Baseline        GA-RAG          Improvement    
+--------------------------------------------------------------------------------
+factual_accuracy               0.660           0.800           +21.2%
+logical_consistency            0.500           1.000           +100.0%
+hallucination_rate             0.339           0.363           -6.9%
+response_coherence             0.800           0.940           +17.5%
+graph_completeness             0.000           0.153           +0.0%
+avg_response_time              2.055           9.702           +372.2%
+
+================================================================================
+KEY FINDINGS:
+--------------------------------------------------------------------------------
+• Accuracy Gain: +21.2%
+• Consistency Gain: +100.0%
+• Hallucination Reduction: -6.9%

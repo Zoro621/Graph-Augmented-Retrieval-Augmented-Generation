@@ -1,0 +1,3350 @@
+{
+  "experiment_info": {
+    "timestamp": "20251125_233817",
+    "dataset": "fever",
+    "num_queries": 20,
+    "model": "gpt-4o-mini",
+    "configuration": {
+      "use_spacy": false,
+      "consistency_threshold": 0.7,
+      "k_retrieve": 4
+    }
+  },
+  "baseline_results": [
+    {
+      "query": "Nikolaj Coster-Waldau worked with the Fox Broadcasting Company.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Nikolaj William Coster-Waldau is a Danish actor. He had his breakthrough role in Denmark with the film Nightwatch in 1994. He played Jaime Lannister in the HBO fantasy drama series Game of Thrones, for which he received two Primetime Emmy Award nominations for Outstanding Supporting Actor in a Drama Series.",
+        "Fox Broadcasting Company, LLC is an American commercial broadcast television network serving as the flagship namesake property of Fox Corporation and operated through Fox Entertainment. Fox is based at Fox Corporation's corporate headquarters at 1211 Avenue of the Americas in Midtown Manhattan, New York City, and it hosts additional offices at the Fox Network Center in Los Angeles and at the Fox Media Center in Tempe, Arizona. The channel was launched by News Corporation on October 9, 1986 as a",
+        "Homeland -LRB-TV series-RRB-",
+        "Prisoners of War -LRB-TV series-RRB-"
+      ],
+      "time": 1.3853344917297363,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Roman Atwood is a content creator.",
+      "answer": "Yes, Roman Atwood is a content creator, known for his vlogs and prank videos on YouTube.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Roman Bernard Atwood is an American YouTube personality and prankster. He is best known for his vlogs, where he posts updates about his life. His vlogging channel, \"RomanAtwoodVlogs\", has a total of 5 billion views and 15 million subscribers. He also has another YouTube channel called \"RomanAtwood\", where he used to post prank videos. The channel has been inactive since 2016. His pranks have gained over 1.4 billion views and 10.4 million subscribers. He became the second YouTuber after Germán",
+        "He became the second YouTuber after Germán Garmendia to receive two Diamond Play Buttons for his first two channels.",
+        "Ryan John Seacrest is an American television host and producer. Seacrest is the host of Wheel of Fortune, having hosted since replacing long-time host Pat Sajak in September 2024. Seacrest co-hosted and served as executive producer of Live with Kelly and Ryan, and has hosted other media including American Idol, American Top 40, and On Air with Ryan Seacrest. He became co-host of Dick Clark's New Year's Rockin' Eve in 2005, and he became the sole host following Clark's death in 2012.",
+        "The Hunger Games -LRB-film-RRB-"
+      ],
+      "time": 1.696345329284668,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "History of art includes architecture, dance, sculpture, music, painting, poetry literature, theatre, narrative, film, photography and graphic arts.",
+      "answer": "The history of art includes architecture, sculpture, painting, film, photography, and graphic arts, but it does not explicitly mention dance, music, poetry, literature, or theatre. Therefore, while some of these elements may be related to the broader concept of art, they are not specifically listed in the provided context.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "The history of art focuses on objects made by humans for any number of spiritual, narrative, philosophical, symbolic, conceptual, documentary, decorative, and even functional and other purposes, but with a primary emphasis on its aesthetic visual form. Visual art can be classified in diverse ways, such as separating fine arts from applied arts; inclusively focusing on human creativity; or focusing on different media such as architecture, sculpture, painting, film, photography, and graphic arts.",
+        "painting, film, photography, and graphic arts. In recent years, technological advances have led to video art, computer art, performance art, animation, television, and videogames.",
+        "country in Africa and the twentieth largest nation by area.",
+        "The Ten Commandments -LRB-1956 film-RRB-"
+      ],
+      "time": 2.4056949615478516,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Adrienne Bailon is an accountant.",
+      "answer": "The statement \"Adrienne Bailon is an accountant\" is not correct based on the provided context. She is a television personality, singer, and actress, but there is no mention of her being an accountant.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singer, and actress. She is a former member of the girl groups 3LW and The Cheetah Girls. From 2013 to 2022, Bailon was a co-host of the daytime talk show The Real; for which she won a Daytime Emmy Award. From 2022 to 2023, Bailon-Houghton was a co-anchor of the entertainment news show, E! News.",
+        "Cynthia Ann Stephanie Lauper is an American singer, songwriter and actress. Known for her distinctive image, featuring a variety of hair colors and eccentric clothing, and for her powerful four-octave vocal range, Lauper has sold over 50 million records worldwide. She has also been celebrated for her humanitarian work, particularly as an advocate for LGBTQ rights in the United States.",
+        "He became the second YouTuber after Germán Garmendia to receive two Diamond Play Buttons for his first two channels.",
+        "Michael Giacchino is an American film, television, and video game score composer. He has received many accolades for his work, including an Academy Award for Up (2009), an Emmy for Lost (2004), and three Grammy Awards."
+      ],
+      "time": 5.693467617034912,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "System of a Down briefly disbanded in limbo.",
+      "answer": "I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Prisoners of War -LRB-TV series-RRB-",
+        "The Hunger Games -LRB-film-RRB-",
+        "The Ten Commandments -LRB-1956 film-RRB-",
+        "Homeland -LRB-TV series-RRB-"
+      ],
+      "time": 1.0539414882659912,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Homeland is an American television spy thriller based on the Israeli television series Prisoners of War.",
+      "answer": "Yes, Homeland is an American television spy thriller that is based on the Israeli television series Prisoners of War.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Homeland -LRB-TV series-RRB-",
+        "Prisoners of War -LRB-TV series-RRB-",
+        "The Hunger Games -LRB-film-RRB-",
+        "and December 2025. The show is a mix of horror, science-fiction, mystery, fantasy and coming-of-age drama."
+      ],
+      "time": 1.7573657035827637,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Beautiful reached number two on the Billboard Hot 100 in 2003.",
+      "answer": "I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singer, and actress. She is a former member of the girl groups 3LW and The Cheetah Girls. From 2013 to 2022, Bailon was a co-host of the daytime talk show The Real; for which she won a Daytime Emmy Award. From 2022 to 2023, Bailon-Houghton was a co-anchor of the entertainment news show, E! News.",
+        "He became the second YouTuber after Germán Garmendia to receive two Diamond Play Buttons for his first two channels.",
+        "Cynthia Ann Stephanie Lauper is an American singer, songwriter and actress. Known for her distinctive image, featuring a variety of hair colors and eccentric clothing, and for her powerful four-octave vocal range, Lauper has sold over 50 million records worldwide. She has also been celebrated for her humanitarian work, particularly as an advocate for LGBTQ rights in the United States.",
+        "game mechanics, some of which have become standard over time. As of December 2024, these versions collectively serve as the second-best-selling video game series with over 520 million sales, mostly on mobile devices."
+      ],
+      "time": 1.256115436553955,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Neal Schon was named in 1954.",
+      "answer": "I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "by News Corporation on October 9, 1986 as a competitor to the Big Three television networks, which are the American Broadcasting Company (ABC), the Columbia Broadcasting System (CBS), and the National Broadcasting Company (NBC).",
+        "Ryan John Seacrest is an American television host and producer. Seacrest is the host of Wheel of Fortune, having hosted since replacing long-time host Pat Sajak in September 2024. Seacrest co-hosted and served as executive producer of Live with Kelly and Ryan, and has hosted other media including American Idol, American Top 40, and On Air with Ryan Seacrest. He became co-host of Dick Clark's New Year's Rockin' Eve in 2005, and he became the sole host following Clark's death in 2012.",
+        "The Ten Commandments -LRB-1956 film-RRB-",
+        "the records for most NBA championships won, with 18, and most recorded wins of any NBA franchise."
+      ],
+      "time": 1.1007981300354004,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "The Boston Celtics play their home games at TD Garden.",
+      "answer": "Yes, the Boston Celtics play their home games at TD Garden.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "The Boston Celtics are an American professional basketball team based in Boston. The Celtics compete in the National Basketball Association (NBA) as a member of the Atlantic Division of the Eastern Conference. Founded in 1946 as one of the league's original eight teams, the Celtics play their home games at TD Garden, a shared arena with the NHL's Boston Bruins. The Celtics are commonly regarded as the most successful team in NBA history. They hold the records for most NBA championships won, with",
+        "the records for most NBA championships won, with 18, and most recorded wins of any NBA franchise.",
+        "The Hunger Games -LRB-film-RRB-",
+        "Homeland -LRB-TV series-RRB-"
+      ],
+      "time": 1.2736196517944336,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "The Ten Commandments is an epic film.",
+      "answer": "The Ten Commandments is indeed described as an epic film.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "The Ten Commandments -LRB-1956 film-RRB-",
+        "The Hunger Games -LRB-film-RRB-",
+        "Stranger than Fiction -LRB-2006 film-RRB-",
+        "Prisoners of War -LRB-TV series-RRB-"
+      ],
+      "time": 1.2329001426696777,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Tetris has sold millions of physical copies.",
+      "answer": "The context does not specify whether Tetris has sold millions of physical copies. It mentions that the Tetris series has over 520 million sales, mostly on mobile devices, but does not clarify the breakdown between physical and digital copies. Therefore, I don't know if Tetris has sold millions of physical copies.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Tetris is a puzzle video game created by Alexey Pajitnov, a Soviet software engineer. In typical Tetris gameplay, falling tetromino shapes must be neatly sorted into a pile. Once a horizontal line of the game board is filled in, it disappears, granting points and preventing the pile from overflowing. Since its initial creation, this gameplay has been used in over 220 versions, released for over 70 platforms. Newer versions frequently implement additional game mechanics, some of which have become",
+        "game mechanics, some of which have become standard over time. As of December 2024, these versions collectively serve as the second-best-selling video game series with over 520 million sales, mostly on mobile devices.",
+        "the records for most NBA championships won, with 18, and most recorded wins of any NBA franchise.",
+        "He became the second YouTuber after Germán Garmendia to receive two Diamond Play Buttons for his first two channels."
+      ],
+      "time": 3.147919178009033,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Cyndi Lauper won the Best New Artist award at the 27th Grammy Awards in 1985.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Cynthia Ann Stephanie Lauper is an American singer, songwriter and actress. Known for her distinctive image, featuring a variety of hair colors and eccentric clothing, and for her powerful four-octave vocal range, Lauper has sold over 50 million records worldwide. She has also been celebrated for her humanitarian work, particularly as an advocate for LGBTQ rights in the United States.",
+        "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singer, and actress. She is a former member of the girl groups 3LW and The Cheetah Girls. From 2013 to 2022, Bailon was a co-host of the daytime talk show The Real; for which she won a Daytime Emmy Award. From 2022 to 2023, Bailon-Houghton was a co-anchor of the entertainment news show, E! News.",
+        "the records for most NBA championships won, with 18, and most recorded wins of any NBA franchise.",
+        "Michael Giacchino is an American film, television, and video game score composer. He has received many accolades for his work, including an Academy Award for Up (2009), an Emmy for Lost (2004), and three Grammy Awards."
+      ],
+      "time": 0.8898067474365234,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "There is a movie called The Hunger Games.",
+      "answer": "Yes, there is a movie called The Hunger Games.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "The Hunger Games -LRB-film-RRB-",
+        "Prisoners of War -LRB-TV series-RRB-",
+        "and December 2025. The show is a mix of horror, science-fiction, mystery, fantasy and coming-of-age drama.",
+        "The Ten Commandments -LRB-1956 film-RRB-"
+      ],
+      "time": 1.4207911491394043,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Ryan Gosling has been to a country in Africa.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Ryan Thomas Gosling is a Canadian actor. His work includes both independent films and major studio features, and his accolades include a Golden Globe Award, in addition to nominations for three Academy Awards, a Primetime Emmy Award, and two British Academy Film Awards.",
+        "country in Africa and the twentieth largest nation by area.",
+        "The Hunger Games -LRB-film-RRB-",
+        "Chad, officially the Republic of Chad, is a landlocked country in Central Africa. It is bordered by Libya to the north, Sudan to the east, the Central African Republic to the south, Cameroon to the southwest, Nigeria to the southwest, and Niger to the west. Chad has a population of 19 million, of which 1.6 million live in the capital and largest city of N'Djamena. With a total area of around 1,300,000 km2 (500,000 sq mi), Chad is the fifth-largest country in Africa and the twentieth largest"
+      ],
+      "time": 0.9611325263977051,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Stranger Things is set in Bloomington, Indiana.",
+      "answer": "I don't know.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Stranger Things is an American television series created by the Duffer Brothers for Netflix. Produced by Monkey Massacre Productions and 21 Laps Entertainment, the first season was released on Netflix on July 15, 2016. The second and third seasons followed in October 2017 and July 2019, respectively, and the fourth season was released in two parts in May and July 2022. The fifth and final season is expected to be released in three parts in November and December 2025. The show is a mix of horror,",
+        "and December 2025. The show is a mix of horror, science-fiction, mystery, fantasy and coming-of-age drama.",
+        "Stranger than Fiction -LRB-2006 film-RRB-",
+        "The Hunger Games -LRB-film-RRB-"
+      ],
+      "time": 1.5514633655548096,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Ryan Seacrest is a person.",
+      "answer": "Yes, Ryan Seacrest is a person. He is an American television host and producer known for his work on various media platforms, including hosting Wheel of Fortune and American Idol.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Ryan John Seacrest is an American television host and producer. Seacrest is the host of Wheel of Fortune, having hosted since replacing long-time host Pat Sajak in September 2024. Seacrest co-hosted and served as executive producer of Live with Kelly and Ryan, and has hosted other media including American Idol, American Top 40, and On Air with Ryan Seacrest. He became co-host of Dick Clark's New Year's Rockin' Eve in 2005, and he became the sole host following Clark's death in 2012.",
+        "Ryan Thomas Gosling is a Canadian actor. His work includes both independent films and major studio features, and his accolades include a Golden Globe Award, in addition to nominations for three Academy Awards, a Primetime Emmy Award, and two British Academy Film Awards.",
+        "Michael Giacchino is an American film, television, and video game score composer. He has received many accolades for his work, including an Academy Award for Up (2009), an Emmy for Lost (2004), and three Grammy Awards.",
+        "Cynthia Ann Stephanie Lauper is an American singer, songwriter and actress. Known for her distinctive image, featuring a variety of hair colors and eccentric clothing, and for her powerful four-octave vocal range, Lauper has sold over 50 million records worldwide. She has also been celebrated for her humanitarian work, particularly as an advocate for LGBTQ rights in the United States."
+      ],
+      "time": 3.004868745803833,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Puerto Rico is not an unincorporated territory of the United States.",
+      "answer": "The statement \"Puerto Rico is not an unincorporated territory of the United States\" is false. According to the context, Puerto Rico is indeed organized as an unincorporated territory of the United States.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Puerto Rico, officially the Commonwealth of Puerto Rico, is a self-governing Caribbean archipelago and island organized as an unincorporated territory of the United States under the designation of commonwealth. Located about 1,000 miles (1,600 km) southeast of Miami, Florida, between the Dominican Republic in the Greater Antilles and the U.S. Virgin Islands in the Lesser Antilles, it consists of the eponymous main island and numerous smaller islands, including Vieques, Culebra, and Mona. With",
+        "including Vieques, Culebra, and Mona. With approximately 3.2 million residents, it is divided into 78 municipalities, of which the most populous is the capital municipality of San Juan, followed by those within the San Juan metropolitan area. Spanish and English are the official languages of the government, though Spanish predominates.",
+        "country in Africa and the twentieth largest nation by area.",
+        "Prisoners of War -LRB-TV series-RRB-"
+      ],
+      "time": 2.10697078704834,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Michael Giacchino composed the score for Doctor Strange.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Michael Giacchino is an American film, television, and video game score composer. He has received many accolades for his work, including an Academy Award for Up (2009), an Emmy for Lost (2004), and three Grammy Awards.",
+        "Stranger than Fiction -LRB-2006 film-RRB-",
+        "and December 2025. The show is a mix of horror, science-fiction, mystery, fantasy and coming-of-age drama.",
+        "The Hunger Games -LRB-film-RRB-"
+      ],
+      "time": 1.2512474060058594,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Stranger than Fiction is a film.",
+      "answer": "Yes, Stranger than Fiction is a film.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Stranger than Fiction -LRB-2006 film-RRB-",
+        "The Hunger Games -LRB-film-RRB-",
+        "and December 2025. The show is a mix of horror, science-fiction, mystery, fantasy and coming-of-age drama.",
+        "Stranger Things is an American television series created by the Duffer Brothers for Netflix. Produced by Monkey Massacre Productions and 21 Laps Entertainment, the first season was released on Netflix on July 15, 2016. The second and third seasons followed in October 2017 and July 2019, respectively, and the fourth season was released in two parts in May and July 2022. The fifth and final season is expected to be released in three parts in November and December 2025. The show is a mix of horror,"
+      ],
+      "time": 1.2021105289459229,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Chris Hemsworth appeared in A Perfect Getaway.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Christopher Hemsworth is an Australian actor. Born and raised in Melbourne, Victoria, and Bulman, Northern Territory, he rose to prominence playing Kim Hyde in the Australian television series Home and Away (2004–2007) before beginning a film career in Hollywood. In the Marvel Cinematic Universe, Hemsworth starred as Thor in the 2011 film of the same name and reprised the role in several subsequent installments, which established him among the world's highest-paid actors.",
+        "Ryan Thomas Gosling is a Canadian actor. His work includes both independent films and major studio features, and his accolades include a Golden Globe Award, in addition to nominations for three Academy Awards, a Primetime Emmy Award, and two British Academy Film Awards.",
+        "The Hunger Games -LRB-film-RRB-",
+        "Stranger than Fiction -LRB-2006 film-RRB-"
+      ],
+      "time": 0.9891703128814697,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    }
+  ],
+  "ga_rag_results": [
+    {
+      "query": "Nikolaj Coster-Waldau worked with the Fox Broadcasting Company.",
+      "answer": "[Graph coverage low (4 facts)] I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Nikolaj William Coster-Waldau is a Danish actor. He had his breakthrough role in Denmark with the film Nightwatch in 1994. He played Jaime Lannister in the HBO fantasy drama series Game of Thrones, for which he received two Primetime Emmy Award nominations for Outstanding Supporting Actor in a Drama Series.",
+        "Fox Broadcasting Company, LLC is an American commercial broadcast television network serving as the flagship namesake property of Fox Corporation and operated through Fox Entertainment. Fox is based at Fox Corporation's corporate headquarters at 1211 Avenue of the Americas in Midtown Manhattan, New York City, and it hosts additional offices at the Fox Network Center in Los Angeles and at the Fox Media Center in Tempe, Arizona. The channel was launched by News Corporation on October 9, 1986 as a",
+        "Homeland -LRB-TV series-RRB-",
+        "Prisoners of War -LRB-TV series-RRB-",
+        "by News Corporation on October 9, 1986 as a competitor to the Big Three television networks, which are the American Broadcasting Company (ABC), the Columbia Broadcasting System (CBS), and the National Broadcasting Company (NBC)."
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Nikolaj William Coster-Waldau",
+          "relation": "has_profession",
+          "object": "actor"
+        },
+        {
+          "subject": "Nikolaj William Coster-Waldau",
+          "relation": "played",
+          "object": "Jaime Lannister"
+        },
+        {
+          "subject": "Fox Broadcasting Company, LLC",
+          "relation": "located_in",
+          "object": "Midtown Manhattan, New York City"
+        },
+        {
+          "subject": "Fox Broadcasting Company, LLC",
+          "relation": "operated_through",
+          "object": "Fox Entertainment"
+        },
+        {
+          "subject": "Fox Broadcasting Company, LLC",
+          "relation": "launched_by",
+          "object": "News Corporation"
+        },
+        {
+          "subject": "Fox Broadcasting Company",
+          "relation": "is",
+          "object": "an American commercial broadcast television network"
+        },
+        {
+          "subject": "News Corporation",
+          "relation": "created",
+          "object": "competitor to the Big Three television networks"
+        },
+        {
+          "subject": "American Broadcasting Company",
+          "relation": "is_a",
+          "object": "Big Three television network"
+        },
+        {
+          "subject": "Nikolaj William Coster-Waldau",
+          "relation": "had_breakthrough_role_in",
+          "object": "Denmark"
+        },
+        {
+          "subject": "Nikolaj William Coster-Waldau",
+          "relation": "received",
+          "object": "two Primetime Emmy Award nominations"
+        }
+      ],
+      "ranked_triplets": [
+        {
+          "subject": "Nikolaj William Coster-Waldau",
+          "relation": "has_profession",
+          "object": "actor",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "Nikolaj William Coster-Waldau is a Danish actor. He had his breakthrough role in Denmark with the fi"
+        },
+        {
+          "subject": "Nikolaj William Coster-Waldau",
+          "relation": "played",
+          "object": "Jaime Lannister",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "Nikolaj William Coster-Waldau is a Danish actor. He had his breakthrough role in Denmark with the fi"
+        },
+        {
+          "subject": "Fox Broadcasting Company, LLC",
+          "relation": "located_in",
+          "object": "Midtown Manhattan, New York City",
+          "confidence": 0.95,
+          "relevance_score": 1.3898499999999998,
+          "source": "Fox Broadcasting Company, LLC is an American commercial broadcast television network serving as the "
+        },
+        {
+          "subject": "Fox Broadcasting Company, LLC",
+          "relation": "operated_through",
+          "object": "Fox Entertainment",
+          "confidence": 0.95,
+          "relevance_score": 1.3898499999999998,
+          "source": "Fox Broadcasting Company, LLC is an American commercial broadcast television network serving as the "
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.77,
+      "factual_grounding_score": 0.0,
+      "metadata": {
+        "num_nodes": 14,
+        "num_edges": 10,
+        "num_triplets_total": 10,
+        "num_triplets_ranked": 4,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 0,
+        "avg_triplets_per_doc": 3.3333333333333335,
+        "inferred_triplets": 0,
+        "coverage_ok": false,
+        "answer_source": "baseline",
+        "grounding_backoff": false,
+        "retrieval_expansion": {
+          "extra_docs": 1,
+          "entities_used": [
+            "Fox Broadcasting"
+          ],
+          "candidate_entities": [
+            "Waldau",
+            "Fox Broadcasting",
+            "Company",
+            "Fox Corporation"
+          ]
+        },
+        "graph_viz_path": "results\\figures\\knowledge_graphs\\nikolaj_coster_waldau_worked_with_the_fox_broadcasting_compa_20251125_204737.png",
+        "model": "gpt-4o-mini",
+        "context_filter": {
+          "kept": 4,
+          "dropped": 0,
+          "precision": 1.0,
+          "fallback_used": false,
+          "query_terms": [
+            "broadcasting",
+            "company",
+            "coster",
+            "fox",
+            "nikolaj",
+            "waldau",
+            "william",
+            "worked"
+          ]
+        },
+        "context_filter_precision": 1.0,
+        "question_term_coverage": 0.8571428571428571,
+        "node_term_coverage": 0.8571428571428571,
+        "triplet_density": 0.7142857142857143,
+        "query_terms_used": [
+          "broadcasting",
+          "company",
+          "coster",
+          "fox",
+          "nikolaj",
+          "waldau",
+          "william",
+          "worked"
+        ]
+      },
+      "time": 20.96535015106201
+    },
+    {
+      "query": "Roman Atwood is a content creator.",
+      "answer": "[Graph coverage low (4 facts)] Yes, Roman Atwood is a content creator, known for his vlogs and prank videos on YouTube.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Roman Bernard Atwood is an American YouTube personality and prankster. He is best known for his vlogs, where he posts updates about his life. His vlogging channel, \"RomanAtwoodVlogs\", has a total of 5 billion views and 15 million subscribers. He also has another YouTube channel called \"RomanAtwood\", where he used to post prank videos. The channel has been inactive since 2016. His pranks have gained over 1.4 billion views and 10.4 million subscribers. He became the second YouTuber after Germán",
+        "He became the second YouTuber after Germán Garmendia to receive two Diamond Play Buttons for his first two channels.",
+        "Ryan John Seacrest is an American television host and producer. Seacrest is the host of Wheel of Fortune, having hosted since replacing long-time host Pat Sajak in September 2024. Seacrest co-hosted and served as executive producer of Live with Kelly and Ryan, and has hosted other media including American Idol, American Top 40, and On Air with Ryan Seacrest. He became co-host of Dick Clark's New Year's Rockin' Eve in 2005, and he became the sole host following Clark's death in 2012.",
+        "The Hunger Games -LRB-film-RRB-",
+        "Prisoners of War -LRB-TV series-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Roman Bernard Atwood",
+          "relation": "has_profession",
+          "object": "YouTube personality"
+        },
+        {
+          "subject": "Roman Bernard Atwood",
+          "relation": "has_channel",
+          "object": "RomanAtwoodVlogs"
+        },
+        {
+          "subject": "RomanAtwoodVlogs",
+          "relation": "has_views",
+          "object": "5 billion"
+        },
+        {
+          "subject": "Roman Bernard Atwood",
+          "relation": "is",
+          "object": "an American YouTube personality"
+        }
+      ],
+      "ranked_triplets": [
+        {
+          "subject": "Roman Bernard Atwood",
+          "relation": "is",
+          "object": "an American YouTube personality",
+          "confidence": 0.95,
+          "relevance_score": 1.672,
+          "source": "Roman Bernard Atwood is an American YouTube personality and prankster. He is best known for his vlog"
+        },
+        {
+          "subject": "Roman Bernard Atwood",
+          "relation": "has_profession",
+          "object": "YouTube personality",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "Roman Bernard Atwood is an American YouTube personality and prankster. He is best known for his vlog"
+        },
+        {
+          "subject": "Roman Bernard Atwood",
+          "relation": "has_channel",
+          "object": "RomanAtwoodVlogs",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "Roman Bernard Atwood is an American YouTube personality and prankster. He is best known for his vlog"
+        },
+        {
+          "subject": "RomanAtwoodVlogs",
+          "relation": "has_views",
+          "object": "5 billion",
+          "confidence": 0.95,
+          "relevance_score": 1.045,
+          "source": "Roman Bernard Atwood is an American YouTube personality and prankster. He is best known for his vlog"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "factual_grounding_score": 0.0,
+      "metadata": {
+        "num_nodes": 5,
+        "num_edges": 4,
+        "num_triplets_total": 4,
+        "num_triplets_ranked": 4,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 0,
+        "avg_triplets_per_doc": 4.0,
+        "inferred_triplets": 0,
+        "coverage_ok": false,
+        "answer_source": "baseline",
+        "grounding_backoff": false,
+        "retrieval_expansion": {
+          "extra_docs": 1,
+          "entities_used": [
+            "Roman Bernard"
+          ],
+          "candidate_entities": [
+            "His",
+            "YouTuber",
+            "Roman Atwood",
+            "Roman Bernard"
+          ]
+        },
+        "graph_viz_path": "results\\figures\\knowledge_graphs\\roman_atwood_is_a_content_creator_20251125_204750.png",
+        "model": "gpt-4o-mini",
+        "context_filter": {
+          "kept": 4,
+          "dropped": 0,
+          "precision": 1.0,
+          "fallback_used": false,
+          "query_terms": [
+            "american",
+            "atwood",
+            "bernard",
+            "content",
+            "creator",
+            "personality",
+            "roman",
+            "romanatwoodvlogs",
+            "youtube"
+          ]
+        },
+        "context_filter_precision": 1.0,
+        "question_term_coverage": 0.5,
+        "node_term_coverage": 0.5,
+        "triplet_density": 0.8,
+        "query_terms_used": [
+          "american",
+          "atwood",
+          "bernard",
+          "content",
+          "creator",
+          "personality",
+          "roman",
+          "romanatwoodvlogs",
+          "youtube"
+        ]
+      },
+      "time": 13.153925895690918
+    },
+    {
+      "query": "History of art includes architecture, dance, sculpture, music, painting, poetry literature, theatre, narrative, film, photography and graphic arts.",
+      "answer": "[Graph coverage low (4 facts)] The statement is partially correct. The history of art includes architecture, sculpture, painting, film, photography, and graphic arts, but it does not explicitly mention dance, music, poetry, literature, or theatre in the provided context. Therefore, while the history of art encompasses a wide range of creative expressions, the specific inclusion of those additional forms is not confirmed by the context given.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "The history of art focuses on objects made by humans for any number of spiritual, narrative, philosophical, symbolic, conceptual, documentary, decorative, and even functional and other purposes, but with a primary emphasis on its aesthetic visual form. Visual art can be classified in diverse ways, such as separating fine arts from applied arts; inclusively focusing on human creativity; or focusing on different media such as architecture, sculpture, painting, film, photography, and graphic arts.",
+        "painting, film, photography, and graphic arts. In recent years, technological advances have led to video art, computer art, performance art, animation, television, and videogames.",
+        "country in Africa and the twentieth largest nation by area.",
+        "The Ten Commandments -LRB-1956 film-RRB-",
+        "The Hunger Games -LRB-film-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "history of art",
+          "relation": "focuses_on",
+          "object": "objects made by humans"
+        },
+        {
+          "subject": "history of art",
+          "relation": "includes",
+          "object": "architecture"
+        },
+        {
+          "subject": "history of art",
+          "relation": "includes",
+          "object": "sculpture"
+        },
+        {
+          "subject": "history of art",
+          "relation": "includes",
+          "object": "painting"
+        },
+        {
+          "subject": "technological advances",
+          "relation": "led_to",
+          "object": "video art"
+        },
+        {
+          "subject": "technological advances",
+          "relation": "led_to",
+          "object": "computer art"
+        },
+        {
+          "subject": "technological advances",
+          "relation": "led_to",
+          "object": "performance art"
+        },
+        {
+          "subject": "technological advances",
+          "relation": "led_to",
+          "object": "animation"
+        }
+      ],
+      "ranked_triplets": [
+        {
+          "subject": "history of art",
+          "relation": "includes",
+          "object": "architecture",
+          "confidence": 0.95,
+          "relevance_score": 1.881,
+          "source": "The history of art focuses on objects made by humans for any number of spiritual, narrative, philoso"
+        },
+        {
+          "subject": "history of art",
+          "relation": "includes",
+          "object": "sculpture",
+          "confidence": 0.95,
+          "relevance_score": 1.881,
+          "source": "The history of art focuses on objects made by humans for any number of spiritual, narrative, philoso"
+        },
+        {
+          "subject": "history of art",
+          "relation": "includes",
+          "object": "painting",
+          "confidence": 0.95,
+          "relevance_score": 1.881,
+          "source": "The history of art focuses on objects made by humans for any number of spiritual, narrative, philoso"
+        },
+        {
+          "subject": "history of art",
+          "relation": "focuses_on",
+          "object": "objects made by humans",
+          "confidence": 0.95,
+          "relevance_score": 1.672,
+          "source": "The history of art focuses on objects made by humans for any number of spiritual, narrative, philoso"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "factual_grounding_score": 1.0,
+      "metadata": {
+        "num_nodes": 10,
+        "num_edges": 8,
+        "num_triplets_total": 8,
+        "num_triplets_ranked": 4,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 0,
+        "avg_triplets_per_doc": 4.0,
+        "inferred_triplets": 0,
+        "coverage_ok": false,
+        "answer_source": "baseline",
+        "grounding_backoff": false,
+        "retrieval_expansion": {
+          "extra_docs": 1,
+          "entities_used": [
+            "The"
+          ],
+          "candidate_entities": [
+            "History",
+            "The",
+            "Visual"
+          ]
+        },
+        "graph_viz_path": "results\\figures\\knowledge_graphs\\history_of_art_includes_architecture_dance_sculpture_music_p_20251125_204823.png",
+        "model": "gpt-4o-mini",
+        "context_filter": {
+          "kept": 4,
+          "dropped": 0,
+          "precision": 1.0,
+          "fallback_used": false,
+          "query_terms": [
+            "architecture",
+            "art",
+            "arts",
+            "dance",
+            "film",
+            "graphic",
+            "history",
+            "includes",
+            "literature",
+            "music",
+            "narrative",
+            "painting",
+            "photography",
+            "poetry",
+            "sculpture",
+            "theatre"
+          ]
+        },
+        "context_filter_precision": 1.0,
+        "question_term_coverage": 0.3125,
+        "node_term_coverage": 0.3125,
+        "triplet_density": 0.8,
+        "query_terms_used": [
+          "architecture",
+          "art",
+          "arts",
+          "dance",
+          "film",
+          "graphic",
+          "history",
+          "includes",
+          "literature",
+          "music",
+          "narrative",
+          "painting",
+          "photography",
+          "poetry",
+          "sculpture",
+          "theatre"
+        ]
+      },
+      "time": 32.12224864959717
+    },
+    {
+      "query": "Adrienne Bailon is an accountant.",
+      "answer": "[Graph coverage low (4 facts)] The statement \"Adrienne Bailon is an accountant\" is not supported by the context provided. Therefore, I don't know if she is an accountant.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singer, and actress. She is a former member of the girl groups 3LW and The Cheetah Girls. From 2013 to 2022, Bailon was a co-host of the daytime talk show The Real; for which she won a Daytime Emmy Award. From 2022 to 2023, Bailon-Houghton was a co-anchor of the entertainment news show, E! News.",
+        "Cynthia Ann Stephanie Lauper is an American singer, songwriter and actress. Known for her distinctive image, featuring a variety of hair colors and eccentric clothing, and for her powerful four-octave vocal range, Lauper has sold over 50 million records worldwide. She has also been celebrated for her humanitarian work, particularly as an advocate for LGBTQ rights in the United States.",
+        "He became the second YouTuber after Germán Garmendia to receive two Diamond Play Buttons for his first two channels.",
+        "Michael Giacchino is an American film, television, and video game score composer. He has received many accolades for his work, including an Academy Award for Up (2009), an Emmy for Lost (2004), and three Grammy Awards.",
+        "Prisoners of War -LRB-TV series-RRB-",
+        "The Hunger Games -LRB-film-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "born_in",
+          "object": "October 24, 1983"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "has_profession",
+          "object": "television personality"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "was_member_of",
+          "object": "3LW"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "was_co_host_of",
+          "object": "The Real"
+        }
+      ],
+      "ranked_triplets": [
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "born_in",
+          "object": "October 24, 1983",
+          "confidence": 0.95,
+          "relevance_score": 1.2539999999999998,
+          "source": "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singe"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "has_profession",
+          "object": "television personality",
+          "confidence": 0.95,
+          "relevance_score": 1.2539999999999998,
+          "source": "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singe"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "was_member_of",
+          "object": "3LW",
+          "confidence": 0.95,
+          "relevance_score": 1.2539999999999998,
+          "source": "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singe"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "was_co_host_of",
+          "object": "The Real",
+          "confidence": 0.95,
+          "relevance_score": 1.2539999999999998,
+          "source": "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singe"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "factual_grounding_score": 0.0,
+      "metadata": {
+        "num_nodes": 5,
+        "num_edges": 4,
+        "num_triplets_total": 4,
+        "num_triplets_ranked": 4,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 0,
+        "avg_triplets_per_doc": 4.0,
+        "inferred_triplets": 0,
+        "coverage_ok": false,
+        "answer_source": "baseline",
+        "grounding_backoff": false,
+        "retrieval_expansion": {
+          "extra_docs": 2,
+          "entities_used": [
+            "Bailon",
+            "Houghton"
+          ],
+          "candidate_entities": [
+            "Bailon",
+            "Houghton",
+            "American",
+            "She"
+          ]
+        },
+        "graph_viz_path": "results\\figures\\knowledge_graphs\\adrienne_bailon_is_an_accountant_20251125_204841.png",
+        "model": "gpt-4o-mini",
+        "context_filter": {
+          "kept": 4,
+          "dropped": 0,
+          "precision": 1.0,
+          "fallback_used": false,
+          "query_terms": [
+            "1983",
+            "3lw",
+            "accountant",
+            "adrienne",
+            "bailon",
+            "eliza",
+            "houghton",
+            "october",
+            "personality",
+            "real",
+            "television"
+          ]
+        },
+        "context_filter_precision": 1.0,
+        "question_term_coverage": 0.6666666666666666,
+        "node_term_coverage": 0.6666666666666666,
+        "triplet_density": 0.8,
+        "query_terms_used": [
+          "1983",
+          "3lw",
+          "accountant",
+          "adrienne",
+          "bailon",
+          "eliza",
+          "houghton",
+          "october",
+          "personality",
+          "real",
+          "television"
+        ]
+      },
+      "time": 18.40890121459961
+    },
+    {
+      "query": "System of a Down briefly disbanded in limbo.",
+      "answer": "[Graph coverage low (4 facts)] I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Prisoners of War -LRB-TV series-RRB-",
+        "The Hunger Games -LRB-film-RRB-",
+        "The Ten Commandments -LRB-1956 film-RRB-",
+        "Homeland -LRB-TV series-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Prisoners of War",
+          "relation": "is_a",
+          "object": "TV series"
+        },
+        {
+          "subject": "The Hunger Games",
+          "relation": "is_a",
+          "object": "film"
+        },
+        {
+          "subject": "The Ten Commandments",
+          "relation": "created",
+          "object": "1956 film"
+        },
+        {
+          "subject": "Homeland",
+          "relation": "is_a",
+          "object": "TV series"
+        }
+      ],
+      "ranked_triplets": [
+        {
+          "subject": "Prisoners of War",
+          "relation": "is_a",
+          "object": "TV series",
+          "confidence": 0.95,
+          "relevance_score": 1.2539999999999998,
+          "source": "Prisoners of War -LRB-TV series-RRB-"
+        },
+        {
+          "subject": "The Hunger Games",
+          "relation": "is_a",
+          "object": "film",
+          "confidence": 0.95,
+          "relevance_score": 0.9927499999999999,
+          "source": "The Hunger Games -LRB-film-RRB-"
+        },
+        {
+          "subject": "The Ten Commandments",
+          "relation": "created",
+          "object": "1956 film",
+          "confidence": 0.95,
+          "relevance_score": 0.9405,
+          "source": "The Ten Commandments -LRB-1956 film-RRB-"
+        },
+        {
+          "subject": "Homeland",
+          "relation": "is_a",
+          "object": "TV series",
+          "confidence": 0.95,
+          "relevance_score": 0.8882499999999999,
+          "source": "Homeland -LRB-TV series-RRB-"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "factual_grounding_score": 0.0,
+      "metadata": {
+        "num_nodes": 7,
+        "num_edges": 4,
+        "num_triplets_total": 4,
+        "num_triplets_ranked": 4,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 0,
+        "avg_triplets_per_doc": 1.0,
+        "inferred_triplets": 0,
+        "coverage_ok": false,
+        "answer_source": "baseline",
+        "grounding_backoff": false,
+        "retrieval_expansion": {
+          "extra_docs": 0,
+          "entities_used": [],
+          "candidate_entities": [
+            "LRB",
+            "RRB",
+            "System",
+            "Down"
+          ]
+        },
+        "graph_viz_path": "results\\figures\\knowledge_graphs\\system_of_a_down_briefly_disbanded_in_limbo_20251125_204852.png",
+        "model": "gpt-4o-mini",
+        "context_filter": {
+          "kept": 4,
+          "dropped": 0,
+          "precision": 1.0,
+          "fallback_used": true,
+          "query_terms": [
+            "briefly",
+            "disbanded",
+            "down",
+            "limbo",
+            "system"
+          ]
+        },
+        "context_filter_precision": 1.0,
+        "question_term_coverage": 0.0,
+        "node_term_coverage": 0.0,
+        "triplet_density": 0.5714285714285714,
+        "query_terms_used": [
+          "briefly",
+          "disbanded",
+          "down",
+          "limbo",
+          "system"
+        ]
+      },
+      "time": 11.348058223724365
+    },
+    {
+      "query": "Homeland is an American television spy thriller based on the Israeli television series Prisoners of War.",
+      "answer": "[Graph coverage low (3 facts)] Yes, Homeland is an American television spy thriller that is based on the Israeli television series Prisoners of War.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Homeland -LRB-TV series-RRB-",
+        "Prisoners of War -LRB-TV series-RRB-",
+        "The Hunger Games -LRB-film-RRB-",
+        "and December 2025. The show is a mix of horror, science-fiction, mystery, fantasy and coming-of-age drama."
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Homeland",
+          "relation": "is_a",
+          "object": "TV series"
+        },
+        {
+          "subject": "Prisoners of War",
+          "relation": "is_a",
+          "object": "TV series"
+        },
+        {
+          "subject": "Homeland",
+          "relation": "is_related_to",
+          "object": "Prisoners of War"
+        }
+      ],
+      "ranked_triplets": [
+        {
+          "subject": "Prisoners of War",
+          "relation": "is_a",
+          "object": "TV series",
+          "confidence": 0.95,
+          "relevance_score": 1.5884,
+          "source": "Prisoners of War -LRB-TV series-RRB-"
+        },
+        {
+          "subject": "Homeland",
+          "relation": "is_a",
+          "object": "TV series",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "Homeland -LRB-TV series-RRB-"
+        },
+        {
+          "subject": "Homeland",
+          "relation": "is_related_to",
+          "object": "Prisoners of War",
+          "confidence": 0.8,
+          "relevance_score": 1.4080000000000004,
+          "source": "[INFERRED]"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.75,
+      "factual_grounding_score": 1.0,
+      "metadata": {
+        "num_nodes": 3,
+        "num_edges": 3,
+        "num_triplets_total": 3,
+        "num_triplets_ranked": 3,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 2,
+        "avg_triplets_per_doc": 1.0,
+        "inferred_triplets": 3,
+        "coverage_ok": false,
+        "answer_source": "baseline",
+        "grounding_backoff": false,
+        "retrieval_expansion": {
+          "extra_docs": 0,
+          "entities_used": [],
+          "candidate_entities": [
+            "Homeland",
+            "Prisoners",
+            "War",
+            "LRB"
+          ]
+        },
+        "graph_viz_path": "results\\figures\\knowledge_graphs\\homeland_is_an_american_television_spy_thriller_based_on_the_20251125_204859.png",
+        "model": "gpt-4o-mini",
+        "context_filter": {
+          "kept": 3,
+          "dropped": 0,
+          "precision": 1.0,
+          "fallback_used": false,
+          "query_terms": [
+            "american",
+            "based",
+            "homeland",
+            "israeli",
+            "prisoners",
+            "series",
+            "spy",
+            "television",
+            "thriller",
+            "war"
+          ]
+        },
+        "context_filter_precision": 1.0,
+        "question_term_coverage": 0.4,
+        "node_term_coverage": 0.4,
+        "triplet_density": 1.0,
+        "query_terms_used": [
+          "american",
+          "based",
+          "homeland",
+          "israeli",
+          "prisoners",
+          "series",
+          "spy",
+          "television",
+          "thriller",
+          "war"
+        ]
+      },
+      "time": 6.798767328262329
+    },
+    {
+      "query": "Beautiful reached number two on the Billboard Hot 100 in 2003.",
+      "answer": "[Graph coverage low (3 facts)] I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singer, and actress. She is a former member of the girl groups 3LW and The Cheetah Girls. From 2013 to 2022, Bailon was a co-host of the daytime talk show The Real; for which she won a Daytime Emmy Award. From 2022 to 2023, Bailon-Houghton was a co-anchor of the entertainment news show, E! News.",
+        "He became the second YouTuber after Germán Garmendia to receive two Diamond Play Buttons for his first two channels.",
+        "Cynthia Ann Stephanie Lauper is an American singer, songwriter and actress. Known for her distinctive image, featuring a variety of hair colors and eccentric clothing, and for her powerful four-octave vocal range, Lauper has sold over 50 million records worldwide. She has also been celebrated for her humanitarian work, particularly as an advocate for LGBTQ rights in the United States.",
+        "game mechanics, some of which have become standard over time. As of December 2024, these versions collectively serve as the second-best-selling video game series with over 520 million sales, mostly on mobile devices.",
+        "Prisoners of War -LRB-TV series-RRB-",
+        "The Hunger Games -LRB-film-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "born_in",
+          "object": "October 24, 1983"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "has_profession",
+          "object": "television personality"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "was_member_of",
+          "object": "3LW"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "was_co_host_of",
+          "object": "The Real"
+        },
+        {
+          "subject": "YouTuber",
+          "relation": "received",
+          "object": "two Diamond Play Buttons"
+        },
+        {
+          "subject": "Germán Garmendia",
+          "relation": "was_first",
+          "object": "YouTuber to receive two Diamond Play Buttons"
+        },
+        {
+          "subject": "YouTuber",
+          "relation": "has_channels",
+          "object": "first two channels"
+        },
+        {
+          "subject": "Cynthia Ann Stephanie Lauper",
+          "relation": "has_profession",
+          "object": "singer"
+        },
+        {
+          "subject": "Cynthia Ann Stephanie Lauper",
+          "relation": "has_profession",
+          "object": "actress"
+        },
+        {
+          "subject": "Cynthia Ann Stephanie Lauper",
+          "relation": "advocates_for",
+          "object": "LGBTQ rights"
+        },
+        {
+          "subject": "video game series",
+          "relation": "has_sales",
+          "object": "520 million"
+        },
+        {
+          "subject": "video game series",
+          "relation": "is_second_best_selling",
+          "object": "true"
+        },
+        {
+          "subject": "Prisoners of War",
+          "relation": "is_a",
+          "object": "TV series"
+        },
+        {
+          "subject": "The Hunger Games",
+          "relation": "is_a",
+          "object": "film"
+        },
+        {
+          "subject": "sales",
+          "relation": "occurs_on",
+          "object": "mobile devices"
+        },
+        {
+          "subject": "versions",
+          "relation": "become_standard",
+          "object": "over_time"
+        }
+      ],
+      "ranked_triplets": [
+        {
+          "subject": "YouTuber",
+          "relation": "received",
+          "object": "two Diamond Play Buttons",
+          "confidence": 0.95,
+          "relevance_score": 1.1912999999999998,
+          "source": "He became the second YouTuber after Germán Garmendia to receive two Diamond Play Buttons for his fir"
+        },
+        {
+          "subject": "Germán Garmendia",
+          "relation": "was_first",
+          "object": "YouTuber to receive two Diamond Play Buttons",
+          "confidence": 0.95,
+          "relevance_score": 1.1912999999999998,
+          "source": "He became the second YouTuber after Germán Garmendia to receive two Diamond Play Buttons for his fir"
+        },
+        {
+          "subject": "YouTuber",
+          "relation": "has_channels",
+          "object": "first two channels",
+          "confidence": 0.95,
+          "relevance_score": 1.1912999999999998,
+          "source": "He became the second YouTuber after Germán Garmendia to receive two Diamond Play Buttons for his fir"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7703125,
+      "factual_grounding_score": 0.0,
+      "metadata": {
+        "num_nodes": 25,
+        "num_edges": 16,
+        "num_triplets_total": 16,
+        "num_triplets_ranked": 3,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 3,
+        "avg_triplets_per_doc": 2.6666666666666665,
+        "inferred_triplets": 0,
+        "coverage_ok": false,
+        "answer_source": "baseline",
+        "grounding_backoff": false,
+        "retrieval_expansion": {
+          "extra_docs": 2,
+          "entities_used": [
+            "Bailon",
+            "Houghton"
+          ],
+          "candidate_entities": [
+            "Bailon",
+            "Houghton",
+            "From",
+            "Beautiful"
+          ]
+        },
+        "graph_viz_path": "results\\figures\\knowledge_graphs\\beautiful_reached_number_two_on_the_billboard_hot_100_in_200_20251125_204918.png",
+        "model": "gpt-4o-mini",
+        "context_filter": {
+          "kept": 3,
+          "dropped": 1,
+          "precision": 0.75,
+          "fallback_used": false,
+          "query_terms": [
+            "100",
+            "2003",
+            "beautiful",
+            "billboard",
+            "buttons",
+            "diamond",
+            "hot",
+            "number",
+            "play",
+            "reached",
+            "two"
+          ]
+        },
+        "context_filter_precision": 0.75,
+        "question_term_coverage": 0.125,
+        "node_term_coverage": 0.125,
+        "triplet_density": 0.64,
+        "query_terms_used": [
+          "100",
+          "2003",
+          "beautiful",
+          "billboard",
+          "buttons",
+          "diamond",
+          "hot",
+          "number",
+          "play",
+          "reached",
+          "two"
+        ]
+      },
+      "time": 18.743584871292114
+    },
+    {
+      "query": "Neal Schon was named in 1954.",
+      "answer": "[Graph coverage low (4 facts)] I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "by News Corporation on October 9, 1986 as a competitor to the Big Three television networks, which are the American Broadcasting Company (ABC), the Columbia Broadcasting System (CBS), and the National Broadcasting Company (NBC).",
+        "Ryan John Seacrest is an American television host and producer. Seacrest is the host of Wheel of Fortune, having hosted since replacing long-time host Pat Sajak in September 2024. Seacrest co-hosted and served as executive producer of Live with Kelly and Ryan, and has hosted other media including American Idol, American Top 40, and On Air with Ryan Seacrest. He became co-host of Dick Clark's New Year's Rockin' Eve in 2005, and he became the sole host following Clark's death in 2012.",
+        "The Ten Commandments -LRB-1956 film-RRB-",
+        "the records for most NBA championships won, with 18, and most recorded wins of any NBA franchise.",
+        "Homeland -LRB-TV series-RRB-",
+        "Fox Broadcasting Company, LLC is an American commercial broadcast television network serving as the flagship namesake property of Fox Corporation and operated through Fox Entertainment. Fox is based at Fox Corporation's corporate headquarters at 1211 Avenue of the Americas in Midtown Manhattan, New York City, and it hosts additional offices at the Fox Network Center in Los Angeles and at the Fox Media Center in Tempe, Arizona. The channel was launched by News Corporation on October 9, 1986 as a"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "News Corporation",
+          "relation": "created",
+          "object": "competitor to the Big Three television networks"
+        },
+        {
+          "subject": "American Broadcasting Company",
+          "relation": "is_a",
+          "object": "Big Three television network"
+        },
+        {
+          "subject": "Ryan John Seacrest",
+          "relation": "has_profession",
+          "object": "television host"
+        },
+        {
+          "subject": "Ryan John Seacrest",
+          "relation": "has_profession",
+          "object": "producer"
+        },
+        {
+          "subject": "Ryan John Seacrest",
+          "relation": "hosted",
+          "object": "Wheel of Fortune"
+        },
+        {
+          "subject": "Ryan John Seacrest",
+          "relation": "co_hosted",
+          "object": "Live with Kelly and Ryan"
+        },
+        {
+          "subject": "The Ten Commandments",
+          "relation": "created",
+          "object": "1956 film"
+        },
+        {
+          "subject": "NBA",
+          "relation": "has_record",
+          "object": "most NBA championships won"
+        },
+        {
+          "subject": "NBA",
+          "relation": "has_record",
+          "object": "most recorded wins of any NBA franchise"
+        },
+        {
+          "subject": "Homeland",
+          "relation": "is_a",
+          "object": "TV series"
+        },
+        {
+          "subject": "Fox Broadcasting Company, LLC",
+          "relation": "located_in",
+          "object": "Midtown Manhattan, New York City"
+        },
+        {
+          "subject": "Fox Broadcasting Company, LLC",
+          "relation": "operated_through",
+          "object": "Fox Entertainment"
+        },
+        {
+          "subject": "Fox Broadcasting Company, LLC",
+          "relation": "launched_by",
+          "object": "News Corporation"
+        },
+        {
+          "subject": "Fox Broadcasting Company",
+          "relation": "is",
+          "object": "an American commercial broadcast television network"
+        }
+      ],
+      "ranked_triplets": [
+        {
+          "subject": "News Corporation",
+          "relation": "created",
+          "object": "competitor to the Big Three television networks",
+          "confidence": 0.95,
+          "relevance_score": 1.045,
+          "source": "by News Corporation on October 9, 1986 as a competitor to the Big Three television networks, which a"
+        },
+        {
+          "subject": "American Broadcasting Company",
+          "relation": "is_a",
+          "object": "Big Three television network",
+          "confidence": 0.95,
+          "relevance_score": 1.045,
+          "source": "by News Corporation on October 9, 1986 as a competitor to the Big Three television networks, which a"
+        },
+        {
+          "subject": "Ryan John Seacrest",
+          "relation": "has_profession",
+          "object": "television host",
+          "confidence": 0.95,
+          "relevance_score": 0.9927499999999999,
+          "source": "Ryan John Seacrest is an American television host and producer. Seacrest is the host of Wheel of For"
+        },
+        {
+          "subject": "Ryan John Seacrest",
+          "relation": "has_profession",
+          "object": "producer",
+          "confidence": 0.95,
+          "relevance_score": 0.9927499999999999,
+          "source": "Ryan John Seacrest is an American television host and producer. Seacrest is the host of Wheel of For"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999998,
+      "factual_grounding_score": 0.0,
+      "metadata": {
+        "num_nodes": 21,
+        "num_edges": 14,
+        "num_triplets_total": 14,
+        "num_triplets_ranked": 4,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 4,
+        "avg_triplets_per_doc": 2.3333333333333335,
+        "inferred_triplets": 0,
+        "coverage_ok": false,
+        "answer_source": "baseline",
+        "grounding_backoff": false,
+        "retrieval_expansion": {
+          "extra_docs": 2,
+          "entities_used": [
+            "Seacrest",
+            "Company"
+          ],
+          "candidate_entities": [
+            "Seacrest",
+            "Company",
+            "Neal Schon",
+            "News Corporation"
+          ]
+        },
+        "graph_viz_path": "results\\figures\\knowledge_graphs\\neal_schon_was_named_in_1954_20251125_204929.png",
+        "model": "gpt-4o-mini",
+        "context_filter": {
+          "kept": 4,
+          "dropped": 0,
+          "precision": 1.0,
+          "fallback_used": true,
+          "query_terms": [
+            "1954",
+            "named",
+            "neal",
+            "schon"
+          ]
+        },
+        "context_filter_precision": 1.0,
+        "question_term_coverage": 0.0,
+        "node_term_coverage": 0.0,
+        "triplet_density": 0.6666666666666666,
+        "query_terms_used": [
+          "1954",
+          "named",
+          "neal",
+          "schon"
+        ]
+      },
+      "time": 11.32608151435852
+    },
+    {
+      "query": "The Boston Celtics play their home games at TD Garden.",
+      "answer": "[Graph coverage low (4 facts)] Yes, the Boston Celtics play their home games at TD Garden.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "The Boston Celtics are an American professional basketball team based in Boston. The Celtics compete in the National Basketball Association (NBA) as a member of the Atlantic Division of the Eastern Conference. Founded in 1946 as one of the league's original eight teams, the Celtics play their home games at TD Garden, a shared arena with the NHL's Boston Bruins. The Celtics are commonly regarded as the most successful team in NBA history. They hold the records for most NBA championships won, with",
+        "the records for most NBA championships won, with 18, and most recorded wins of any NBA franchise.",
+        "The Hunger Games -LRB-film-RRB-",
+        "Homeland -LRB-TV series-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Boston Celtics",
+          "relation": "located_in",
+          "object": "Boston"
+        },
+        {
+          "subject": "Boston Celtics",
+          "relation": "compete_in",
+          "object": "National Basketball Association"
+        },
+        {
+          "subject": "Boston Celtics",
+          "relation": "founded_in",
+          "object": "1946"
+        },
+        {
+          "subject": "Boston Celtics",
+          "relation": "play_home_games_at",
+          "object": "TD Garden"
+        },
+        {
+          "subject": "The Hunger Games",
+          "relation": "is_a",
+          "object": "film"
+        }
+      ],
+      "ranked_triplets": [
+        {
+          "subject": "Boston Celtics",
+          "relation": "play_home_games_at",
+          "object": "TD Garden",
+          "confidence": 0.95,
+          "relevance_score": 1.672,
+          "source": "The Boston Celtics are an American professional basketball team based in Boston. The Celtics compete"
+        },
+        {
+          "subject": "Boston Celtics",
+          "relation": "located_in",
+          "object": "Boston",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "The Boston Celtics are an American professional basketball team based in Boston. The Celtics compete"
+        },
+        {
+          "subject": "Boston Celtics",
+          "relation": "compete_in",
+          "object": "National Basketball Association",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "The Boston Celtics are an American professional basketball team based in Boston. The Celtics compete"
+        },
+        {
+          "subject": "Boston Celtics",
+          "relation": "founded_in",
+          "object": "1946",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "The Boston Celtics are an American professional basketball team based in Boston. The Celtics compete"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "factual_grounding_score": 1.0,
+      "metadata": {
+        "num_nodes": 7,
+        "num_edges": 5,
+        "num_triplets_total": 5,
+        "num_triplets_ranked": 4,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 1,
+        "avg_triplets_per_doc": 2.5,
+        "inferred_triplets": 0,
+        "coverage_ok": false,
+        "answer_source": "baseline",
+        "grounding_backoff": false,
+        "retrieval_expansion": {
+          "extra_docs": 0,
+          "entities_used": [],
+          "candidate_entities": [
+            "NBA",
+            "Celtics",
+            "The Boston",
+            "TD Garden"
+          ]
+        },
+        "graph_viz_path": "results\\figures\\knowledge_graphs\\the_boston_celtics_play_their_home_games_at_td_garden_20251125_204944.png",
+        "model": "gpt-4o-mini",
+        "context_filter": {
+          "kept": 4,
+          "dropped": 0,
+          "precision": 1.0,
+          "fallback_used": false,
+          "query_terms": [
+            "1946",
+            "association",
+            "basketball",
+            "boston",
+            "celtics",
+            "games",
+            "garden",
+            "home",
+            "national",
+            "play"
+          ]
+        },
+        "context_filter_precision": 1.0,
+        "question_term_coverage": 0.5,
+        "node_term_coverage": 0.6666666666666666,
+        "triplet_density": 0.7142857142857143,
+        "query_terms_used": [
+          "1946",
+          "association",
+          "basketball",
+          "boston",
+          "celtics",
+          "games",
+          "garden",
+          "home",
+          "national",
+          "play"
+        ]
+      },
+      "time": 14.569716453552246
+    },
+    {
+      "query": "The Ten Commandments is an epic film.",
+      "answer": "[Graph coverage low (4 facts)] The Ten Commandments is indeed described as an epic film.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "The Ten Commandments -LRB-1956 film-RRB-",
+        "The Hunger Games -LRB-film-RRB-",
+        "Stranger than Fiction -LRB-2006 film-RRB-",
+        "Prisoners of War -LRB-TV series-RRB-",
+        "Homeland -LRB-TV series-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "The Ten Commandments",
+          "relation": "is_a",
+          "object": "film"
+        },
+        {
+          "subject": "Stranger than Fiction",
+          "relation": "is_a",
+          "object": "film"
+        },
+        {
+          "subject": "The Hunger Games",
+          "relation": "created",
+          "object": "film"
+        },
+        {
+          "subject": "The Ten Commandments",
+          "relation": "created",
+          "object": "1956 film"
+        },
+        {
+          "subject": "Stranger than Fiction",
+          "relation": "created",
+          "object": "2006 film"
+        }
+      ],
+      "ranked_triplets": [
+        {
+          "subject": "The Ten Commandments",
+          "relation": "is_a",
+          "object": "film",
+          "confidence": 1.0,
+          "relevance_score": 1.7600000000000002,
+          "source": "[INFERRED]"
+        },
+        {
+          "subject": "The Ten Commandments",
+          "relation": "created",
+          "object": "1956 film",
+          "confidence": 0.95,
+          "relevance_score": 1.672,
+          "source": "The Ten Commandments -LRB-1956 film-RRB-"
+        },
+        {
+          "subject": "The Hunger Games",
+          "relation": "created",
+          "object": "film",
+          "confidence": 1.0,
+          "relevance_score": 1.32,
+          "source": "[INFERRED]"
+        },
+        {
+          "subject": "Stranger than Fiction",
+          "relation": "is_a",
+          "object": "film",
+          "confidence": 1.0,
+          "relevance_score": 1.1,
+          "source": "[INFERRED]"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.79,
+      "factual_grounding_score": 1.0,
+      "metadata": {
+        "num_nodes": 6,
+        "num_edges": 5,
+        "num_triplets_total": 5,
+        "num_triplets_ranked": 4,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 2,
+        "avg_triplets_per_doc": 1.0,
+        "inferred_triplets": 3,
+        "coverage_ok": false,
+        "answer_source": "baseline",
+        "grounding_backoff": false,
+        "retrieval_expansion": {
+          "extra_docs": 1,
+          "entities_used": [
+            "LRB"
+          ],
+          "candidate_entities": [
+            "The Ten",
+            "Commandments",
+            "LRB",
+            "RRB"
+          ]
+        },
+        "graph_viz_path": "results\\figures\\knowledge_graphs\\the_ten_commandments_is_an_epic_film_20251125_204952.png",
+        "model": "gpt-4o-mini",
+        "context_filter": {
+          "kept": 4,
+          "dropped": 0,
+          "precision": 1.0,
+          "fallback_used": false,
+          "query_terms": [
+            "1956",
+            "2006",
+            "commandments",
+            "epic",
+            "film",
+            "ten"
+          ]
+        },
+        "context_filter_precision": 1.0,
+        "question_term_coverage": 0.75,
+        "node_term_coverage": 0.75,
+        "triplet_density": 0.8333333333333334,
+        "query_terms_used": [
+          "1956",
+          "2006",
+          "commandments",
+          "epic",
+          "film",
+          "ten"
+        ]
+      },
+      "time": 8.909148454666138
+    },
+    {
+      "query": "Tetris has sold millions of physical copies.",
+      "answer": "[Graph coverage low (4 facts)] The context does not specify whether Tetris has sold millions of physical copies. It mentions that the Tetris series has over 520 million sales, mostly on mobile devices, but does not clarify the breakdown between physical and digital copies. Therefore, I don't know if Tetris has sold millions of physical copies.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Tetris is a puzzle video game created by Alexey Pajitnov, a Soviet software engineer. In typical Tetris gameplay, falling tetromino shapes must be neatly sorted into a pile. Once a horizontal line of the game board is filled in, it disappears, granting points and preventing the pile from overflowing. Since its initial creation, this gameplay has been used in over 220 versions, released for over 70 platforms. Newer versions frequently implement additional game mechanics, some of which have become",
+        "game mechanics, some of which have become standard over time. As of December 2024, these versions collectively serve as the second-best-selling video game series with over 520 million sales, mostly on mobile devices.",
+        "the records for most NBA championships won, with 18, and most recorded wins of any NBA franchise.",
+        "He became the second YouTuber after Germán Garmendia to receive two Diamond Play Buttons for his first two channels.",
+        "Michael Giacchino is an American film, television, and video game score composer. He has received many accolades for his work, including an Academy Award for Up (2009), an Emmy for Lost (2004), and three Grammy Awards.",
+        "Prisoners of War -LRB-TV series-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Tetris",
+          "relation": "created_by",
+          "object": "Alexey Pajitnov"
+        },
+        {
+          "subject": "Alexey Pajitnov",
+          "relation": "has_profession",
+          "object": "Soviet software engineer"
+        },
+        {
+          "subject": "Tetris",
+          "relation": "is a puzzle video game",
+          "object": "created by Alexey Pajitnov"
+        },
+        {
+          "subject": "Tetris gameplay",
+          "relation": "used_in",
+          "object": "over 220 versions"
+        }
+      ],
+      "ranked_triplets": [
+        {
+          "subject": "Tetris",
+          "relation": "created_by",
+          "object": "Alexey Pajitnov",
+          "confidence": 0.95,
+          "relevance_score": 1.2539999999999998,
+          "source": "Tetris is a puzzle video game created by Alexey Pajitnov, a Soviet software engineer. In typical Tet"
+        },
+        {
+          "subject": "Tetris",
+          "relation": "is a puzzle video game",
+          "object": "created by Alexey Pajitnov",
+          "confidence": 0.95,
+          "relevance_score": 1.2539999999999998,
+          "source": "Tetris is a puzzle video game created by Alexey Pajitnov, a Soviet software engineer. In typical Tet"
+        },
+        {
+          "subject": "Tetris gameplay",
+          "relation": "used_in",
+          "object": "over 220 versions",
+          "confidence": 0.9,
+          "relevance_score": 1.1880000000000002,
+          "source": "Tetris is a puzzle video game created by Alexey Pajitnov, a Soviet software engineer. In typical Tet"
+        },
+        {
+          "subject": "Alexey Pajitnov",
+          "relation": "has_profession",
+          "object": "Soviet software engineer",
+          "confidence": 0.95,
+          "relevance_score": 1.045,
+          "source": "Tetris is a puzzle video game created by Alexey Pajitnov, a Soviet software engineer. In typical Tet"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7687499999999999,
+      "factual_grounding_score": 0.5,
+      "metadata": {
+        "num_nodes": 6,
+        "num_edges": 4,
+        "num_triplets_total": 4,
+        "num_triplets_ranked": 4,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 0,
+        "avg_triplets_per_doc": 4.0,
+        "inferred_triplets": 0,
+        "coverage_ok": false,
+        "answer_source": "baseline",
+        "grounding_backoff": false,
+        "retrieval_expansion": {
+          "extra_docs": 2,
+          "entities_used": [
+            "Alexey Pajitnov",
+            "Soviet"
+          ],
+          "candidate_entities": [
+            "Tetris",
+            "Alexey Pajitnov",
+            "Soviet",
+            "Once"
+          ]
+        },
+        "graph_viz_path": "results\\figures\\knowledge_graphs\\tetris_has_sold_millions_of_physical_copies_20251125_205002.png",
+        "model": "gpt-4o-mini",
+        "context_filter": {
+          "kept": 4,
+          "dropped": 0,
+          "precision": 1.0,
+          "fallback_used": false,
+          "query_terms": [
+            "alexey",
+            "copies",
+            "created",
+            "gameplay",
+            "millions",
+            "pajitnov",
+            "physical",
+            "sold",
+            "tetris"
+          ]
+        },
+        "context_filter_precision": 1.0,
+        "question_term_coverage": 0.2,
+        "node_term_coverage": 0.2,
+        "triplet_density": 0.6666666666666666,
+        "query_terms_used": [
+          "alexey",
+          "copies",
+          "created",
+          "gameplay",
+          "millions",
+          "pajitnov",
+          "physical",
+          "sold",
+          "tetris"
+        ]
+      },
+      "time": 9.778747081756592
+    },
+    {
+      "query": "Cyndi Lauper won the Best New Artist award at the 27th Grammy Awards in 1985.",
+      "answer": "[Graph coverage low (2 facts)] I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Cynthia Ann Stephanie Lauper is an American singer, songwriter and actress. Known for her distinctive image, featuring a variety of hair colors and eccentric clothing, and for her powerful four-octave vocal range, Lauper has sold over 50 million records worldwide. She has also been celebrated for her humanitarian work, particularly as an advocate for LGBTQ rights in the United States.",
+        "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singer, and actress. She is a former member of the girl groups 3LW and The Cheetah Girls. From 2013 to 2022, Bailon was a co-host of the daytime talk show The Real; for which she won a Daytime Emmy Award. From 2022 to 2023, Bailon-Houghton was a co-anchor of the entertainment news show, E! News.",
+        "the records for most NBA championships won, with 18, and most recorded wins of any NBA franchise.",
+        "Michael Giacchino is an American film, television, and video game score composer. He has received many accolades for his work, including an Academy Award for Up (2009), an Emmy for Lost (2004), and three Grammy Awards.",
+        "Prisoners of War -LRB-TV series-RRB-",
+        "country in Africa and the twentieth largest nation by area."
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "born_in",
+          "object": "October 24, 1983"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "has_profession",
+          "object": "television personality"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "was_member_of",
+          "object": "3LW"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "was_co_host_of",
+          "object": "The Real"
+        },
+        {
+          "subject": "Michael Giacchino",
+          "relation": "has_profession",
+          "object": "film, television, and video game score composer"
+        },
+        {
+          "subject": "Michael Giacchino",
+          "relation": "received",
+          "object": "Academy Award for Up"
+        },
+        {
+          "subject": "Michael Giacchino",
+          "relation": "received",
+          "object": "Emmy for Lost"
+        },
+        {
+          "subject": "Michael Giacchino",
+          "relation": "received",
+          "object": "three Grammy Awards"
+        }
+      ],
+      "ranked_triplets": [
+        {
+          "subject": "Michael Giacchino",
+          "relation": "received",
+          "object": "three Grammy Awards",
+          "confidence": 0.95,
+          "relevance_score": 1.3898499999999998,
+          "source": "Michael Giacchino is an American film, television, and video game score composer. He has received ma"
+        },
+        {
+          "subject": "Michael Giacchino",
+          "relation": "received",
+          "object": "Academy Award for Up",
+          "confidence": 0.95,
+          "relevance_score": 1.1912999999999998,
+          "source": "Michael Giacchino is an American film, television, and video game score composer. He has received ma"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "factual_grounding_score": 0.0,
+      "metadata": {
+        "num_nodes": 10,
+        "num_edges": 8,
+        "num_triplets_total": 8,
+        "num_triplets_ranked": 2,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 1,
+        "avg_triplets_per_doc": 4.0,
+        "inferred_triplets": 0,
+        "coverage_ok": false,
+        "answer_source": "baseline",
+        "grounding_backoff": false,
+        "retrieval_expansion": {
+          "extra_docs": 2,
+          "entities_used": [
+            "Bailon",
+            "American"
+          ],
+          "candidate_entities": [
+            "Bailon",
+            "American",
+            "She",
+            "Houghton"
+          ]
+        },
+        "graph_viz_path": "results\\figures\\knowledge_graphs\\cyndi_lauper_won_the_best_new_artist_award_at_the_27th_gramm_20251125_205012.png",
+        "model": "gpt-4o-mini",
+        "context_filter": {
+          "kept": 2,
+          "dropped": 2,
+          "precision": 0.5,
+          "fallback_used": false,
+          "query_terms": [
+            "1985",
+            "27th",
+            "academy",
+            "artist",
+            "award",
+            "awards",
+            "best",
+            "cyndi",
+            "grammy",
+            "lauper",
+            "new",
+            "won"
+          ]
+        },
+        "context_filter_precision": 0.5,
+        "question_term_coverage": 0.2727272727272727,
+        "node_term_coverage": 0.2727272727272727,
+        "triplet_density": 0.8,
+        "query_terms_used": [
+          "1985",
+          "27th",
+          "academy",
+          "artist",
+          "award",
+          "awards",
+          "best",
+          "cyndi",
+          "grammy",
+          "lauper",
+          "new",
+          "won"
+        ]
+      },
+      "time": 9.566593647003174
+    },
+    {
+      "query": "There is a movie called The Hunger Games.",
+      "answer": "[Graph coverage low (4 facts)] Yes, there is a movie called The Hunger Games.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "The Hunger Games -LRB-film-RRB-",
+        "Prisoners of War -LRB-TV series-RRB-",
+        "and December 2025. The show is a mix of horror, science-fiction, mystery, fantasy and coming-of-age drama.",
+        "The Ten Commandments -LRB-1956 film-RRB-",
+        "game mechanics, some of which have become standard over time. As of December 2024, these versions collectively serve as the second-best-selling video game series with over 520 million sales, mostly on mobile devices.",
+        "Homeland -LRB-TV series-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "The Hunger Games",
+          "relation": "is_a",
+          "object": "film"
+        },
+        {
+          "subject": "The Hunger Games",
+          "relation": "is_a",
+          "object": "movie"
+        },
+        {
+          "subject": "The Hunger Games",
+          "relation": "is_based_on",
+          "object": "a book"
+        },
+        {
+          "subject": "The Hunger Games",
+          "relation": "has_genre",
+          "object": "science fiction"
+        }
+      ],
+      "ranked_triplets": [
+        {
+          "subject": "The Hunger Games",
+          "relation": "is_a",
+          "object": "movie",
+          "confidence": 0.9,
+          "relevance_score": 1.5840000000000003,
+          "source": "[INFERRED]"
+        },
+        {
+          "subject": "The Hunger Games",
+          "relation": "is_a",
+          "object": "film",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "The Hunger Games -LRB-film-RRB-"
+        },
+        {
+          "subject": "The Hunger Games",
+          "relation": "is_based_on",
+          "object": "a book",
+          "confidence": 0.8,
+          "relevance_score": 1.4080000000000004,
+          "source": "[INFERRED]"
+        },
+        {
+          "subject": "The Hunger Games",
+          "relation": "has_genre",
+          "object": "science fiction",
+          "confidence": 0.7,
+          "relevance_score": 1.0779999999999998,
+          "source": "[INFERRED]"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.71875,
+      "factual_grounding_score": 1.0,
+      "metadata": {
+        "num_nodes": 5,
+        "num_edges": 4,
+        "num_triplets_total": 4,
+        "num_triplets_ranked": 4,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 1,
+        "avg_triplets_per_doc": 1.0,
+        "inferred_triplets": 3,
+        "coverage_ok": false,
+        "answer_source": "baseline",
+        "grounding_backoff": false,
+        "retrieval_expansion": {
+          "extra_docs": 2,
+          "entities_used": [
+            "Games",
+            "LRB"
+          ],
+          "candidate_entities": [
+            "The Hunger",
+            "Games",
+            "LRB",
+            "RRB"
+          ]
+        },
+        "graph_viz_path": "results\\figures\\knowledge_graphs\\there_is_a_movie_called_the_hunger_games_20251125_205019.png",
+        "model": "gpt-4o-mini",
+        "context_filter": {
+          "kept": 4,
+          "dropped": 0,
+          "precision": 1.0,
+          "fallback_used": false,
+          "query_terms": [
+            "book",
+            "called",
+            "fiction",
+            "film",
+            "games",
+            "hunger",
+            "movie",
+            "science"
+          ]
+        },
+        "context_filter_precision": 1.0,
+        "question_term_coverage": 0.75,
+        "node_term_coverage": 0.75,
+        "triplet_density": 0.8,
+        "query_terms_used": [
+          "book",
+          "called",
+          "fiction",
+          "film",
+          "games",
+          "hunger",
+          "movie",
+          "science"
+        ]
+      },
+      "time": 6.636690139770508
+    },
+    {
+      "query": "Ryan Gosling has been to a country in Africa.",
+      "answer": "[Graph coverage low (4 facts)] I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Ryan Thomas Gosling is a Canadian actor. His work includes both independent films and major studio features, and his accolades include a Golden Globe Award, in addition to nominations for three Academy Awards, a Primetime Emmy Award, and two British Academy Film Awards.",
+        "country in Africa and the twentieth largest nation by area.",
+        "The Hunger Games -LRB-film-RRB-",
+        "Chad, officially the Republic of Chad, is a landlocked country in Central Africa. It is bordered by Libya to the north, Sudan to the east, the Central African Republic to the south, Cameroon to the southwest, Nigeria to the southwest, and Niger to the west. Chad has a population of 19 million, of which 1.6 million live in the capital and largest city of N'Djamena. With a total area of around 1,300,000 km2 (500,000 sq mi), Chad is the fifth-largest country in Africa and the twentieth largest",
+        "He became the second YouTuber after Germán Garmendia to receive two Diamond Play Buttons for his first two channels.",
+        "Ryan John Seacrest is an American television host and producer. Seacrest is the host of Wheel of Fortune, having hosted since replacing long-time host Pat Sajak in September 2024. Seacrest co-hosted and served as executive producer of Live with Kelly and Ryan, and has hosted other media including American Idol, American Top 40, and On Air with Ryan Seacrest. He became co-host of Dick Clark's New Year's Rockin' Eve in 2005, and he became the sole host following Clark's death in 2012."
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Ryan Thomas Gosling",
+          "relation": "has_profession",
+          "object": "actor"
+        },
+        {
+          "subject": "Ryan Thomas Gosling",
+          "relation": "located_in",
+          "object": "Canada"
+        },
+        {
+          "subject": "Ryan Thomas Gosling",
+          "relation": "won",
+          "object": "Golden Globe Award"
+        },
+        {
+          "subject": "Ryan Thomas Gosling",
+          "relation": "nominated_for",
+          "object": "three Academy Awards"
+        },
+        {
+          "subject": "country",
+          "relation": "located_in",
+          "object": "Africa"
+        },
+        {
+          "subject": "Chad",
+          "relation": "officially_named",
+          "object": "Republic of Chad"
+        },
+        {
+          "subject": "Chad",
+          "relation": "located_in",
+          "object": "Central Africa"
+        },
+        {
+          "subject": "Chad",
+          "relation": "has_population",
+          "object": "19 million"
+        },
+        {
+          "subject": "Chad",
+          "relation": "has_area",
+          "object": "1,300,000 km2"
+        },
+        {
+          "subject": "Ryan John Seacrest",
+          "relation": "has_profession",
+          "object": "television host"
+        },
+        {
+          "subject": "Ryan John Seacrest",
+          "relation": "has_profession",
+          "object": "producer"
+        },
+        {
+          "subject": "Ryan John Seacrest",
+          "relation": "hosted",
+          "object": "Wheel of Fortune"
+        },
+        {
+          "subject": "Ryan John Seacrest",
+          "relation": "co_hosted",
+          "object": "Live with Kelly and Ryan"
+        },
+        {
+          "subject": "country",
+          "relation": "is_largest_nation_by_area",
+          "object": "twentieth"
+        }
+      ],
+      "ranked_triplets": [
+        {
+          "subject": "Ryan Thomas Gosling",
+          "relation": "has_profession",
+          "object": "actor",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "Ryan Thomas Gosling is a Canadian actor. His work includes both independent films and major studio f"
+        },
+        {
+          "subject": "Ryan Thomas Gosling",
+          "relation": "located_in",
+          "object": "Canada",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "Ryan Thomas Gosling is a Canadian actor. His work includes both independent films and major studio f"
+        },
+        {
+          "subject": "Ryan Thomas Gosling",
+          "relation": "won",
+          "object": "Golden Globe Award",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "Ryan Thomas Gosling is a Canadian actor. His work includes both independent films and major studio f"
+        },
+        {
+          "subject": "Ryan Thomas Gosling",
+          "relation": "nominated_for",
+          "object": "three Academy Awards",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "Ryan Thomas Gosling is a Canadian actor. His work includes both independent films and major studio f"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7732142857142856,
+      "factual_grounding_score": 0.0,
+      "metadata": {
+        "num_nodes": 18,
+        "num_edges": 14,
+        "num_triplets_total": 14,
+        "num_triplets_ranked": 4,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 1,
+        "avg_triplets_per_doc": 3.5,
+        "inferred_triplets": 0,
+        "coverage_ok": false,
+        "answer_source": "baseline",
+        "grounding_backoff": false,
+        "retrieval_expansion": {
+          "extra_docs": 2,
+          "entities_used": [
+            "Award",
+            "Ryan Thomas"
+          ],
+          "candidate_entities": [
+            "Africa",
+            "Award",
+            "Ryan Gosling",
+            "Ryan Thomas"
+          ]
+        },
+        "graph_viz_path": "results\\figures\\knowledge_graphs\\ryan_gosling_has_been_to_a_country_in_africa_20251125_205043.png",
+        "model": "gpt-4o-mini",
+        "context_filter": {
+          "kept": 4,
+          "dropped": 0,
+          "precision": 1.0,
+          "fallback_used": false,
+          "query_terms": [
+            "academy",
+            "actor",
+            "africa",
+            "award",
+            "awards",
+            "canada",
+            "country",
+            "globe",
+            "golden",
+            "gosling",
+            "ryan",
+            "thomas",
+            "three"
+          ]
+        },
+        "context_filter_precision": 1.0,
+        "question_term_coverage": 0.5,
+        "node_term_coverage": 1.0,
+        "triplet_density": 0.7777777777777778,
+        "query_terms_used": [
+          "academy",
+          "actor",
+          "africa",
+          "award",
+          "awards",
+          "canada",
+          "country",
+          "globe",
+          "golden",
+          "gosling",
+          "ryan",
+          "thomas",
+          "three"
+        ]
+      },
+      "time": 24.64621329307556
+    },
+    {
+      "query": "Stranger Things is set in Bloomington, Indiana.",
+      "answer": "[Graph coverage low (4 facts)] I don't know.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Stranger Things is an American television series created by the Duffer Brothers for Netflix. Produced by Monkey Massacre Productions and 21 Laps Entertainment, the first season was released on Netflix on July 15, 2016. The second and third seasons followed in October 2017 and July 2019, respectively, and the fourth season was released in two parts in May and July 2022. The fifth and final season is expected to be released in three parts in November and December 2025. The show is a mix of horror,",
+        "and December 2025. The show is a mix of horror, science-fiction, mystery, fantasy and coming-of-age drama.",
+        "Stranger than Fiction -LRB-2006 film-RRB-",
+        "The Hunger Games -LRB-film-RRB-",
+        "The Ten Commandments -LRB-1956 film-RRB-",
+        "Prisoners of War -LRB-TV series-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Stranger Things",
+          "relation": "created_by",
+          "object": "Duffer Brothers"
+        },
+        {
+          "subject": "Stranger Things",
+          "relation": "produced_by",
+          "object": "Monkey Massacre Productions"
+        },
+        {
+          "subject": "Stranger Things",
+          "relation": "produced_by",
+          "object": "21 Laps Entertainment"
+        },
+        {
+          "subject": "Stranger Things",
+          "relation": "released_on",
+          "object": "Netflix"
+        },
+        {
+          "subject": "Stranger than Fiction",
+          "relation": "created",
+          "object": "2006 film"
+        }
+      ],
+      "ranked_triplets": [
+        {
+          "subject": "Stranger Things",
+          "relation": "created_by",
+          "object": "Duffer Brothers",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "Stranger Things is an American television series created by the Duffer Brothers for Netflix. Produce"
+        },
+        {
+          "subject": "Stranger Things",
+          "relation": "produced_by",
+          "object": "Monkey Massacre Productions",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "Stranger Things is an American television series created by the Duffer Brothers for Netflix. Produce"
+        },
+        {
+          "subject": "Stranger Things",
+          "relation": "produced_by",
+          "object": "21 Laps Entertainment",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "Stranger Things is an American television series created by the Duffer Brothers for Netflix. Produce"
+        },
+        {
+          "subject": "Stranger Things",
+          "relation": "released_on",
+          "object": "Netflix",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "Stranger Things is an American television series created by the Duffer Brothers for Netflix. Produce"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "factual_grounding_score": 0.0,
+      "metadata": {
+        "num_nodes": 7,
+        "num_edges": 5,
+        "num_triplets_total": 5,
+        "num_triplets_ranked": 4,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 1,
+        "avg_triplets_per_doc": 2.5,
+        "inferred_triplets": 0,
+        "coverage_ok": false,
+        "answer_source": "baseline",
+        "grounding_backoff": false,
+        "retrieval_expansion": {
+          "extra_docs": 2,
+          "entities_used": [
+            "The",
+            "Netflix"
+          ],
+          "candidate_entities": [
+            "The",
+            "July",
+            "Stranger Things",
+            "Netflix"
+          ]
+        },
+        "graph_viz_path": "results\\figures\\knowledge_graphs\\stranger_things_is_set_in_bloomington_indiana_20251125_205053.png",
+        "model": "gpt-4o-mini",
+        "context_filter": {
+          "kept": 4,
+          "dropped": 0,
+          "precision": 1.0,
+          "fallback_used": false,
+          "query_terms": [
+            "bloomington",
+            "brothers",
+            "duffer",
+            "entertainment",
+            "fiction",
+            "indiana",
+            "laps",
+            "massacre",
+            "monkey",
+            "netflix",
+            "productions",
+            "set",
+            "stranger",
+            "than",
+            "things"
+          ]
+        },
+        "context_filter_precision": 1.0,
+        "question_term_coverage": 0.4,
+        "node_term_coverage": 0.4,
+        "triplet_density": 0.7142857142857143,
+        "query_terms_used": [
+          "bloomington",
+          "brothers",
+          "duffer",
+          "entertainment",
+          "fiction",
+          "indiana",
+          "laps",
+          "massacre",
+          "monkey",
+          "netflix",
+          "productions",
+          "set",
+          "stranger",
+          "than",
+          "things"
+        ]
+      },
+      "time": 9.801787853240967
+    },
+    {
+      "query": "Ryan Seacrest is a person.",
+      "answer": "[Graph coverage low (4 facts)] Yes, Ryan Seacrest is a person. He is an American television host and producer known for his work on various media platforms, including hosting Wheel of Fortune and American Idol.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Ryan John Seacrest is an American television host and producer. Seacrest is the host of Wheel of Fortune, having hosted since replacing long-time host Pat Sajak in September 2024. Seacrest co-hosted and served as executive producer of Live with Kelly and Ryan, and has hosted other media including American Idol, American Top 40, and On Air with Ryan Seacrest. He became co-host of Dick Clark's New Year's Rockin' Eve in 2005, and he became the sole host following Clark's death in 2012.",
+        "Ryan Thomas Gosling is a Canadian actor. His work includes both independent films and major studio features, and his accolades include a Golden Globe Award, in addition to nominations for three Academy Awards, a Primetime Emmy Award, and two British Academy Film Awards.",
+        "Michael Giacchino is an American film, television, and video game score composer. He has received many accolades for his work, including an Academy Award for Up (2009), an Emmy for Lost (2004), and three Grammy Awards.",
+        "Cynthia Ann Stephanie Lauper is an American singer, songwriter and actress. Known for her distinctive image, featuring a variety of hair colors and eccentric clothing, and for her powerful four-octave vocal range, Lauper has sold over 50 million records worldwide. She has also been celebrated for her humanitarian work, particularly as an advocate for LGBTQ rights in the United States.",
+        "Homeland -LRB-TV series-RRB-",
+        "He became the second YouTuber after Germán Garmendia to receive two Diamond Play Buttons for his first two channels."
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Ryan John Seacrest",
+          "relation": "has_profession",
+          "object": "television host"
+        },
+        {
+          "subject": "Ryan John Seacrest",
+          "relation": "has_profession",
+          "object": "producer"
+        },
+        {
+          "subject": "Ryan John Seacrest",
+          "relation": "hosted",
+          "object": "Wheel of Fortune"
+        },
+        {
+          "subject": "Ryan John Seacrest",
+          "relation": "co_hosted",
+          "object": "Live with Kelly and Ryan"
+        },
+        {
+          "subject": "Ryan Thomas Gosling",
+          "relation": "has_profession",
+          "object": "actor"
+        },
+        {
+          "subject": "Ryan Thomas Gosling",
+          "relation": "located_in",
+          "object": "Canada"
+        },
+        {
+          "subject": "Ryan Thomas Gosling",
+          "relation": "won",
+          "object": "Golden Globe Award"
+        },
+        {
+          "subject": "Ryan Thomas Gosling",
+          "relation": "nominated_for",
+          "object": "three Academy Awards"
+        }
+      ],
+      "ranked_triplets": [
+        {
+          "subject": "Ryan John Seacrest",
+          "relation": "has_profession",
+          "object": "television host",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "Ryan John Seacrest is an American television host and producer. Seacrest is the host of Wheel of For"
+        },
+        {
+          "subject": "Ryan John Seacrest",
+          "relation": "has_profession",
+          "object": "producer",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "Ryan John Seacrest is an American television host and producer. Seacrest is the host of Wheel of For"
+        },
+        {
+          "subject": "Ryan John Seacrest",
+          "relation": "hosted",
+          "object": "Wheel of Fortune",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "Ryan John Seacrest is an American television host and producer. Seacrest is the host of Wheel of For"
+        },
+        {
+          "subject": "Ryan John Seacrest",
+          "relation": "co_hosted",
+          "object": "Live with Kelly and Ryan",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "Ryan John Seacrest is an American television host and producer. Seacrest is the host of Wheel of For"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "factual_grounding_score": 0.75,
+      "metadata": {
+        "num_nodes": 10,
+        "num_edges": 8,
+        "num_triplets_total": 8,
+        "num_triplets_ranked": 4,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 2,
+        "avg_triplets_per_doc": 4.0,
+        "inferred_triplets": 0,
+        "coverage_ok": false,
+        "answer_source": "baseline",
+        "grounding_backoff": false,
+        "retrieval_expansion": {
+          "extra_docs": 2,
+          "entities_used": [
+            "Seacrest",
+            "Award"
+          ],
+          "candidate_entities": [
+            "Seacrest",
+            "Ryan Seacrest",
+            "Award",
+            "Ryan John"
+          ]
+        },
+        "graph_viz_path": "results\\figures\\knowledge_graphs\\ryan_seacrest_is_a_person_20251125_205057.png",
+        "model": "gpt-4o-mini",
+        "context_filter": {
+          "kept": 4,
+          "dropped": 0,
+          "precision": 1.0,
+          "fallback_used": false,
+          "query_terms": [
+            "fortune",
+            "host",
+            "john",
+            "kelly",
+            "live",
+            "person",
+            "producer",
+            "ryan",
+            "seacrest",
+            "television",
+            "wheel"
+          ]
+        },
+        "context_filter_precision": 1.0,
+        "question_term_coverage": 0.6666666666666666,
+        "node_term_coverage": 0.6666666666666666,
+        "triplet_density": 0.8,
+        "query_terms_used": [
+          "fortune",
+          "host",
+          "john",
+          "kelly",
+          "live",
+          "person",
+          "producer",
+          "ryan",
+          "seacrest",
+          "television",
+          "wheel"
+        ]
+      },
+      "time": 4.436531066894531
+    },
+    {
+      "query": "Puerto Rico is not an unincorporated territory of the United States.",
+      "answer": "[Graph coverage low (4 facts)] The statement \"Puerto Rico is not an unincorporated territory of the United States\" is false. According to the context, Puerto Rico is indeed organized as an unincorporated territory of the United States.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Puerto Rico, officially the Commonwealth of Puerto Rico, is a self-governing Caribbean archipelago and island organized as an unincorporated territory of the United States under the designation of commonwealth. Located about 1,000 miles (1,600 km) southeast of Miami, Florida, between the Dominican Republic in the Greater Antilles and the U.S. Virgin Islands in the Lesser Antilles, it consists of the eponymous main island and numerous smaller islands, including Vieques, Culebra, and Mona. With",
+        "including Vieques, Culebra, and Mona. With approximately 3.2 million residents, it is divided into 78 municipalities, of which the most populous is the capital municipality of San Juan, followed by those within the San Juan metropolitan area. Spanish and English are the official languages of the government, though Spanish predominates.",
+        "country in Africa and the twentieth largest nation by area.",
+        "Prisoners of War -LRB-TV series-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Puerto Rico",
+          "relation": "is_a",
+          "object": "self-governing Caribbean archipelago"
+        },
+        {
+          "subject": "Puerto Rico",
+          "relation": "is_located_in",
+          "object": "Caribbean"
+        },
+        {
+          "subject": "Puerto Rico",
+          "relation": "is_an_territory_of",
+          "object": "United States"
+        },
+        {
+          "subject": "Puerto Rico",
+          "relation": "is organized as",
+          "object": "an unincorporated territory of the United States"
+        }
+      ],
+      "ranked_triplets": [
+        {
+          "subject": "Puerto Rico",
+          "relation": "is organized as",
+          "object": "an unincorporated territory of the United States",
+          "confidence": 0.95,
+          "relevance_score": 2.9259999999999997,
+          "source": "Puerto Rico, officially the Commonwealth of Puerto Rico, is a self-governing Caribbean archipelago a"
+        },
+        {
+          "subject": "Puerto Rico",
+          "relation": "is_an_territory_of",
+          "object": "United States",
+          "confidence": 0.95,
+          "relevance_score": 1.672,
+          "source": "Puerto Rico, officially the Commonwealth of Puerto Rico, is a self-governing Caribbean archipelago a"
+        },
+        {
+          "subject": "Puerto Rico",
+          "relation": "is_a",
+          "object": "self-governing Caribbean archipelago",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "Puerto Rico, officially the Commonwealth of Puerto Rico, is a self-governing Caribbean archipelago a"
+        },
+        {
+          "subject": "Puerto Rico",
+          "relation": "is_located_in",
+          "object": "Caribbean",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "Puerto Rico, officially the Commonwealth of Puerto Rico, is a self-governing Caribbean archipelago a"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "factual_grounding_score": 1.0,
+      "metadata": {
+        "num_nodes": 5,
+        "num_edges": 4,
+        "num_triplets_total": 4,
+        "num_triplets_ranked": 4,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 0,
+        "avg_triplets_per_doc": 4.0,
+        "inferred_triplets": 0,
+        "coverage_ok": false,
+        "answer_source": "baseline",
+        "grounding_backoff": false,
+        "retrieval_expansion": {
+          "extra_docs": 0,
+          "entities_used": [],
+          "candidate_entities": [
+            "Puerto Rico",
+            "United States",
+            "Vieques",
+            "Culebra"
+          ]
+        },
+        "graph_viz_path": "results\\figures\\knowledge_graphs\\puerto_rico_is_not_an_unincorporated_territory_of_the_united_20251125_205111.png",
+        "model": "gpt-4o-mini",
+        "context_filter": {
+          "kept": 4,
+          "dropped": 0,
+          "precision": 1.0,
+          "fallback_used": false,
+          "query_terms": [
+            "archipelago",
+            "caribbean",
+            "governing",
+            "puerto",
+            "rico",
+            "self",
+            "states",
+            "territory",
+            "unincorporated",
+            "united"
+          ]
+        },
+        "context_filter_precision": 1.0,
+        "question_term_coverage": 1.0,
+        "node_term_coverage": 1.0,
+        "triplet_density": 0.8,
+        "query_terms_used": [
+          "archipelago",
+          "caribbean",
+          "governing",
+          "puerto",
+          "rico",
+          "self",
+          "states",
+          "territory",
+          "unincorporated",
+          "united"
+        ]
+      },
+      "time": 13.973726749420166
+    },
+    {
+      "query": "Michael Giacchino composed the score for Doctor Strange.",
+      "answer": "[Graph coverage low (4 facts)] I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Michael Giacchino is an American film, television, and video game score composer. He has received many accolades for his work, including an Academy Award for Up (2009), an Emmy for Lost (2004), and three Grammy Awards.",
+        "Stranger than Fiction -LRB-2006 film-RRB-",
+        "and December 2025. The show is a mix of horror, science-fiction, mystery, fantasy and coming-of-age drama.",
+        "The Hunger Games -LRB-film-RRB-",
+        "country in Africa and the twentieth largest nation by area.",
+        "Homeland -LRB-TV series-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Michael Giacchino",
+          "relation": "has_profession",
+          "object": "film, television, and video game score composer"
+        },
+        {
+          "subject": "Michael Giacchino",
+          "relation": "received",
+          "object": "Academy Award for Up"
+        },
+        {
+          "subject": "Michael Giacchino",
+          "relation": "received",
+          "object": "Emmy for Lost"
+        },
+        {
+          "subject": "Michael Giacchino",
+          "relation": "received",
+          "object": "three Grammy Awards"
+        }
+      ],
+      "ranked_triplets": [
+        {
+          "subject": "Michael Giacchino",
+          "relation": "has_profession",
+          "object": "film, television, and video game score composer",
+          "confidence": 0.95,
+          "relevance_score": 1.672,
+          "source": "Michael Giacchino is an American film, television, and video game score composer. He has received ma"
+        },
+        {
+          "subject": "Michael Giacchino",
+          "relation": "received",
+          "object": "Academy Award for Up",
+          "confidence": 0.95,
+          "relevance_score": 1.672,
+          "source": "Michael Giacchino is an American film, television, and video game score composer. He has received ma"
+        },
+        {
+          "subject": "Michael Giacchino",
+          "relation": "received",
+          "object": "Emmy for Lost",
+          "confidence": 0.95,
+          "relevance_score": 1.672,
+          "source": "Michael Giacchino is an American film, television, and video game score composer. He has received ma"
+        },
+        {
+          "subject": "Michael Giacchino",
+          "relation": "received",
+          "object": "three Grammy Awards",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "Michael Giacchino is an American film, television, and video game score composer. He has received ma"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "factual_grounding_score": 0.0,
+      "metadata": {
+        "num_nodes": 5,
+        "num_edges": 4,
+        "num_triplets_total": 4,
+        "num_triplets_ranked": 4,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 1,
+        "avg_triplets_per_doc": 4.0,
+        "inferred_triplets": 0,
+        "coverage_ok": false,
+        "answer_source": "baseline",
+        "grounding_backoff": false,
+        "retrieval_expansion": {
+          "extra_docs": 2,
+          "entities_used": [
+            "American",
+            "American"
+          ],
+          "candidate_entities": [
+            "Michael Giacchino",
+            "Doctor Strange",
+            "American",
+            "Academy Award"
+          ]
+        },
+        "graph_viz_path": "results\\figures\\knowledge_graphs\\michael_giacchino_composed_the_score_for_doctor_strange_20251125_205114.png",
+        "model": "gpt-4o-mini",
+        "context_filter": {
+          "kept": 4,
+          "dropped": 0,
+          "precision": 1.0,
+          "fallback_used": false,
+          "query_terms": [
+            "academy",
+            "award",
+            "awards",
+            "composed",
+            "composer",
+            "doctor",
+            "emmy",
+            "film",
+            "game",
+            "giacchino",
+            "grammy",
+            "lost",
+            "michael",
+            "score",
+            "strange",
+            "television",
+            "three",
+            "video"
+          ]
+        },
+        "context_filter_precision": 1.0,
+        "question_term_coverage": 0.5,
+        "node_term_coverage": 0.5,
+        "triplet_density": 0.8,
+        "query_terms_used": [
+          "academy",
+          "award",
+          "awards",
+          "composed",
+          "composer",
+          "doctor",
+          "emmy",
+          "film",
+          "game",
+          "giacchino",
+          "grammy",
+          "lost",
+          "michael",
+          "score",
+          "strange",
+          "television",
+          "three",
+          "video"
+        ]
+      },
+      "time": 2.770148992538452
+    },
+    {
+      "query": "Stranger than Fiction is a film.",
+      "answer": "[Graph coverage low (4 facts)] Yes, Stranger than Fiction is a film.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Stranger than Fiction -LRB-2006 film-RRB-",
+        "The Hunger Games -LRB-film-RRB-",
+        "and December 2025. The show is a mix of horror, science-fiction, mystery, fantasy and coming-of-age drama.",
+        "Stranger Things is an American television series created by the Duffer Brothers for Netflix. Produced by Monkey Massacre Productions and 21 Laps Entertainment, the first season was released on Netflix on July 15, 2016. The second and third seasons followed in October 2017 and July 2019, respectively, and the fourth season was released in two parts in May and July 2022. The fifth and final season is expected to be released in three parts in November and December 2025. The show is a mix of horror,",
+        "Prisoners of War -LRB-TV series-RRB-",
+        "Homeland -LRB-TV series-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Stranger than Fiction",
+          "relation": "created",
+          "object": "2006 film"
+        },
+        {
+          "subject": "The Hunger Games",
+          "relation": "is_a",
+          "object": "film"
+        },
+        {
+          "subject": "Stranger Things",
+          "relation": "created_by",
+          "object": "Duffer Brothers"
+        },
+        {
+          "subject": "Stranger Things",
+          "relation": "produced_by",
+          "object": "Monkey Massacre Productions"
+        },
+        {
+          "subject": "Stranger Things",
+          "relation": "produced_by",
+          "object": "21 Laps Entertainment"
+        },
+        {
+          "subject": "Stranger Things",
+          "relation": "released_on",
+          "object": "Netflix"
+        }
+      ],
+      "ranked_triplets": [
+        {
+          "subject": "Stranger than Fiction",
+          "relation": "created",
+          "object": "2006 film",
+          "confidence": 0.95,
+          "relevance_score": 1.672,
+          "source": "Stranger than Fiction -LRB-2006 film-RRB-"
+        },
+        {
+          "subject": "Stranger Things",
+          "relation": "created_by",
+          "object": "Duffer Brothers",
+          "confidence": 0.95,
+          "relevance_score": 1.0658999999999998,
+          "source": "Stranger Things is an American television series created by the Duffer Brothers for Netflix. Produce"
+        },
+        {
+          "subject": "Stranger Things",
+          "relation": "produced_by",
+          "object": "Monkey Massacre Productions",
+          "confidence": 0.95,
+          "relevance_score": 1.0658999999999998,
+          "source": "Stranger Things is an American television series created by the Duffer Brothers for Netflix. Produce"
+        },
+        {
+          "subject": "Stranger Things",
+          "relation": "produced_by",
+          "object": "21 Laps Entertainment",
+          "confidence": 0.95,
+          "relevance_score": 1.0658999999999998,
+          "source": "Stranger Things is an American television series created by the Duffer Brothers for Netflix. Produce"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.775,
+      "factual_grounding_score": 0.25,
+      "metadata": {
+        "num_nodes": 9,
+        "num_edges": 6,
+        "num_triplets_total": 6,
+        "num_triplets_ranked": 4,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 3,
+        "avg_triplets_per_doc": 1.5,
+        "inferred_triplets": 0,
+        "coverage_ok": false,
+        "answer_source": "baseline",
+        "grounding_backoff": false,
+        "retrieval_expansion": {
+          "extra_docs": 2,
+          "entities_used": [
+            "LRB",
+            "LRB"
+          ],
+          "candidate_entities": [
+            "Stranger",
+            "Fiction",
+            "LRB",
+            "RRB"
+          ]
+        },
+        "graph_viz_path": "results\\figures\\knowledge_graphs\\stranger_than_fiction_is_a_film_20251125_205119.png",
+        "model": "gpt-4o-mini",
+        "context_filter": {
+          "kept": 4,
+          "dropped": 0,
+          "precision": 1.0,
+          "fallback_used": false,
+          "query_terms": [
+            "2006",
+            "brothers",
+            "duffer",
+            "entertainment",
+            "fiction",
+            "film",
+            "laps",
+            "massacre",
+            "monkey",
+            "netflix",
+            "productions",
+            "stranger",
+            "than",
+            "things"
+          ]
+        },
+        "context_filter_precision": 1.0,
+        "question_term_coverage": 1.0,
+        "node_term_coverage": 1.0,
+        "triplet_density": 0.6666666666666666,
+        "query_terms_used": [
+          "2006",
+          "brothers",
+          "duffer",
+          "entertainment",
+          "fiction",
+          "film",
+          "laps",
+          "massacre",
+          "monkey",
+          "netflix",
+          "productions",
+          "stranger",
+          "than",
+          "things"
+        ]
+      },
+      "time": 4.87421178817749
+    },
+    {
+      "query": "Chris Hemsworth appeared in A Perfect Getaway.",
+      "answer": "[Graph coverage low (4 facts)] I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Christopher Hemsworth is an Australian actor. Born and raised in Melbourne, Victoria, and Bulman, Northern Territory, he rose to prominence playing Kim Hyde in the Australian television series Home and Away (2004–2007) before beginning a film career in Hollywood. In the Marvel Cinematic Universe, Hemsworth starred as Thor in the 2011 film of the same name and reprised the role in several subsequent installments, which established him among the world's highest-paid actors.",
+        "Ryan Thomas Gosling is a Canadian actor. His work includes both independent films and major studio features, and his accolades include a Golden Globe Award, in addition to nominations for three Academy Awards, a Primetime Emmy Award, and two British Academy Film Awards.",
+        "The Hunger Games -LRB-film-RRB-",
+        "Stranger than Fiction -LRB-2006 film-RRB-",
+        "country in Africa and the twentieth largest nation by area.",
+        "Prisoners of War -LRB-TV series-RRB-"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Christopher Hemsworth",
+          "relation": "has_profession",
+          "object": "actor"
+        },
+        {
+          "subject": "Christopher Hemsworth",
+          "relation": "born_in",
+          "object": "Melbourne, Victoria"
+        },
+        {
+          "subject": "Christopher Hemsworth",
+          "relation": "rose_to_prominence_playing",
+          "object": "Kim Hyde"
+        },
+        {
+          "subject": "Christopher Hemsworth",
+          "relation": "starred_as",
+          "object": "Thor"
+        }
+      ],
+      "ranked_triplets": [
+        {
+          "subject": "Christopher Hemsworth",
+          "relation": "has_profession",
+          "object": "actor",
+          "confidence": 0.95,
+          "relevance_score": 1.2539999999999998,
+          "source": "Christopher Hemsworth is an Australian actor. Born and raised in Melbourne, Victoria, and Bulman, No"
+        },
+        {
+          "subject": "Christopher Hemsworth",
+          "relation": "born_in",
+          "object": "Melbourne, Victoria",
+          "confidence": 0.95,
+          "relevance_score": 1.2539999999999998,
+          "source": "Christopher Hemsworth is an Australian actor. Born and raised in Melbourne, Victoria, and Bulman, No"
+        },
+        {
+          "subject": "Christopher Hemsworth",
+          "relation": "rose_to_prominence_playing",
+          "object": "Kim Hyde",
+          "confidence": 0.95,
+          "relevance_score": 1.2539999999999998,
+          "source": "Christopher Hemsworth is an Australian actor. Born and raised in Melbourne, Victoria, and Bulman, No"
+        },
+        {
+          "subject": "Christopher Hemsworth",
+          "relation": "starred_as",
+          "object": "Thor",
+          "confidence": 0.95,
+          "relevance_score": 1.2539999999999998,
+          "source": "Christopher Hemsworth is an Australian actor. Born and raised in Melbourne, Victoria, and Bulman, No"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7749999999999999,
+      "factual_grounding_score": 0.0,
+      "metadata": {
+        "num_nodes": 5,
+        "num_edges": 4,
+        "num_triplets_total": 4,
+        "num_triplets_ranked": 4,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 0,
+        "avg_triplets_per_doc": 4.0,
+        "inferred_triplets": 0,
+        "coverage_ok": false,
+        "answer_source": "baseline",
+        "grounding_backoff": false,
+        "retrieval_expansion": {
+          "extra_docs": 2,
+          "entities_used": [
+            "Australian",
+            "Australian"
+          ],
+          "candidate_entities": [
+            "Australian",
+            "Award",
+            "Chris Hemsworth",
+            "Perfect Getaway"
+          ]
+        },
+        "graph_viz_path": "results\\figures\\knowledge_graphs\\chris_hemsworth_appeared_in_a_perfect_getaway_20251125_205125.png",
+        "model": "gpt-4o-mini",
+        "context_filter": {
+          "kept": 4,
+          "dropped": 0,
+          "precision": 1.0,
+          "fallback_used": false,
+          "query_terms": [
+            "actor",
+            "appeared",
+            "chris",
+            "christopher",
+            "getaway",
+            "hemsworth",
+            "hyde",
+            "kim",
+            "melbourne",
+            "perfect",
+            "thor",
+            "victoria"
+          ]
+        },
+        "context_filter_precision": 1.0,
+        "question_term_coverage": 0.2,
+        "node_term_coverage": 0.2,
+        "triplet_density": 0.8,
+        "query_terms_used": [
+          "actor",
+          "appeared",
+          "chris",
+          "christopher",
+          "getaway",
+          "hemsworth",
+          "hyde",
+          "kim",
+          "melbourne",
+          "perfect",
+          "thor",
+          "victoria"
+        ]
+      },
+      "time": 6.018977403640747
+    }
+  ],
+  "comparison": {
+    "baseline": {
+      "factual_accuracy": 0.4,
+      "logical_consistency": 0.5,
+      "hallucination_rate": 0.1696148794446008,
+      "response_coherence": 0.85,
+      "graph_completeness": 0.0,
+      "avg_response_time": 1.7690531849861144,
+      "factual_grounding": 0.0,
+      "graph_coverage": 0.0,
+      "context_precision": 0.0
+    },
+    "graph_augmented": {
+      "factual_accuracy": 0.4149999999999999,
+      "logical_consistency": 1.0,
+      "hallucination_rate": 0.14700394033211373,
+      "response_coherence": 1.0,
+      "graph_completeness": 0.16336833333333334,
+      "avg_response_time": 12.442470538616181,
+      "factual_grounding": 0.375,
+      "graph_coverage": 0.48003517316017313,
+      "context_precision": 0.9625
+    },
+    "improvements_pct": {
+      "factual_accuracy": 3.7499999999999756,
+      "logical_consistency": 100.0,
+      "hallucination_rate": 13.330752105314087,
+      "response_coherence": 17.647058823529417,
+      "graph_completeness": 0,
+      "avg_response_time": 603.3406708297379,
+      "factual_grounding": 0,
+      "graph_coverage": 0,
+      "context_precision": 0
+    },
+    "summary": {
+      "accuracy_gain": 3.7499999999999756,
+      "consistency_gain": 100.0,
+      "hallucination_reduction": 13.330752105314087
+    }
+  }
+}

@@ -1,0 +1,1998 @@
+{
+  "experiment_info": {
+    "timestamp": "20251123_011802",
+    "dataset": "fever",
+    "num_queries": 50,
+    "model": "deepseek/deepseek-chat",
+    "configuration": {
+      "use_spacy": true,
+      "consistency_threshold": 0.7,
+      "k_retrieve": 4
+    }
+  },
+  "baseline_results": [
+    {
+      "query": "Nikolaj Coster-Waldau worked with the Fox Broadcasting Company.",
+      "answer": "Based on the provided context, there is no direct information indicating whether Nikolaj Coster-Waldau worked with the Fox Broadcasting Company. The names listed appear to be unrelated entities or individuals without explicit connections stated in the context. \n\nTherefore, I cannot confirm or deny the claim with the given information.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Nikolaj_Coster-Waldau",
+        "Fox_Broadcasting_Company",
+        "The_Jim_Henson_Company",
+        "J._Howard_Marshall"
+      ],
+      "time": 4.966795921325684,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Roman Atwood is a content creator.",
+      "answer": "The context provided does not contain enough information to confirm whether Roman Atwood is a content creator. Therefore, I cannot definitively answer the question based on the given context.  \n\nIf you could provide additional relevant details about Roman Atwood or his work, I’d be happy to assist further. Otherwise, I don’t know based on the current context.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Roman_Atwood",
+        "Fox_Broadcasting_Company",
+        "The_Jim_Henson_Company",
+        "History_of_art"
+      ],
+      "time": 3.4678568840026855,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "History of art includes architecture, dance, sculpture, music, painting, poetry literature, theatre, narrative, film, photography and graphic arts.",
+      "answer": "It appears you've listed multiple subjects related to the history of art, including architecture, dance, sculpture, and others. However, your question isn't clear. Are you asking whether these disciplines are included in the history of art? If so, yes—the history of art traditionally encompasses these fields.  \n\nIf you meant to ask something else related to \"The Hunger Games (film),\" \"Sophie Turner,\" or \"Mother Teresa,\" please clarify, as those topics don’t directly connect to the provided context on the history of art. Let me know how I can help!",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "History_of_art",
+        "The_Hunger_Games_-LRB-film-RRB-",
+        "Sophie_Turner",
+        "Mother_Teresa"
+      ],
+      "time": 4.441887855529785,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Adrienne Bailon is an accountant.",
+      "answer": "The context provided does not indicate that Adrienne Bailon is an accountant. Adrienne Bailon is known as a television personality, singer, and actress, notably from her work on \"The Cheetah Girls\" and as a co-host on \"The Real.\" \n\nSince the context does not mention her profession as an accountant, I cannot confirm this statement. If you have additional or specific information suggesting otherwise, please share it. Otherwise, based on the given context, the answer is:  \n\n**Answer:** I don't know (the context does not support the claim that Adrienne Bailon is an accountant).",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Adrienne_Bailon",
+        "Ryan_Gosling",
+        "Ryan_Seacrest",
+        "Michael_Giacchino"
+      ],
+      "time": 5.223480939865112,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "System of a Down briefly disbanded in limbo.",
+      "answer": "The provided context does not contain any information about the band *System of a Down* or their disbandment. Therefore, I don't know the answer to your question.  \n\nLet me know if you'd like me to look up relevant information about the band instead!",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Prisoners_of_War_-LRB-TV_series-RRB-",
+        "The_Jim_Henson_Company",
+        "Robert_J._O'Neill_-LRB-U.S._Navy_SEAL-RRB-",
+        "History_of_art"
+      ],
+      "time": 2.789017915725708,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Homeland is an American television spy thriller based on the Israeli television series Prisoners of War.",
+      "answer": "The answer is: **True**.  \n\nThe American TV series *Homeland* is indeed based on the Israeli series *Prisoners of War* (*Hatufim* in Hebrew). The context confirms this relationship between the two shows.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Homeland_-LRB-TV_series-RRB-",
+        "Prisoners_of_War_-LRB-TV_series-RRB-",
+        "United_States",
+        "Stranger_Things"
+      ],
+      "time": 3.2323718070983887,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Beautiful reached number two on the Billboard Hot 100 in 2003.",
+      "answer": "The context provided does not include any information about the song \"Beautiful\" or its Billboard Hot 100 performance in 2003. The names listed (Chris Hemsworth, Cyndi Lauper, Sophie Turner, Tupac Shakur) are unrelated to the question. \n\nI don’t know the answer to your question.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Chris_Hemsworth",
+        "Cyndi_Lauper",
+        "Sophie_Turner",
+        "Tupac_Shakur"
+      ],
+      "time": 2.8992950916290283,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Neal Schon was named in 1954.",
+      "answer": "The provided context does not mention Neal Schon or any information related to him being named in 1954. Therefore, I don't know the answer based on the given context.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Robert_J._O'Neill_-LRB-U.S._Navy_SEAL-RRB-",
+        "The_Jim_Henson_Company",
+        "Nikolaj_Coster-Waldau",
+        "J._Howard_Marshall"
+      ],
+      "time": 1.8138267993927002,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "The Boston Celtics play their home games at TD Garden.",
+      "answer": "The answer to your question is not directly provided in the given context. However, the statement \"The Boston Celtics play their home games at TD Garden\" is factually correct. The context includes \"Boston_Celtics,\" which is relevant to the question, but it does not specifically mention TD Garden. \n\nSo, based on external knowledge (not the context given), the answer is: **Yes, the Boston Celtics play their home games at TD Garden.**  \n\nIf you'd like an answer strictly from the provided context, I would say: *The context does not mention TD Garden, so I cannot confirm based on the given information.*",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Boston_Celtics",
+        "Puerto_Rico",
+        "Michael_Giacchino",
+        "Homeland_-LRB-TV_series-RRB-"
+      ],
+      "time": 5.030982732772827,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "The Ten Commandments is an epic film.",
+      "answer": "Based on the context provided, *The Ten Commandments (1956 film)* is indeed an epic film. It is a classic biblical epic directed by Cecil B. DeMille, known for its grandeur, scale, and dramatic storytelling.  \n\nThe other films listed (*The Hunger Games, Stranger than Fiction, The Silence of the Lambs*) are unrelated to this classification.  \n\nAnswer: Yes, *The Ten Commandments (1956 film)* is an epic film.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "The_Ten_Commandments_-LRB-1956_film-RRB-",
+        "The_Hunger_Games_-LRB-film-RRB-",
+        "Stranger_than_Fiction_-LRB-2006_film-RRB-",
+        "The_Silence_of_the_Lambs_-LRB-film-RRB-"
+      ],
+      "time": 3.633072853088379,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Tetris has sold millions of physical copies.",
+      "answer": "The given context does not contain any information about Tetris or its sales. Therefore, I don't know the answer to whether Tetris has sold millions of physical copies.  \n\n(Note: For reference, outside of this context, Tetris has indeed sold millions of physical copies across various platforms since its release.)",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Saratoga_-LRB-film-RRB-",
+        "The_Hunger_Games_-LRB-film-RRB-",
+        "History_of_art",
+        "The_Jim_Henson_Company"
+      ],
+      "time": 3.8338708877563477,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Cyndi Lauper won the Best New Artist award at the 27th Grammy Awards in 1985.",
+      "answer": "The context provided does not include information about Cyndi Lauper winning the Best New Artist award at the 27th Grammy Awards in 1985. Therefore, I cannot confirm or deny this claim based on the given context. \n\nHowever, for accuracy outside the provided context: Yes, Cyndi Lauper did win the Grammy Award for Best New Artist in 1985.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Cyndi_Lauper",
+        "Mother_Teresa",
+        "Michael_Giacchino",
+        "Tupac_Shakur"
+      ],
+      "time": 3.5902857780456543,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "There is a movie called The Hunger Games.",
+      "answer": "Based on the provided context, there is indeed a film titled \"The_Hunger_Games_-LRB-film-RRB-,\" which confirms that \"The Hunger Games\" is a movie. The \"-LRB-\" and \"-RRB-\" notations typically stand for left and right brackets, indicating that \"film\" is enclosed in parentheses (e.g., \"The Hunger Games (film)\"). \n\nAnswer: Yes, \"The Hunger Games\" is a movie, as confirmed by the context.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "The_Hunger_Games_-LRB-film-RRB-",
+        "Stranger_than_Fiction_-LRB-2006_film-RRB-",
+        "Stranger_Things",
+        "Saratoga_-LRB-film-RRB-"
+      ],
+      "time": 4.253579616546631,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Ryan Gosling has been to a country in Africa.",
+      "answer": "The provided context does not contain any information about Ryan Gosling visiting a country in Africa. Therefore, I don't know the answer to this question.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Ryan_Gosling",
+        "Ryan_Seacrest",
+        "Michael_Giacchino",
+        "Saratoga_-LRB-film-RRB-"
+      ],
+      "time": 2.518258571624756,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Stranger Things is set in Bloomington, Indiana.",
+      "answer": "The context provided does not specify the exact setting of *Stranger Things*. While the show is set in the fictional town of Hawkins, Indiana, which is in the Midwestern United States, it is not explicitly stated to be Bloomington, Indiana.  \n\nIf you'd like a more precise answer, additional context or verification from a reliable source would be needed. Let me know if you'd like help finding that!",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Stranger_Things",
+        "Stranger_than_Fiction_-LRB-2006_film-RRB-",
+        "The_Jim_Henson_Company",
+        "Midwestern_United_States"
+      ],
+      "time": 4.587118864059448,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Ryan Seacrest is a person.",
+      "answer": "The context lists \"Ryan_Seacrest\" as an entry, which indicates that Ryan Seacrest is indeed a person. Therefore, the statement \"Ryan Seacrest is a person\" is correct. \n\n**Answer:** Yes, Ryan Seacrest is a person.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Ryan_Seacrest",
+        "Ryan_Gosling",
+        "Chris_Hemsworth",
+        "Adrienne_Bailon"
+      ],
+      "time": 2.677830934524536,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Puerto Rico is not an unincorporated territory of the United States.",
+      "answer": "The statement in the question is incorrect. Puerto Rico is indeed an unincorporated territory of the United States. The context provided includes \"Puerto_Rico\" and \"United_States,\" which supports this fact. \n\nLet me know if you'd like further clarification!",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Puerto_Rico",
+        "United_States",
+        "Midwestern_United_States",
+        "Newfoundland_and_Labrador"
+      ],
+      "time": 2.8762433528900146,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Michael Giacchino composed the score for Doctor Strange.",
+      "answer": "The context provided does not mention Michael Giacchino composing the score for *Doctor Strange*. Therefore, I cannot confirm or deny this based on the given information. \n\n(Note: For accuracy, Michael Giacchino did compose the score for *Doctor Strange* (2016), but this fact is not derived from the provided context.)",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Michael_Giacchino",
+        "Stranger_than_Fiction_-LRB-2006_film-RRB-",
+        "Stranger_Things",
+        "Cyndi_Lauper"
+      ],
+      "time": 3.20265531539917,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Stranger than Fiction is a film.",
+      "answer": "Yes, \"Stranger than Fiction\" is a film, as indicated by the context where it is listed with \"-LRB-2006_film-RRB-\" denoting its release year and medium. The other entries also confirm this format for films (e.g., \"The Hunger Games\" and \"The Silence of the Lambs\"). \n\nAnswer: Yes, \"Stranger than Fiction\" is a 2006 film.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Stranger_than_Fiction_-LRB-2006_film-RRB-",
+        "Stranger_Things",
+        "The_Hunger_Games_-LRB-film-RRB-",
+        "The_Silence_of_the_Lambs_-LRB-film-RRB-"
+      ],
+      "time": 4.174850702285767,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Chris Hemsworth appeared in A Perfect Getaway.",
+      "answer": "The given context does not provide any information about Chris Hemsworth appearing in *A Perfect Getaway*. Without additional details, I cannot confirm the accuracy of the statement.  \n\nI don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Chris_Hemsworth",
+        "Ryan_Gosling",
+        "Ryan_Seacrest",
+        "Peggy_Sue_Got_Married"
+      ],
+      "time": 2.463247537612915,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Selena recorded music.",
+      "answer": "The context provided does not mention Selena, so I cannot confirm whether she recorded music based on the given information. I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Grace_Jones",
+        "Cyndi_Lauper",
+        "Ryan_Seacrest",
+        "Willie_Nelson"
+      ],
+      "time": 2.234755516052246,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "John Wick: Chapter 2 was theatrically released in the Oregon.",
+      "answer": "The context provided does not include any information about the theatrical release of *John Wick: Chapter 2* or its location (Oregon). Therefore, I don't know the answer to this question.  \n\nWould you like assistance in finding the correct information about the film's release?",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Prisoners_of_War_-LRB-TV_series-RRB-",
+        "Stranger_than_Fiction_-LRB-2006_film-RRB-",
+        "The_Jim_Henson_Company",
+        "Nikolaj_Coster-Waldau"
+      ],
+      "time": 2.5715484619140625,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Robert J. O'Neill was born April 10, 1976.",
+      "answer": "The context provided does not include information about Robert J. O'Neill's birth date. Therefore, I cannot confirm whether he was born on April 10, 1976. \n\nIf you'd like, I can try to find a reliable source to verify this information. Let me know!",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Robert_J._O'Neill_-LRB-U.S._Navy_SEAL-RRB-",
+        "J._Howard_Marshall",
+        "Michael_Giacchino",
+        "Malcolm_Young"
+      ],
+      "time": 3.099783182144165,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Afghanistan is the source of the Kushan dynasty.",
+      "answer": "The given context does not include any information about Afghanistan or the Kushan dynasty. Therefore, I don't know the answer to this question.  \n\n(Note: Historically, the Kushan Empire did originate in the region that includes parts of modern-day Afghanistan, but this is not derived from the provided context.)",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "History_of_art",
+        "Malcolm_Young",
+        "The_Jim_Henson_Company",
+        "Tupac_Shakur"
+      ],
+      "time": 2.7802317142486572,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Marilyn Monroe worked with Warner Brothers.",
+      "answer": "The provided context does not contain any information about Marilyn Monroe or her association with Warner Brothers. Therefore, I don't know the answer to this question based on the given context.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "The_Jim_Henson_Company",
+        "Sophie_Turner",
+        "Peggy_Sue_Got_Married",
+        "Robert_J._O'Neill_-LRB-U.S._Navy_SEAL-RRB-"
+      ],
+      "time": 2.4961307048797607,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "The Silence of the Lambs was a film starring Scott Glenn.",
+      "answer": "The Silence of the Lambs (film) does not star Scott Glenn. The main actors in the film are Jodie Foster as Clarice Starling and Anthony Hopkins as Hannibal Lecter. Scott Glenn is not listed among the primary cast members in the provided context.  \n\nIf you have further questions, let me know!",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "The_Silence_of_the_Lambs_-LRB-film-RRB-",
+        "Stranger_than_Fiction_-LRB-2006_film-RRB-",
+        "The_Hunger_Games_-LRB-film-RRB-",
+        "Stranger_Things"
+      ],
+      "time": 3.171477794647217,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Peggy Sue Got Married is a Egyptian film released in 1986.",
+      "answer": "The context does not support the claim that *Peggy Sue Got Married* is an Egyptian film.  \n\nHere's the factual information based on the given context:  \n- *Peggy Sue Got Married* (1986) is an American romantic comedy-drama directed by Francis Ford Coppola, starring Kathleen Turner.  \n- The other context entries (*Sophie Turner*, *The Ten Commandments (1956 film)*, and *Saratoga (film)*) appear unrelated to the question.  \n\nThe claim that it is an **Egyptian film** is incorrect. Let me know if you'd like clarification on any details.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Peggy_Sue_Got_Married",
+        "Sophie_Turner",
+        "The_Ten_Commandments_-LRB-1956_film-RRB-",
+        "Saratoga_-LRB-film-RRB-"
+      ],
+      "time": 5.004032611846924,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Andy Roddick lost 5 Master Series between 2002 and 2010.",
+      "answer": "The context provided does not contain any information about Andy Roddick's tennis career or his performance in Master Series tournaments. Therefore, I don't know the answer to the question.  \n\nIf you'd like, I can look up reliable sources to verify this claim. Let me know!",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Andy_Roddick",
+        "Stranger_than_Fiction_-LRB-2006_film-RRB-",
+        "Peggy_Sue_Got_Married",
+        "Prisoners_of_War_-LRB-TV_series-RRB-"
+      ],
+      "time": 2.603013515472412,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "As the Vietnam War raged in 1969, Yoko Ono and her husband John Lennon did not have two week-long Bed-Ins for Peace.",
+      "answer": "The context provided does not contain any information about Yoko Ono and John Lennon's Bed-Ins for Peace during the Vietnam War in 1969. Therefore, I don't know the answer based on the given context.  \n\n(Historical fact: Yoko Ono and John Lennon did famously hold two week-long Bed-Ins for Peace in 1969—one in Amsterdam and one in Montreal—to promote peace during the Vietnam War. However, this is not mentioned in the provided context.)",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Peggy_Sue_Got_Married",
+        "Prisoners_of_War_-LRB-TV_series-RRB-",
+        "Chris_Hemsworth",
+        "Mother_Teresa"
+      ],
+      "time": 4.1079301834106445,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Tupac Shakur was born Lesane Parish Crooks.",
+      "answer": "The context provided does not contain any information about Tupac Shakur's birth name. Therefore, I cannot confirm or deny whether he was born as Lesane Parish Crooks based on the given context.  \n\nIf you'd like, I can look up the information from a reliable source to verify this claim. Let me know!",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Tupac_Shakur",
+        "Malcolm_Young",
+        "Willie_Nelson",
+        "Francis_Ford_Coppola"
+      ],
+      "time": 3.5758886337280273,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Harold Ramis was a veteran.",
+      "answer": "The context provided does not include any information about Harold Ramis, so I cannot confirm whether he was a veteran or not. I don't know the answer based on the given context.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Robert_J._O'Neill_-LRB-U.S._Navy_SEAL-RRB-",
+        "J._Howard_Marshall",
+        "Nikolaj_Coster-Waldau",
+        "Malcolm_Young"
+      ],
+      "time": 2.806396245956421,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "The Jim Henson Company produced The Muppet Movie, The Dark Crystal, and Labyrinth.",
+      "answer": "Based on the context provided, the statement is accurate. The Jim Henson Company did produce *The Muppet Movie*, *The Dark Crystal*, and *Labyrinth*. However, none of these films are listed in the given context. The context includes *Stranger than Fiction (2006 film)*, *Stranger Things*, and *The Silence of the Lambs (film)*, none of which are directly related to The Jim Henson Company's productions mentioned in the question.  \n\nIf you'd like confirmation on the productions listed in the context, I can clarify that *Stranger Things* is a Netflix series not produced by The Jim Henson Company, while *The Silence of the Lambs* and *Stranger than Fiction* are unrelated to their work. Let me know if you'd like further details!",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "The_Jim_Henson_Company",
+        "Stranger_than_Fiction_-LRB-2006_film-RRB-",
+        "Stranger_Things",
+        "The_Silence_of_the_Lambs_-LRB-film-RRB-"
+      ],
+      "time": 6.657505512237549,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "United Nations was relocated to the United States in 1945.",
+      "answer": "The context provided does not contain any information about the relocation of the United Nations to the United States in 1945. Therefore, I cannot confirm or deny the statement based on the given context. \n\nHowever, historically, the United Nations was established in 1945, and its headquarters were set in New York City, USA, where it remains today. If you'd like a more detailed answer, additional context would be needed.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "United_States",
+        "Midwestern_United_States",
+        "The_Jim_Henson_Company",
+        "Newfoundland_and_Labrador"
+      ],
+      "time": 4.594700336456299,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Whoopi Goldberg co-produced an American dance tournament.",
+      "answer": "The provided context does not mention Whoopi Goldberg or an American dance tournament, so I cannot confirm whether she co-produced one. I don't know the answer based on the given information.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "The_Jim_Henson_Company",
+        "Ryan_Seacrest",
+        "History_of_art",
+        "Chris_Hemsworth"
+      ],
+      "time": 3.0263431072235107,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Slovenia uses the euro.",
+      "answer": "The context provided does not contain any information about Slovenia or its currency. Therefore, I cannot confirm whether Slovenia uses the euro based on the given context.  \n\nHowever, as a general fact (outside the given context), Slovenia does indeed use the euro as its official currency, having adopted it in 2007 when it joined the Eurozone.  \n\nLet me know if you'd like an answer strictly limited to the provided context!",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Puerto_Rico",
+        "Michael_Giacchino",
+        "Boston_Celtics",
+        "United_States"
+      ],
+      "time": 3.2080440521240234,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Iowa is a part of the Midwestern United States.",
+      "answer": "Yes, Iowa is part of the Midwestern United States. The Midwestern region of the United States includes states such as Iowa, Illinois, Indiana, Ohio, Michigan, Wisconsin, Minnesota, Missouri, Kansas, Nebraska, North Dakota, and South Dakota.  \n\nThe context provided includes \"Midwestern_United_States,\" which confirms that the Midwest is a recognized region, and \"United_States,\" which establishes the broader country. The other pieces of context (\"Newfoundland_and_Labrador\" and \"Ryan_Seacrest\") are unrelated to the question.  \n\nThus, the statement is correct. Iowa is indeed part of the Midwest.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Midwestern_United_States",
+        "United_States",
+        "Newfoundland_and_Labrador",
+        "Ryan_Seacrest"
+      ],
+      "time": 5.05123496055603,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Keith Urban is a person who sings.",
+      "answer": "The context provided does not mention Keith Urban, so I cannot confirm or deny whether he is a person who sings based on the given information. I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Michael_Giacchino",
+        "Cyndi_Lauper",
+        "Willie_Nelson",
+        "Ryan_Seacrest"
+      ],
+      "time": 2.615293502807617,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Hotell is owned by Lisa Langseth.",
+      "answer": "The provided context does not contain any information about \"Hotell\" or its ownership by Lisa Langseth. Therefore, I don't know the answer based on the given context.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Sophie_Turner",
+        "Fox_Broadcasting_Company",
+        "Cyndi_Lauper",
+        "The_Jim_Henson_Company"
+      ],
+      "time": 2.7632293701171875,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Saratoga is an American film from 1937.",
+      "answer": "The context provided does not include any information about the 1937 film *Saratoga*. The only mention of \"Saratoga\" in the context is *Saratoga_-LRB-film-RRB-*, which does not specify the year or any details about the film. \n\nSince I don't have enough information to confirm or refute the statement, I don't know the answer.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Saratoga_-LRB-film-RRB-",
+        "Ryan_Gosling",
+        "The_Hunger_Games_-LRB-film-RRB-",
+        "The_Silence_of_the_Lambs_-LRB-film-RRB-"
+      ],
+      "time": 2.7685739994049072,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "J. Howard Marshall was a baby.",
+      "answer": "The context provided does not include any information about J. Howard Marshall being a baby, so I cannot confirm or deny the statement. I don't know the answer.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "J._Howard_Marshall",
+        "Robert_J._O'Neill_-LRB-U.S._Navy_SEAL-RRB-",
+        "Malcolm_Young",
+        "Mother_Teresa"
+      ],
+      "time": 2.2338454723358154,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Grace Jones is a dancer.",
+      "answer": "Based on the given context, the names listed (Grace_Jones, Sophie_Turner, Mother_Teresa, Chris_Hemsworth) do not provide any specific information about Grace Jones being a dancer. Without additional details, I cannot confirm or deny the statement.  \n\nIf you'd like, I can provide general information about Grace Jones (the well-known singer, actress, and model), but the context provided does not support the claim. Let me know how you'd like to proceed!",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Grace_Jones",
+        "Sophie_Turner",
+        "Mother_Teresa",
+        "Chris_Hemsworth"
+      ],
+      "time": 4.348370313644409,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Lisbon has a population larger than 1.",
+      "answer": "The context provided does not contain any information about the population of Lisbon or any comparison to the number 1. Therefore, I don't know the answer to your question based on the given context.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Michael_Giacchino",
+        "Puerto_Rico",
+        "Newfoundland_and_Labrador",
+        "Boston_Celtics"
+      ],
+      "time": 2.148359775543213,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Willie Nelson dropped out of college after three years.",
+      "answer": "The given context does not provide any information about Willie Nelson's education or whether he dropped out of college. Therefore, I cannot confirm or deny the statement based on the provided context.  \n\nIf you'd like, I can look up verified information about Willie Nelson's education history. Let me know!",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Willie_Nelson",
+        "The_Jim_Henson_Company",
+        "Malcolm_Young",
+        "Nikolaj_Coster-Waldau"
+      ],
+      "time": 2.9570934772491455,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Malcolm Young was the co-founder of Australian hard rock band AC/DC.",
+      "answer": "Based on the context provided, the statement is correct: **Malcolm Young was the co-founder of the Australian hard rock band AC/DC**.  \n\nThe other names listed (Tupac Shakur, Robert J. O'Neill, and Francis Ford Coppola) are unrelated to this fact. Let me know if you'd like details on them as well!",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Malcolm_Young",
+        "Tupac_Shakur",
+        "Robert_J._O'Neill_-LRB-U.S._Navy_SEAL-RRB-",
+        "Francis_Ford_Coppola"
+      ],
+      "time": 3.2884209156036377,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Nice & Slow is a jazz single.",
+      "answer": "It appears the question *\"Nice & Slow is a jazz single\"* does not directly relate to any of the provided context entries (Willie Nelson, Tupac Shakur, *The Silence of the Lambs*, or *Stranger Things*). Without additional relevant context, I cannot confirm whether the statement is accurate.  \n\nWould you like me to look up information about *\"Nice & Slow\"* for clarification?",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Willie_Nelson",
+        "Tupac_Shakur",
+        "The_Silence_of_the_Lambs_-LRB-film-RRB-",
+        "Stranger_Things"
+      ],
+      "time": 4.1558544635772705,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Newfoundland and Labrador is the most linguistically homogeneous of Canada.",
+      "answer": "The context provided does not contain any information about the linguistic homogeneity of Newfoundland and Labrador compared to other parts of Canada. Therefore, I cannot confirm or refute the statement based on the given context.  \n\nIf you'd like, I can look up reliable sources to verify the claim. Let me know!",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Newfoundland_and_Labrador",
+        "Midwestern_United_States",
+        "Puerto_Rico",
+        "United_States"
+      ],
+      "time": 2.5995845794677734,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Furia is adapted from a short story by Anna Politkovskaya.",
+      "answer": "The provided context does not mention Anna Politkovskaya or the source material for *Furia*. Therefore, I cannot confirm whether *Furia* is adapted from a short story by her. I don't know the answer.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Furia_-LRB-film-RRB-",
+        "Francis_Ford_Coppola",
+        "Sophie_Turner",
+        "Nikolaj_Coster-Waldau"
+      ],
+      "time": 2.664013385772705,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "One state of the United States has Russia to its west.",
+      "answer": "The question asks which U.S. state has Russia to its west, but none of the provided context (United States, Midwestern United States, Newfoundland and Labrador, Puerto Rico) directly answers this.  \n\nThe correct answer is **Alaska**, as it is the only U.S. state with Russia to its west (across the Bering Strait). However, since Alaska is not mentioned in the given context, I cannot confirm it definitively here. \n\nIf you want a precise answer, I recommend verifying with relevant geographical sources.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "United_States",
+        "Midwestern_United_States",
+        "Newfoundland_and_Labrador",
+        "Puerto_Rico"
+      ],
+      "time": 4.1124889850616455,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Sophie Turner was born in the 1990s.",
+      "answer": "Based on the context provided, Sophie Turner was indeed born in the 1990s. She was born on February 21, 1996.  \n\nAnswer: **True**. Sophie Turner was born in the 1990s.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Sophie_Turner",
+        "Ryan_Gosling",
+        "Peggy_Sue_Got_Married",
+        "Mother_Teresa"
+      ],
+      "time": 2.3928542137145996,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Mother Teresa was made a saint by the church.",
+      "answer": "Based on the given context, the statement \"Mother Teresa was made a saint by the church\" is accurate. Mother Teresa was canonized as a saint by the Roman Catholic Church on September 4, 2016, by Pope Francis. \n\nThe other pieces of context (Sophie_Turner, History_of_art, Peggy_Sue_Got_Married) do not appear relevant to this question. \n\nSo, the answer is: **Yes, Mother Teresa was made a saint by the church.**",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Mother_Teresa",
+        "Sophie_Turner",
+        "History_of_art",
+        "Peggy_Sue_Got_Married"
+      ],
+      "time": 4.20296049118042,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    }
+  ],
+  "ga_rag_results": [
+    {
+      "query": "Nikolaj Coster-Waldau worked with the Fox Broadcasting Company.",
+      "answer": "[Low consistency detected: 0.00] Based on the given context, it is true that Nikolaj Coster-Waldau worked with the Fox Broadcasting Company. The connection is explicitly mentioned in the provided context. The other entities (The Jim Henson Company, J. Howard Marshall) are unrelated to this specific claim.  \n\nAnswer: **True** (Nikolaj Coster-Waldau did work with the Fox Broadcasting Company according to the context).",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Nikolaj_Coster-Waldau",
+        "Fox_Broadcasting_Company",
+        "The_Jim_Henson_Company",
+        "J._Howard_Marshall"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 4.068707466125488
+    },
+    {
+      "query": "Roman Atwood is a content creator.",
+      "answer": "[Low consistency detected: 0.00] The given context does not provide enough information to confirm whether Roman Atwood is a content creator. Based on the available data, I cannot definitively answer the question.  \n\nIf you'd like a more accurate response, additional context about Roman Atwood's profession or background would be helpful. Otherwise, I cannot verify the statement solely from the references provided (Roman_Atwood, Fox_Broadcasting_Company, The_Jim_Henson_Company, History_of_art).",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Roman_Atwood",
+        "Fox_Broadcasting_Company",
+        "The_Jim_Henson_Company",
+        "History_of_art"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 4.6537885665893555
+    },
+    {
+      "query": "History of art includes architecture, dance, sculpture, music, painting, poetry literature, theatre, narrative, film, photography and graphic arts.",
+      "answer": "[Low consistency detected: 0.00] Based on the provided context, the statement is accurate: the **history of art** encompasses a wide range of creative disciplines, including architecture, dance, sculpture, music, painting, literature, theatre, film, photography, and graphic arts. The other listed items (e.g., *The Hunger Games (film)*, *Sophie Turner*, *Mother Teresa*) are unrelated to this definition and do not contradict it.  \n\nWould you like elaboration on any specific aspect of art history?",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "History_of_art",
+        "The_Hunger_Games_-LRB-film-RRB-",
+        "Sophie_Turner",
+        "Mother_Teresa"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 5.070640802383423
+    },
+    {
+      "query": "Adrienne Bailon is an accountant.",
+      "answer": "[Low consistency detected: 0.00] The context provided does not indicate that Adrienne Bailon is an accountant. Adrienne Bailon is known as a singer, actress, and television personality, notably from her work with The Cheetah Girls and as a co-host on \"The Real.\" Without additional context confirming her profession as an accountant, the statement appears incorrect.  \n\nAnswer: No, Adrienne Bailon is not an accountant based on the given context.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Adrienne_Bailon",
+        "Ryan_Gosling",
+        "Ryan_Seacrest",
+        "Michael_Giacchino"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 5.022076606750488
+    },
+    {
+      "query": "System of a Down briefly disbanded in limbo.",
+      "answer": "[Low consistency detected: 0.00] The provided context does not contain any information about the band \"System of a Down\" or their disbandment. Therefore, I don't know the answer to your question.  \n\nIf you'd like, I can try to help with something related to the context you provided (e.g., *Prisoners of War* (TV series), *The Jim Henson Company*, *Robert J. O'Neill*, or *History of art*). Let me know!",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Prisoners_of_War_-LRB-TV_series-RRB-",
+        "The_Jim_Henson_Company",
+        "Robert_J._O'Neill_-LRB-U.S._Navy_SEAL-RRB-",
+        "History_of_art"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 4.584031343460083
+    },
+    {
+      "query": "Homeland is an American television spy thriller based on the Israeli television series Prisoners of War.",
+      "answer": "[Low consistency detected: 0.00] The statement is correct. *Homeland* is an American television spy thriller series that is indeed based on the Israeli TV series *Prisoners of War* (Hebrew: *Hatufim*). The U.S. adaptation was developed for Showtime, while *Prisoners of War* originally aired in Israel.  \n\nThe context provided (*Homeland*, *Prisoners of War*, *United States*) supports this relationship between the two shows. Meanwhile, *Stranger Things* is unrelated to this topic.  \n\nWould you like additional details?",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Homeland_-LRB-TV_series-RRB-",
+        "Prisoners_of_War_-LRB-TV_series-RRB-",
+        "United_States",
+        "Stranger_Things"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 4.333987474441528
+    },
+    {
+      "query": "Beautiful reached number two on the Billboard Hot 100 in 2003.",
+      "answer": "[Low consistency detected: 0.00] The context provided does not include any information about the song \"Beautiful\" or its chart performance in 2003. Therefore, I don't know the answer to your question.  \n\nIf you'd like, you can provide additional context or clarify the artist associated with the song, and I’d be happy to help!",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Chris_Hemsworth",
+        "Cyndi_Lauper",
+        "Sophie_Turner",
+        "Tupac_Shakur"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 3.886809825897217
+    },
+    {
+      "query": "Neal Schon was named in 1954.",
+      "answer": "[Low consistency detected: 0.00] The context provided does not include any information about Neal Schon or his birth year. Therefore, I don't know the answer to whether Neal Schon was named in 1954.  \n\nIf you'd like, I can try to find accurate information from a reliable source. Let me know!",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Robert_J._O'Neill_-LRB-U.S._Navy_SEAL-RRB-",
+        "The_Jim_Henson_Company",
+        "Nikolaj_Coster-Waldau",
+        "J._Howard_Marshall"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 3.882551431655884
+    },
+    {
+      "query": "The Boston Celtics play their home games at TD Garden.",
+      "answer": "[Low consistency detected: 0.00] The Boston Celtics do indeed play their home games at TD Garden. This information is correct, though it was not explicitly mentioned in the provided context.  \n\n(Note: The context snippets—Boston_Celtics, Puerto_Rico, Michael_Giacchino, and Homeland_(TV_series)—do not directly relate to the question, but the answer is independently verifiable as true.)",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Boston_Celtics",
+        "Puerto_Rico",
+        "Michael_Giacchino",
+        "Homeland_-LRB-TV_series-RRB-"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 4.650304794311523
+    },
+    {
+      "query": "The Ten Commandments is an epic film.",
+      "answer": "[Low consistency detected: 0.00] Based on the context provided, \"The Ten Commandments\" is indeed a 1956 film, and it is widely recognized as an epic film. The context does not contradict this statement, so the answer is consistent with the information given. \n\nAnswer: Yes, \"The Ten Commandments\" (1956 film) is an epic film.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "The_Ten_Commandments_-LRB-1956_film-RRB-",
+        "The_Hunger_Games_-LRB-film-RRB-",
+        "Stranger_than_Fiction_-LRB-2006_film-RRB-",
+        "The_Silence_of_the_Lambs_-LRB-film-RRB-"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 3.906512498855591
+    },
+    {
+      "query": "Tetris has sold millions of physical copies.",
+      "answer": "[Low consistency detected: 0.00] The given context does not mention anything about Tetris or its sales, so I cannot provide an answer based on the information provided. If you have any questions related to the listed films or topics (Saratoga, The Hunger Games, History of Art, or The Jim Henson Company), I’d be happy to help!",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Saratoga_-LRB-film-RRB-",
+        "The_Hunger_Games_-LRB-film-RRB-",
+        "History_of_art",
+        "The_Jim_Henson_Company"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 3.4111034870147705
+    },
+    {
+      "query": "Cyndi Lauper won the Best New Artist award at the 27th Grammy Awards in 1985.",
+      "answer": "[Low consistency detected: 0.00] The context you provided lists names (Cyndi Lauper, Mother Teresa, Michael Giacchino, Tupac Shakur) but does not include any information about Grammy Awards or Cyndi Lauper's 1985 win. \n\nSince the context doesn't contain the answer to your question, I cannot confirm or deny whether Cyndi Lauper won Best New Artist at the 27th Grammy Awards in 1985. \n\n(Note: For factual reference, Cyndi Lauper *did* win Best New Artist at the 1985 Grammys—but this answer is based on external knowledge, not the given context.)",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Cyndi_Lauper",
+        "Mother_Teresa",
+        "Michael_Giacchino",
+        "Tupac_Shakur"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 5.117501497268677
+    },
+    {
+      "query": "There is a movie called The Hunger Games.",
+      "answer": "[Low consistency detected: 0.00] The context provided includes *The_Hunger_Games_-LRB-film-RRB-*, which indicates that *The Hunger Games* is indeed a film. \n\n**Answer:** Yes, there is a movie called *The Hunger Games*.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "The_Hunger_Games_-LRB-film-RRB-",
+        "Stranger_than_Fiction_-LRB-2006_film-RRB-",
+        "Stranger_Things",
+        "Saratoga_-LRB-film-RRB-"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 3.372340679168701
+    },
+    {
+      "query": "Ryan Gosling has been to a country in Africa.",
+      "answer": "[Low consistency detected: 0.00] The given context does not provide any information about Ryan Gosling visiting a country in Africa. Therefore, I don't know the answer to this question.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Ryan_Gosling",
+        "Ryan_Seacrest",
+        "Michael_Giacchino",
+        "Saratoga_-LRB-film-RRB-"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 2.938067674636841
+    },
+    {
+      "query": "Stranger Things is set in Bloomington, Indiana.",
+      "answer": "[Low consistency detected: 0.00] The context provided does not specify the exact setting of *Stranger Things*. However, the show is famously set in the fictional town of Hawkins, Indiana, not Bloomington, Indiana. \n\nSo, the statement \"Stranger Things is set in Bloomington, Indiana\" is incorrect. The correct setting is Hawkins, Indiana.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Stranger_Things",
+        "Stranger_than_Fiction_-LRB-2006_film-RRB-",
+        "The_Jim_Henson_Company",
+        "Midwestern_United_States"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 4.157367706298828
+    },
+    {
+      "query": "Ryan Seacrest is a person.",
+      "answer": "[Low consistency detected: 0.00] The correct answer is:  \n\n**\"Ryan Seacrest is a person.\"** is a true statement, as Ryan Seacrest is indeed a person listed in the provided context.  \n\nThe other names (Ryan Gosling, Chris Hemsworth, Adrienne Bailon) are also people, but the question specifically confirms Ryan Seacrest's status as a person, which is correct.  \n\nLet me know if you need further clarification!",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Ryan_Seacrest",
+        "Ryan_Gosling",
+        "Chris_Hemsworth",
+        "Adrienne_Bailon"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 3.8225080966949463
+    },
+    {
+      "query": "Puerto Rico is not an unincorporated territory of the United States.",
+      "answer": "[Low consistency detected: 0.00] The correct answer is that **Puerto Rico is an unincorporated territory of the United States**.  \n\nThe statement *\"Puerto Rico is not an unincorporated territory of the United States\"* is **false**. Since 1898, Puerto Rico has been a U.S. territory, and its current status is that of an **unincorporated organized territory**, meaning it is governed by the U.S. but not fully part of the United States in the same way as a state.  \n\nGiven the limited context provided, I can confirm that the assertion in the question is incorrect. If you need further details about Puerto Rico's political status, let me know!",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Puerto_Rico",
+        "United_States",
+        "Midwestern_United_States",
+        "Newfoundland_and_Labrador"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 4.9365010261535645
+    },
+    {
+      "query": "Michael Giacchino composed the score for Doctor Strange.",
+      "answer": "[Low consistency detected: 0.00] The context provided does not mention Michael Giacchino composing the score for *Doctor Strange*. The context includes references to *Stranger than Fiction (2006 film)*, *Stranger Things*, and Cyndi Lauper, but not *Doctor Strange*. \n\nSince I don't have confirmation from the given context, I cannot verify whether Michael Giacchino composed the score for *Doctor Strange*. You may need to consult a reliable source for that information. \n\n(Note: For accuracy, Michael Giacchino did compose the score for *Doctor Strange* (2016), but this is not derived from the provided context.)",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Michael_Giacchino",
+        "Stranger_than_Fiction_-LRB-2006_film-RRB-",
+        "Stranger_Things",
+        "Cyndi_Lauper"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 6.271758317947388
+    },
+    {
+      "query": "Stranger than Fiction is a film.",
+      "answer": "[Low consistency detected: 0.00] Yes, \"Stranger than Fiction\" is a film, as indicated by the context where it is listed with \"-LRB-2006_film-RRB-\" denoting its release year and medium. The other entries also confirm this pattern (e.g., \"The_Hunger_Games_-LRB-film-RRB-\"). \n\nAnswer: **True**. \"Stranger than Fiction\" is a 2006 film.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Stranger_than_Fiction_-LRB-2006_film-RRB-",
+        "Stranger_Things",
+        "The_Hunger_Games_-LRB-film-RRB-",
+        "The_Silence_of_the_Lambs_-LRB-film-RRB-"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 5.018555641174316
+    },
+    {
+      "query": "Chris Hemsworth appeared in A Perfect Getaway.",
+      "answer": "[Low consistency detected: 0.00] The context does not provide any information about Chris Hemsworth appearing in *A Perfect Getaway*. Without additional details, I cannot confirm or deny this claim. If you have more context or sources, please share them.  \n\nAnswer: I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Chris_Hemsworth",
+        "Ryan_Gosling",
+        "Ryan_Seacrest",
+        "Peggy_Sue_Got_Married"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 4.007064342498779
+    },
+    {
+      "query": "Selena recorded music.",
+      "answer": "[Low consistency detected: 0.00] The context provided does not include any information about Selena recording music. Therefore, I don't know the answer based on the given context.  \n\n(Note: If you're referring to Selena Quintanilla, the famous singer, she did record music, but this is not indicated in the provided context.)",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Grace_Jones",
+        "Cyndi_Lauper",
+        "Ryan_Seacrest",
+        "Willie_Nelson"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 3.3380789756774902
+    },
+    {
+      "query": "John Wick: Chapter 2 was theatrically released in the Oregon.",
+      "answer": "[Low consistency detected: 0.00] The given context does not contain any information about the theatrical release of *John Wick: Chapter 2* or its location in Oregon. Therefore, I don't know the answer to this question. \n\nIf you'd like, I can find accurate information for you through a reliable source. Let me know!",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Prisoners_of_War_-LRB-TV_series-RRB-",
+        "Stranger_than_Fiction_-LRB-2006_film-RRB-",
+        "The_Jim_Henson_Company",
+        "Nikolaj_Coster-Waldau"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 3.440136432647705
+    },
+    {
+      "query": "Robert J. O'Neill was born April 10, 1976.",
+      "answer": "[Low consistency detected: 0.00] The context provided does not include information about Robert J. O'Neill's birthdate. Therefore, I cannot confirm whether he was born on April 10, 1976. I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Robert_J._O'Neill_-LRB-U.S._Navy_SEAL-RRB-",
+        "J._Howard_Marshall",
+        "Michael_Giacchino",
+        "Malcolm_Young"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 3.119901657104492
+    },
+    {
+      "query": "Afghanistan is the source of the Kushan dynasty.",
+      "answer": "[Low consistency detected: 0.00] The context provided does not contain any information about the Kushan dynasty or Afghanistan. Therefore, I don't know the answer to whether Afghanistan is the source of the Kushan dynasty.  \n\n(Note: Historically, the Kushan Empire did originate in the region of Bactria, which includes parts of modern-day Afghanistan, but this is not confirmed by the given context.)",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "History_of_art",
+        "Malcolm_Young",
+        "The_Jim_Henson_Company",
+        "Tupac_Shakur"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 4.027369260787964
+    },
+    {
+      "query": "Marilyn Monroe worked with Warner Brothers.",
+      "answer": "[Low consistency detected: 0.00] The context provided does not contain any information about Marilyn Monroe or her association with Warner Brothers. Therefore, I don't know the answer to this question.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "The_Jim_Henson_Company",
+        "Sophie_Turner",
+        "Peggy_Sue_Got_Married",
+        "Robert_J._O'Neill_-LRB-U.S._Navy_SEAL-RRB-"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 2.3040390014648438
+    },
+    {
+      "query": "The Silence of the Lambs was a film starring Scott Glenn.",
+      "answer": "[Low consistency detected: 0.00] The context provided does not include information about the cast of *The Silence of the Lambs*. Therefore, I cannot confirm whether Scott Glenn starred in the film. If you'd like, I can look up the correct cast for you.  \n\n(Note: For accuracy, Scott Glenn did *not* star in *The Silence of the Lambs*—the main actors were Jodie Foster and Anthony Hopkins.)",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "The_Silence_of_the_Lambs_-LRB-film-RRB-",
+        "Stranger_than_Fiction_-LRB-2006_film-RRB-",
+        "The_Hunger_Games_-LRB-film-RRB-",
+        "Stranger_Things"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 4.185622692108154
+    },
+    {
+      "query": "Peggy Sue Got Married is a Egyptian film released in 1986.",
+      "answer": "[Low consistency detected: 0.00] The statement is incorrect. Based on the context provided, \"Peggy Sue Got Married\" is not an Egyptian film. It is an American film released in 1986, directed by Francis Ford Coppola and starring Kathleen Turner. The context does not mention any connection to Egypt or Egyptian cinema. \n\nThe other items listed (Sophie Turner, \"The Ten Commandments\" (1956 film), and \"Saratoga\" (film)) are unrelated to the question. \n\nSo, no, \"Peggy Sue Got Married\" is not an Egyptian film.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Peggy_Sue_Got_Married",
+        "Sophie_Turner",
+        "The_Ten_Commandments_-LRB-1956_film-RRB-",
+        "Saratoga_-LRB-film-RRB-"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 5.43064022064209
+    },
+    {
+      "query": "Andy Roddick lost 5 Master Series between 2002 and 2010.",
+      "answer": "[Low consistency detected: 0.00] The provided context does not include any information about Andy Roddick's performance in Master Series tournaments between 2002 and 2010. Therefore, I cannot confirm or deny whether he lost 5 Master Series during that period.  \n\nIf you'd like, I can look up this information from a reliable source. Let me know!",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Andy_Roddick",
+        "Stranger_than_Fiction_-LRB-2006_film-RRB-",
+        "Peggy_Sue_Got_Married",
+        "Prisoners_of_War_-LRB-TV_series-RRB-"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 4.316780090332031
+    },
+    {
+      "query": "As the Vietnam War raged in 1969, Yoko Ono and her husband John Lennon did not have two week-long Bed-Ins for Peace.",
+      "answer": "[Low consistency detected: 0.00] The context provided does not contain any information about Yoko Ono and John Lennon's Bed-Ins for Peace in 1969. Therefore, I don't know the answer to this question.  \n\nHowever, historically, Yoko Ono and John Lennon did hold two week-long Bed-Ins for Peace in 1969 (the first in Amsterdam and the second in Montreal) as a form of nonviolent protest against the Vietnam War. Since this detail is not in the given context, I cannot confirm it based on the provided information.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Peggy_Sue_Got_Married",
+        "Prisoners_of_War_-LRB-TV_series-RRB-",
+        "Chris_Hemsworth",
+        "Mother_Teresa"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 6.230840444564819
+    },
+    {
+      "query": "Tupac Shakur was born Lesane Parish Crooks.",
+      "answer": "[Low consistency detected: 0.00] The given context does not provide any information about Tupac Shakur's birth name. Therefore, I cannot confirm whether he was born as Lesane Parish Crooks or not based on the provided context.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Tupac_Shakur",
+        "Malcolm_Young",
+        "Willie_Nelson",
+        "Francis_Ford_Coppola"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 2.5377697944641113
+    },
+    {
+      "query": "Harold Ramis was a veteran.",
+      "answer": "[Low consistency detected: 0.00] The context provided does not include any information about Harold Ramis, so I cannot confirm whether he was a veteran or not. I don't know the answer based on the given context.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Robert_J._O'Neill_-LRB-U.S._Navy_SEAL-RRB-",
+        "J._Howard_Marshall",
+        "Nikolaj_Coster-Waldau",
+        "Malcolm_Young"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 2.692448854446411
+    },
+    {
+      "query": "The Jim Henson Company produced The Muppet Movie, The Dark Crystal, and Labyrinth.",
+      "answer": "[Low consistency detected: 0.00] The given context does not explicitly confirm or deny whether **The Jim Henson Company** produced *The Muppet Movie*, *The Dark Crystal*, or *Labyrinth*. Since the context does not mention these specific films, I cannot verify the claim with the provided information.  \n\n*(However, based on general knowledge outside this context, yes, The Jim Henson Company did produce those films.)*",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "The_Jim_Henson_Company",
+        "Stranger_than_Fiction_-LRB-2006_film-RRB-",
+        "Stranger_Things",
+        "The_Silence_of_the_Lambs_-LRB-film-RRB-"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 4.095836400985718
+    },
+    {
+      "query": "United Nations was relocated to the United States in 1945.",
+      "answer": "[Low consistency detected: 0.00] The context provided does not contain any information about the United Nations being relocated to the United States in 1945. Therefore, I cannot confirm or deny the statement based on the given context. \n\nHowever, historically, the United Nations was established in 1945, and its headquarters were indeed located in the United States (specifically in New York City). If you'd like a more detailed answer, I would need additional context or sources.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "United_States",
+        "Midwestern_United_States",
+        "The_Jim_Henson_Company",
+        "Newfoundland_and_Labrador"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 4.783512592315674
+    },
+    {
+      "query": "Whoopi Goldberg co-produced an American dance tournament.",
+      "answer": "[Low consistency detected: 0.00] The provided context does not mention Whoopi Goldberg or an American dance tournament, so I cannot confirm whether she co-produced one. I don't know the answer based on the given information.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "The_Jim_Henson_Company",
+        "Ryan_Seacrest",
+        "History_of_art",
+        "Chris_Hemsworth"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 2.688321590423584
+    },
+    {
+      "query": "Slovenia uses the euro.",
+      "answer": "[Low consistency detected: 0.00] The context provided does not include any information about Slovenia or its currency. Therefore, I cannot confirm whether Slovenia uses the euro based on the given context.  \n\nHowever, as a general fact (outside the given context), Slovenia does indeed use the euro as its official currency, having adopted it in 2007.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Puerto_Rico",
+        "Michael_Giacchino",
+        "Boston_Celtics",
+        "United_States"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 4.012526750564575
+    },
+    {
+      "query": "Iowa is a part of the Midwestern United States.",
+      "answer": "[Low consistency detected: 0.00] The statement \"Iowa is a part of the Midwestern United States\" is **true**. Iowa is indeed one of the states included in the Midwest region of the United States, as referenced in the provided context (\"Midwestern_United_States\"). \n\nNone of the other context pieces (United_States, Newfoundland_and_Labrador, Ryan_Seacrest) are directly relevant to this question. \n\nFinal Answer: **True.** Iowa is part of the Midwestern United States.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Midwestern_United_States",
+        "United_States",
+        "Newfoundland_and_Labrador",
+        "Ryan_Seacrest"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 4.129791736602783
+    },
+    {
+      "query": "Keith Urban is a person who sings.",
+      "answer": "[Low consistency detected: 0.00] The context provided does not include any information about Keith Urban. Therefore, I don't know if he is a person who sings based on the given context.  \n\n(Note: Keith Urban is indeed a singer in real life, but this answer is strictly based on the limited context provided.)",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Michael_Giacchino",
+        "Cyndi_Lauper",
+        "Willie_Nelson",
+        "Ryan_Seacrest"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 3.709327459335327
+    },
+    {
+      "query": "Hotell is owned by Lisa Langseth.",
+      "answer": "[Low consistency detected: 0.00] I don't know. The provided context does not contain any information about \"Hotell\" or its ownership by Lisa Langseth.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Sophie_Turner",
+        "Fox_Broadcasting_Company",
+        "Cyndi_Lauper",
+        "The_Jim_Henson_Company"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 2.7904269695281982
+    },
+    {
+      "query": "Saratoga is an American film from 1937.",
+      "answer": "[Low consistency detected: 0.00] The provided context does not contain any information about the 1937 film \"Saratoga.\" Since I don't have the necessary details to confirm or refute the statement, I can't provide a reliable answer.  \n\n(Note: The context lists unrelated films like \"Saratoga (film),\" \"The Hunger Games (film),\" and \"The Silence of the Lambs (film)\" without details. Based on external knowledge, *Saratoga* (1937) is a romantic comedy starring Jean Harlow and Clark Gable, but this isn't verifiable from the given context.)",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Saratoga_-LRB-film-RRB-",
+        "Ryan_Gosling",
+        "The_Hunger_Games_-LRB-film-RRB-",
+        "The_Silence_of_the_Lambs_-LRB-film-RRB-"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 4.8821821212768555
+    },
+    {
+      "query": "J. Howard Marshall was a baby.",
+      "answer": "[Low consistency detected: 0.00] The context provided does not include any information about J. Howard Marshall's age or whether he was a baby. Therefore, I cannot confirm or deny the statement \"J. Howard Marshall was a baby.\"  \n\nAnswer: I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "J._Howard_Marshall",
+        "Robert_J._O'Neill_-LRB-U.S._Navy_SEAL-RRB-",
+        "Malcolm_Young",
+        "Mother_Teresa"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 3.4195492267608643
+    },
+    {
+      "query": "Grace Jones is a dancer.",
+      "answer": "[Low consistency detected: 0.00] Based on the given context, the names listed (Grace_Jones, Sophie_Turner, Mother_Teresa, Chris_Hemsworth) do not provide any information about Grace Jones being a dancer. Therefore, I cannot confirm or deny the statement \"Grace Jones is a dancer\" from this context alone. \n\nHowever, in broader general knowledge, Grace Jones is indeed known as a singer, model, and actress, and she has also been involved in dancing as part of her performances. But since this isn't reflected in the provided context, I can't use it to answer definitively. \n\nIf you'd like, I can provide more information about Grace Jones from general knowledge!",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Grace_Jones",
+        "Sophie_Turner",
+        "Mother_Teresa",
+        "Chris_Hemsworth"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 6.276000499725342
+    },
+    {
+      "query": "Lisbon has a population larger than 1.",
+      "answer": "[Low consistency detected: 0.00] The context provided does not contain any information about Lisbon or its population. Therefore, I cannot answer the question based on the given context. \n\nHowever, as a general fact, Lisbon (the capital of Portugal) does indeed have a population larger than 1. According to recent estimates, its metropolitan area has over 2.8 million inhabitants. But this is not derived from the context you shared.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Michael_Giacchino",
+        "Puerto_Rico",
+        "Newfoundland_and_Labrador",
+        "Boston_Celtics"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 3.9617762565612793
+    },
+    {
+      "query": "Willie Nelson dropped out of college after three years.",
+      "answer": "[Low consistency detected: 0.00] The context provided does not include any information about Willie Nelson dropping out of college, so I cannot confirm or deny the statement. I don't know.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Willie_Nelson",
+        "The_Jim_Henson_Company",
+        "Malcolm_Young",
+        "Nikolaj_Coster-Waldau"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 2.8140852451324463
+    },
+    {
+      "query": "Malcolm Young was the co-founder of Australian hard rock band AC/DC.",
+      "answer": "[Low consistency detected: 0.00] Based on the context provided, the statement is correct. Malcolm Young was indeed the co-founder of the Australian hard rock band AC/DC. \n\nThe other names listed (Tupac Shakur, Robert J. O'Neill, and Francis Ford Coppola) are unrelated to this fact. \n\nAnswer: Yes, Malcolm Young was the co-founder of AC/DC.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Malcolm_Young",
+        "Tupac_Shakur",
+        "Robert_J._O'Neill_-LRB-U.S._Navy_SEAL-RRB-",
+        "Francis_Ford_Coppola"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 3.748340606689453
+    },
+    {
+      "query": "Nice & Slow is a jazz single.",
+      "answer": "[Low consistency detected: 0.00] The context provided does not mention anything about \"Nice & Slow\" being a jazz single or any details related to it. Therefore, I don't know the answer to your question.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Willie_Nelson",
+        "Tupac_Shakur",
+        "The_Silence_of_the_Lambs_-LRB-film-RRB-",
+        "Stranger_Things"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 3.711632490158081
+    },
+    {
+      "query": "Newfoundland and Labrador is the most linguistically homogeneous of Canada.",
+      "answer": "[Low consistency detected: 0.00] The given context does not provide any information about the linguistic homogeneity of Newfoundland and Labrador or how it compares to other regions in Canada. Therefore, I cannot confirm or deny the statement based on the provided context.  \n\nIf you'd like, I can look up reliable sources to verify this claim. Let me know!",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Newfoundland_and_Labrador",
+        "Midwestern_United_States",
+        "Puerto_Rico",
+        "United_States"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 3.4198758602142334
+    },
+    {
+      "query": "Furia is adapted from a short story by Anna Politkovskaya.",
+      "answer": "[Low consistency detected: 0.00] The provided context does not mention anything about Furia being adapted from a short story by Anna Politkovskaya or any details about its source material. Therefore, I cannot confirm or deny the statement based on the given information.  \n\nIf you'd like, I can try to find additional information about the film's adaptation. Let me know!",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Furia_-LRB-film-RRB-",
+        "Francis_Ford_Coppola",
+        "Sophie_Turner",
+        "Nikolaj_Coster-Waldau"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 4.297420024871826
+    },
+    {
+      "query": "One state of the United States has Russia to its west.",
+      "answer": "[Low consistency detected: 0.00] Based on the given context, I don't see any information that would allow me to answer the question accurately. The context includes general geographic terms like \"United_States,\" \"Midwestern_United_States,\" \"Newfoundland_and_Labrador,\" and \"Puerto_Rico,\" but none of these directly answer whether a U.S. state has Russia to its west. \n\nFor reference, in reality, Alaska is the U.S. state that has Russia (specifically, the Diomede Islands) to its west, but this isn't inferable from the provided context. So, I don't know the answer based on the given information.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "United_States",
+        "Midwestern_United_States",
+        "Newfoundland_and_Labrador",
+        "Puerto_Rico"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 4.964700698852539
+    },
+    {
+      "query": "Sophie Turner was born in the 1990s.",
+      "answer": "[Low consistency detected: 0.00] The context provided does not include information about Sophie Turner's birth year, so I cannot confirm whether she was born in the 1990s. I don't know the answer based on the given context.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Sophie_Turner",
+        "Ryan_Gosling",
+        "Peggy_Sue_Got_Married",
+        "Mother_Teresa"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 2.3241770267486572
+    },
+    {
+      "query": "Mother Teresa was made a saint by the church.",
+      "answer": "[Low consistency detected: 0.00] Based on the given context, the statement \"Mother Teresa was made a saint by the church\" is accurate. Mother Teresa was canonized as a saint by the Roman Catholic Church on September 4, 2016, by Pope Francis. \n\nThe other pieces of context (Sophie_Turner, History_of_art, Peggy_Sue_Got_Married) are unrelated to this question.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Mother_Teresa",
+        "Sophie_Turner",
+        "History_of_art",
+        "Peggy_Sue_Got_Married"
+      ],
+      "graph_triplets": [],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.0,
+      "metadata": {
+        "num_nodes": 0,
+        "num_edges": 0,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 4.117722988128662
+    }
+  ],
+  "comparison": {
+    "baseline": {
+      "factual_accuracy": 0.013266423465140828,
+      "logical_consistency": 0.5,
+      "hallucination_rate": 0.37118630238380634,
+      "response_coherence": 1.0,
+      "graph_completeness": 0.0,
+      "avg_response_time": 3.4383297967910766
+    },
+    "graph_augmented": {
+      "factual_accuracy": 0.012280311475589091,
+      "logical_consistency": 0.5,
+      "hallucination_rate": 0.4054111606878663,
+      "response_coherence": 1.0,
+      "graph_completeness": 0.0,
+      "avg_response_time": 4.057660264968872
+    },
+    "improvements_pct": {
+      "factual_accuracy": -7.43314120902946,
+      "logical_consistency": 0.0,
+      "hallucination_rate": -9.220399051436843,
+      "response_coherence": 0.0,
+      "graph_completeness": 0,
+      "avg_response_time": 18.01253820258324
+    },
+    "summary": {
+      "accuracy_gain": -7.43314120902946,
+      "consistency_gain": 0.0,
+      "hallucination_reduction": -9.220399051436843
+    }
+  }
+}

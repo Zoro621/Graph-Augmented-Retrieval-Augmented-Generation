@@ -1,0 +1,1168 @@
+{
+  "experiment_info": {
+    "timestamp": "20251121_203947",
+    "dataset": "sample",
+    "num_queries": 8,
+    "model": "deepseek/deepseek-chat",
+    "configuration": {
+      "use_spacy": true,
+      "consistency_threshold": 0.7,
+      "k_retrieve": 4
+    }
+  },
+  "baseline_results": [
+    {
+      "query": "When was Albert Einstein born?",
+      "answer": "Albert Einstein was born on March 14, 1879, in Ulm, Germany.  \n\n(Source: The provided context explicitly states this information.)",
+      "ground_truth": "Albert Einstein was born on March 14, 1879.",
+      "retrieved_docs": [
+        "Albert Einstein was born on March 14, 1879, in Ulm, Germany.",
+        "Einstein emigrated to the United States in 1933 and worked at Princeton.",
+        "Einstein died on April 18, 1955, in Princeton, New Jersey.",
+        "In 1921, Einstein received the Nobel Prize in Physics for explaining the photoelectric effect."
+      ],
+      "time": 3.2148640155792236,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "What is Einstein's most famous equation?",
+      "answer": "Einstein's most famous equation is **E=mc²**, which was introduced in his theory of special relativity. This is explicitly mentioned in the provided context.",
+      "ground_truth": "Einstein's most famous equation is E=mc².",
+      "retrieved_docs": [
+        "Einstein's theory of special relativity introduced the equation E=mc².",
+        "Einstein emigrated to the United States in 1933 and worked at Princeton.",
+        "In 1921, Einstein received the Nobel Prize in Physics for explaining the photoelectric effect.",
+        "Einstein died on April 18, 1955, in Princeton, New Jersey."
+      ],
+      "time": 2.10968279838562,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Why did Einstein receive the Nobel Prize?",
+      "answer": "Based on the context provided, Albert Einstein received the Nobel Prize in Physics in 1921 for explaining the photoelectric effect. \n\nThe photoelectric effect refers to the emission of electrons when light shines on a material, and Einstein's work on this phenomenon helped establish foundational principles of quantum theory.",
+      "ground_truth": "Einstein received the Nobel Prize for his explanation of the photoelectric effect.",
+      "retrieved_docs": [
+        "In 1921, Einstein received the Nobel Prize in Physics for explaining the photoelectric effect.",
+        "Einstein emigrated to the United States in 1933 and worked at Princeton.",
+        "Einstein died on April 18, 1955, in Princeton, New Jersey.",
+        "Albert Einstein was born on March 14, 1879, in Ulm, Germany."
+      ],
+      "time": 2.459031105041504,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "When did Einstein move to the United States?",
+      "answer": "Einstein moved to the United States in 1933.",
+      "ground_truth": "Einstein moved to the United States in 1933.",
+      "retrieved_docs": [
+        "Einstein emigrated to the United States in 1933 and worked at Princeton.",
+        "Einstein died on April 18, 1955, in Princeton, New Jersey.",
+        "Albert Einstein was born on March 14, 1879, in Ulm, Germany.",
+        "Einstein was offered the presidency of Israel in 1952 but declined."
+      ],
+      "time": 2.178722858428955,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "What does general relativity describe?",
+      "answer": "Based on the given context, general relativity describes gravity as spacetime curvature caused by mass. \n\nThe context explicitly states: \"General relativity describes gravity as spacetime curvature caused by mass.\" This is the correct and complete answer to your question.",
+      "ground_truth": "General relativity describes gravity as a curvature of spacetime.",
+      "retrieved_docs": [
+        "General relativity describes gravity as spacetime curvature caused by mass.",
+        "Einstein's theory of special relativity introduced the equation E=mc².",
+        "Special relativity was published in 1905.",
+        "Einstein emigrated to the United States in 1933 and worked at Princeton."
+      ],
+      "time": 2.731462001800537,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "Where did Einstein die?",
+      "answer": "Einstein died in Princeton, New Jersey.  \n\n(Source: The context states, \"Einstein died on April 18, 1955, in Princeton, New Jersey.\")",
+      "ground_truth": "Einstein died in Princeton, New Jersey.",
+      "retrieved_docs": [
+        "Einstein died on April 18, 1955, in Princeton, New Jersey.",
+        "Einstein emigrated to the United States in 1933 and worked at Princeton.",
+        "Albert Einstein was born on March 14, 1879, in Ulm, Germany.",
+        "Einstein's theory of special relativity introduced the equation E=mc²."
+      ],
+      "time": 3.0328168869018555,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "What year was special relativity published?",
+      "answer": "Based on the given context, **special relativity was published in 1905**.  \n\nHere’s the direct supporting statement from the context:  \n*\"Special relativity was published in 1905.\"*  \n\nNo further interpretation is needed—the answer is clearly stated. Let me know if you'd like additional details!",
+      "ground_truth": "Special relativity was published in 1905.",
+      "retrieved_docs": [
+        "Special relativity was published in 1905.",
+        "Einstein's theory of special relativity introduced the equation E=mc².",
+        "In 1921, Einstein received the Nobel Prize in Physics for explaining the photoelectric effect.",
+        "Albert Einstein was born on March 14, 1879, in Ulm, Germany."
+      ],
+      "time": 3.061231851577759,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "query": "What position was Einstein offered in 1952?",
+      "answer": "Based on the provided context, in 1952 Albert Einstein was offered the **presidency of Israel**. He declined this offer.  \n\nThe answer is supported by the exact statement in the context:  \n*\"Einstein was offered the presidency of Israel in 1952 but declined.\"*",
+      "ground_truth": "Einstein was offered the presidency of Israel in 1952.",
+      "retrieved_docs": [
+        "Einstein was offered the presidency of Israel in 1952 but declined.",
+        "Einstein emigrated to the United States in 1933 and worked at Princeton.",
+        "Einstein died on April 18, 1955, in Princeton, New Jersey.",
+        "Albert Einstein was born on March 14, 1879, in Ulm, Germany."
+      ],
+      "time": 2.560110330581665,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "deepseek/deepseek-chat"
+      }
+    }
+  ],
+  "ga_rag_results": [
+    {
+      "query": "When was Albert Einstein born?",
+      "answer": "Albert Einstein was born on March 14, 1879.  \n\n(Answer derived directly from the validated knowledge: \"Albert Einstein bear_PERSON_to_DATE March 14, 1879.\")",
+      "ground_truth": "Albert Einstein was born on March 14, 1879.",
+      "retrieved_docs": [
+        "Albert Einstein was born on March 14, 1879, in Ulm, Germany.",
+        "Einstein emigrated to the United States in 1933 and worked at Princeton.",
+        "Einstein died on April 18, 1955, in Princeton, New Jersey.",
+        "In 1921, Einstein received the Nobel Prize in Physics for explaining the photoelectric effect."
+      ],
+      "graph_triplets": [
+        {
+          "subject": "April 18, 1955",
+          "relation": "die_DATE_to_GPE",
+          "object": "Princeton"
+        },
+        {
+          "subject": "1933",
+          "relation": "emigrate_DATE_to_PERSON",
+          "object": "Einstein"
+        },
+        {
+          "subject": "March 14, 1879",
+          "relation": "bear_DATE_to_GPE",
+          "object": "Germany"
+        },
+        {
+          "subject": "the United States",
+          "relation": "work_GPE_to_PERSON",
+          "object": "Einstein"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "emigrate_PERSON_to_DATE",
+          "object": "1933"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "receive",
+          "object": "Prize"
+        },
+        {
+          "subject": "1921",
+          "relation": "receive_DATE_to_WORK_OF_ART",
+          "object": "the Nobel Prize in Physics"
+        },
+        {
+          "subject": "1933",
+          "relation": "work_DATE_to_GPE",
+          "object": "the United States"
+        },
+        {
+          "subject": "Princeton",
+          "relation": "emigrate_GPE_to_PERSON",
+          "object": "Einstein"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "receive_PERSON_to_WORK_OF_ART",
+          "object": "the Nobel Prize in Physics"
+        },
+        {
+          "subject": "Albert Einstein",
+          "relation": "bear_PERSON_to_GPE",
+          "object": "Germany"
+        },
+        {
+          "subject": "Princeton",
+          "relation": "work_GPE_to_PERSON",
+          "object": "Einstein"
+        },
+        {
+          "subject": "1933",
+          "relation": "work_DATE_to_GPE",
+          "object": "Princeton"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "receive_PERSON_to_DATE",
+          "object": "1921"
+        },
+        {
+          "subject": "the Nobel Prize in Physics",
+          "relation": "receive_WORK_OF_ART_to_DATE",
+          "object": "1921"
+        },
+        {
+          "subject": "Princeton",
+          "relation": "die_GPE_to_GPE",
+          "object": "New Jersey"
+        },
+        {
+          "subject": "the Nobel Prize in Physics",
+          "relation": "explain_WORK_OF_ART_to_DATE",
+          "object": "1921"
+        },
+        {
+          "subject": "New Jersey",
+          "relation": "die_GPE_to_DATE",
+          "object": "April 18, 1955"
+        },
+        {
+          "subject": "Ulm",
+          "relation": "bear_GPE_to_GPE",
+          "object": "Germany"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "work_PERSON_to_DATE",
+          "object": "1933"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 1.0,
+      "metadata": {
+        "num_nodes": 13,
+        "num_edges": 37,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 7.479640483856201
+    },
+    {
+      "query": "What is Einstein's most famous equation?",
+      "answer": "Based on the validated knowledge provided, Einstein's most famous equation is **E=mc²**, which was introduced by his theory of special relativity. \n\nThe context explicitly states:  \n*\"Einstein's theory of special relativity introduced the equation E=mc².\"*  \n\nThus, the answer is **E=mc²**.",
+      "ground_truth": "Einstein's most famous equation is E=mc².",
+      "retrieved_docs": [
+        "Einstein's theory of special relativity introduced the equation E=mc².",
+        "Einstein emigrated to the United States in 1933 and worked at Princeton.",
+        "In 1921, Einstein received the Nobel Prize in Physics for explaining the photoelectric effect.",
+        "Einstein died on April 18, 1955, in Princeton, New Jersey."
+      ],
+      "graph_triplets": [
+        {
+          "subject": "April 18, 1955",
+          "relation": "die_DATE_to_GPE",
+          "object": "Princeton"
+        },
+        {
+          "subject": "1933",
+          "relation": "emigrate_DATE_to_PERSON",
+          "object": "Einstein"
+        },
+        {
+          "subject": "the United States",
+          "relation": "work_GPE_to_PERSON",
+          "object": "Einstein"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "emigrate_PERSON_to_DATE",
+          "object": "1933"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "receive",
+          "object": "Prize"
+        },
+        {
+          "subject": "1921",
+          "relation": "receive_DATE_to_WORK_OF_ART",
+          "object": "the Nobel Prize in Physics"
+        },
+        {
+          "subject": "1933",
+          "relation": "work_DATE_to_GPE",
+          "object": "the United States"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "receive_PERSON_to_WORK_OF_ART",
+          "object": "the Nobel Prize in Physics"
+        },
+        {
+          "subject": "Princeton",
+          "relation": "work_GPE_to_PERSON",
+          "object": "Einstein"
+        },
+        {
+          "subject": "theory",
+          "relation": "introduce",
+          "object": "equation"
+        },
+        {
+          "subject": "1933",
+          "relation": "work_DATE_to_GPE",
+          "object": "Princeton"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "receive_PERSON_to_DATE",
+          "object": "1921"
+        },
+        {
+          "subject": "the Nobel Prize in Physics",
+          "relation": "receive_WORK_OF_ART_to_DATE",
+          "object": "1921"
+        },
+        {
+          "subject": "the Nobel Prize in Physics",
+          "relation": "explain_WORK_OF_ART_to_DATE",
+          "object": "1921"
+        },
+        {
+          "subject": "Princeton",
+          "relation": "die_GPE_to_GPE",
+          "object": "New Jersey"
+        },
+        {
+          "subject": "New Jersey",
+          "relation": "die_GPE_to_DATE",
+          "object": "April 18, 1955"
+        },
+        {
+          "subject": "the United States",
+          "relation": "work_GPE_to_GPE",
+          "object": "Princeton"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "work_PERSON_to_DATE",
+          "object": "1933"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "explain_PERSON_to_WORK_OF_ART",
+          "object": "the Nobel Prize in Physics"
+        },
+        {
+          "subject": "Princeton",
+          "relation": "die_GPE_to_DATE",
+          "object": "April 18, 1955"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 1.0,
+      "metadata": {
+        "num_nodes": 13,
+        "num_edges": 28,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 6.1982972621917725
+    },
+    {
+      "query": "Why did Einstein receive the Nobel Prize?",
+      "answer": "Based on the validated knowledge provided, Einstein received the Nobel Prize in Physics in 1921 for explaining the photoelectric effect. \n\nThe key facts supporting this are:\n1. \"Einstein received the Nobel Prize in Physics for explaining the photoelectric effect.\"\n2. \"Einstein explain_PERSON_to_WORK_OF_ART the Nobel Prize in Physics.\"\n3. \"the Nobel Prize in Physics explain_WORK_OF_ART_to_PERSON Einstein.\"\n\nThese statements clearly indicate that Einstein's explanation of the photoelectric effect was the reason he was awarded the Nobel Prize in Physics in 1921.",
+      "ground_truth": "Einstein received the Nobel Prize for his explanation of the photoelectric effect.",
+      "retrieved_docs": [
+        "In 1921, Einstein received the Nobel Prize in Physics for explaining the photoelectric effect.",
+        "Einstein emigrated to the United States in 1933 and worked at Princeton.",
+        "Einstein died on April 18, 1955, in Princeton, New Jersey.",
+        "Albert Einstein was born on March 14, 1879, in Ulm, Germany."
+      ],
+      "graph_triplets": [
+        {
+          "subject": "April 18, 1955",
+          "relation": "die_DATE_to_GPE",
+          "object": "Princeton"
+        },
+        {
+          "subject": "1933",
+          "relation": "emigrate_DATE_to_PERSON",
+          "object": "Einstein"
+        },
+        {
+          "subject": "March 14, 1879",
+          "relation": "bear_DATE_to_GPE",
+          "object": "Germany"
+        },
+        {
+          "subject": "the United States",
+          "relation": "work_GPE_to_PERSON",
+          "object": "Einstein"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "receive",
+          "object": "Prize"
+        },
+        {
+          "subject": "1921",
+          "relation": "receive_DATE_to_WORK_OF_ART",
+          "object": "the Nobel Prize in Physics"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "emigrate_PERSON_to_DATE",
+          "object": "1933"
+        },
+        {
+          "subject": "1933",
+          "relation": "work_DATE_to_GPE",
+          "object": "the United States"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "receive_PERSON_to_WORK_OF_ART",
+          "object": "the Nobel Prize in Physics"
+        },
+        {
+          "subject": "Albert Einstein",
+          "relation": "bear_PERSON_to_GPE",
+          "object": "Germany"
+        },
+        {
+          "subject": "Princeton",
+          "relation": "work_GPE_to_PERSON",
+          "object": "Einstein"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "receive_PERSON_to_DATE",
+          "object": "1921"
+        },
+        {
+          "subject": "1933",
+          "relation": "work_DATE_to_GPE",
+          "object": "Princeton"
+        },
+        {
+          "subject": "the Nobel Prize in Physics",
+          "relation": "receive_WORK_OF_ART_to_DATE",
+          "object": "1921"
+        },
+        {
+          "subject": "the Nobel Prize in Physics",
+          "relation": "explain_WORK_OF_ART_to_DATE",
+          "object": "1921"
+        },
+        {
+          "subject": "Princeton",
+          "relation": "die_GPE_to_GPE",
+          "object": "New Jersey"
+        },
+        {
+          "subject": "New Jersey",
+          "relation": "die_GPE_to_DATE",
+          "object": "April 18, 1955"
+        },
+        {
+          "subject": "the United States",
+          "relation": "work_GPE_to_GPE",
+          "object": "Princeton"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "work_PERSON_to_DATE",
+          "object": "1933"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "explain_PERSON_to_WORK_OF_ART",
+          "object": "the Nobel Prize in Physics"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 1.0,
+      "metadata": {
+        "num_nodes": 13,
+        "num_edges": 37,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 6.990117073059082
+    },
+    {
+      "query": "When did Einstein move to the United States?",
+      "answer": "Einstein moved to the United States in 1933. This is supported by the validated knowledge: \"Einstein work_PERSON_to_DATE 1933\" and \"Einstein work_PERSON_to_GPE the United States.\"",
+      "ground_truth": "Einstein moved to the United States in 1933.",
+      "retrieved_docs": [
+        "Einstein emigrated to the United States in 1933 and worked at Princeton.",
+        "Einstein died on April 18, 1955, in Princeton, New Jersey.",
+        "Albert Einstein was born on March 14, 1879, in Ulm, Germany.",
+        "Einstein was offered the presidency of Israel in 1952 but declined."
+      ],
+      "graph_triplets": [
+        {
+          "subject": "April 18, 1955",
+          "relation": "die_DATE_to_GPE",
+          "object": "Princeton"
+        },
+        {
+          "subject": "1952",
+          "relation": "decline_DATE_to_PERSON",
+          "object": "Einstein"
+        },
+        {
+          "subject": "1933",
+          "relation": "emigrate_DATE_to_PERSON",
+          "object": "Einstein"
+        },
+        {
+          "subject": "Israel",
+          "relation": "offer_GPE_to_DATE",
+          "object": "1952"
+        },
+        {
+          "subject": "March 14, 1879",
+          "relation": "bear_DATE_to_GPE",
+          "object": "Germany"
+        },
+        {
+          "subject": "the United States",
+          "relation": "work_GPE_to_PERSON",
+          "object": "Einstein"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "emigrate_PERSON_to_DATE",
+          "object": "1933"
+        },
+        {
+          "subject": "1933",
+          "relation": "work_DATE_to_GPE",
+          "object": "the United States"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "decline_PERSON_to_DATE",
+          "object": "1952"
+        },
+        {
+          "subject": "1952",
+          "relation": "offer_DATE_to_PERSON",
+          "object": "Einstein"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "decline_PERSON_to_GPE",
+          "object": "Israel"
+        },
+        {
+          "subject": "Albert Einstein",
+          "relation": "bear_PERSON_to_GPE",
+          "object": "Germany"
+        },
+        {
+          "subject": "Princeton",
+          "relation": "work_GPE_to_PERSON",
+          "object": "Einstein"
+        },
+        {
+          "subject": "1933",
+          "relation": "work_DATE_to_GPE",
+          "object": "Princeton"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "offer",
+          "object": "presidency"
+        },
+        {
+          "subject": "Princeton",
+          "relation": "die_GPE_to_GPE",
+          "object": "New Jersey"
+        },
+        {
+          "subject": "Israel",
+          "relation": "offer_GPE_to_PERSON",
+          "object": "Einstein"
+        },
+        {
+          "subject": "New Jersey",
+          "relation": "die_GPE_to_DATE",
+          "object": "April 18, 1955"
+        },
+        {
+          "subject": "the United States",
+          "relation": "work_GPE_to_GPE",
+          "object": "Princeton"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "work_PERSON_to_DATE",
+          "object": "1933"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 1.0,
+      "metadata": {
+        "num_nodes": 13,
+        "num_edges": 37,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 5.044846296310425
+    },
+    {
+      "query": "What does general relativity describe?",
+      "answer": "Based on the validated knowledge provided, the answer is:  \n\n**General relativity describes gravity as spacetime curvature caused by mass.**  \n\nThis is directly stated in the context: *\"General relativity describes gravity as spacetime curvature caused by mass.\"*",
+      "ground_truth": "General relativity describes gravity as a curvature of spacetime.",
+      "retrieved_docs": [
+        "General relativity describes gravity as spacetime curvature caused by mass.",
+        "Einstein's theory of special relativity introduced the equation E=mc².",
+        "Special relativity was published in 1905.",
+        "Einstein emigrated to the United States in 1933 and worked at Princeton."
+      ],
+      "graph_triplets": [
+        {
+          "subject": "1933",
+          "relation": "emigrate_DATE_to_PERSON",
+          "object": "Einstein"
+        },
+        {
+          "subject": "the United States",
+          "relation": "work_GPE_to_PERSON",
+          "object": "Einstein"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "emigrate_PERSON_to_DATE",
+          "object": "1933"
+        },
+        {
+          "subject": "1933",
+          "relation": "work_DATE_to_GPE",
+          "object": "the United States"
+        },
+        {
+          "subject": "Princeton",
+          "relation": "work_GPE_to_PERSON",
+          "object": "Einstein"
+        },
+        {
+          "subject": "theory",
+          "relation": "introduce",
+          "object": "equation"
+        },
+        {
+          "subject": "1933",
+          "relation": "work_DATE_to_GPE",
+          "object": "Princeton"
+        },
+        {
+          "subject": "the United States",
+          "relation": "work_GPE_to_GPE",
+          "object": "Princeton"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "work_PERSON_to_DATE",
+          "object": "1933"
+        },
+        {
+          "subject": "the United States",
+          "relation": "emigrate_GPE_to_DATE",
+          "object": "1933"
+        },
+        {
+          "subject": "Princeton",
+          "relation": "work_GPE_to_GPE",
+          "object": "the United States"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "emigrate_PERSON_to_GPE",
+          "object": "the United States"
+        },
+        {
+          "subject": "the United States",
+          "relation": "work_GPE_to_DATE",
+          "object": "1933"
+        },
+        {
+          "subject": "Princeton",
+          "relation": "emigrate_GPE_to_DATE",
+          "object": "1933"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "emigrate_PERSON_to_GPE",
+          "object": "Princeton"
+        },
+        {
+          "subject": "relativity",
+          "relation": "describe",
+          "object": "gravity"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "work_PERSON_to_GPE",
+          "object": "the United States"
+        },
+        {
+          "subject": "Princeton",
+          "relation": "work_GPE_to_DATE",
+          "object": "1933"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "work_PERSON_to_GPE",
+          "object": "Princeton"
+        },
+        {
+          "subject": "1933",
+          "relation": "work_DATE_to_PERSON",
+          "object": "Einstein"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 1.0,
+      "metadata": {
+        "num_nodes": 10,
+        "num_edges": 16,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 4.453789710998535
+    },
+    {
+      "query": "Where did Einstein die?",
+      "answer": "Based on the context provided, Einstein died in **Princeton, New Jersey**.  \n\nThe validated knowledge confirms:  \n- \"Princeton die_GPE_to_GPE New Jersey\" (Princeton is in New Jersey)  \n- \"April 18, 1955 die_DATE_to_GPE Princeton\" (Einstein died in Princeton on April 18, 1955)  \n\nThus, the answer is **Princeton, New Jersey**.",
+      "ground_truth": "Einstein died in Princeton, New Jersey.",
+      "retrieved_docs": [
+        "Einstein died on April 18, 1955, in Princeton, New Jersey.",
+        "Einstein emigrated to the United States in 1933 and worked at Princeton.",
+        "Albert Einstein was born on March 14, 1879, in Ulm, Germany.",
+        "Einstein's theory of special relativity introduced the equation E=mc²."
+      ],
+      "graph_triplets": [
+        {
+          "subject": "April 18, 1955",
+          "relation": "die_DATE_to_GPE",
+          "object": "Princeton"
+        },
+        {
+          "subject": "1933",
+          "relation": "emigrate_DATE_to_PERSON",
+          "object": "Einstein"
+        },
+        {
+          "subject": "March 14, 1879",
+          "relation": "bear_DATE_to_GPE",
+          "object": "Germany"
+        },
+        {
+          "subject": "the United States",
+          "relation": "work_GPE_to_PERSON",
+          "object": "Einstein"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "emigrate_PERSON_to_DATE",
+          "object": "1933"
+        },
+        {
+          "subject": "1933",
+          "relation": "work_DATE_to_GPE",
+          "object": "the United States"
+        },
+        {
+          "subject": "Albert Einstein",
+          "relation": "bear_PERSON_to_GPE",
+          "object": "Germany"
+        },
+        {
+          "subject": "Princeton",
+          "relation": "work_GPE_to_PERSON",
+          "object": "Einstein"
+        },
+        {
+          "subject": "1933",
+          "relation": "work_DATE_to_GPE",
+          "object": "Princeton"
+        },
+        {
+          "subject": "theory",
+          "relation": "introduce",
+          "object": "equation"
+        },
+        {
+          "subject": "Princeton",
+          "relation": "die_GPE_to_GPE",
+          "object": "New Jersey"
+        },
+        {
+          "subject": "New Jersey",
+          "relation": "die_GPE_to_DATE",
+          "object": "April 18, 1955"
+        },
+        {
+          "subject": "Princeton",
+          "relation": "die_GPE_to_DATE",
+          "object": "April 18, 1955"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "work_PERSON_to_DATE",
+          "object": "1933"
+        },
+        {
+          "subject": "the United States",
+          "relation": "work_GPE_to_GPE",
+          "object": "Princeton"
+        },
+        {
+          "subject": "Ulm",
+          "relation": "bear_GPE_to_GPE",
+          "object": "Germany"
+        },
+        {
+          "subject": "the United States",
+          "relation": "emigrate_GPE_to_DATE",
+          "object": "1933"
+        },
+        {
+          "subject": "Princeton",
+          "relation": "work_GPE_to_GPE",
+          "object": "the United States"
+        },
+        {
+          "subject": "Germany",
+          "relation": "bear_GPE_to_GPE",
+          "object": "Ulm"
+        },
+        {
+          "subject": "New Jersey",
+          "relation": "die_GPE_to_GPE",
+          "object": "Princeton"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 1.0,
+      "metadata": {
+        "num_nodes": 14,
+        "num_edges": 33,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 6.309505224227905
+    },
+    {
+      "query": "What year was special relativity published?",
+      "answer": "Special relativity was published in 1905.",
+      "ground_truth": "Special relativity was published in 1905.",
+      "retrieved_docs": [
+        "Special relativity was published in 1905.",
+        "Einstein's theory of special relativity introduced the equation E=mc².",
+        "In 1921, Einstein received the Nobel Prize in Physics for explaining the photoelectric effect.",
+        "Albert Einstein was born on March 14, 1879, in Ulm, Germany."
+      ],
+      "graph_triplets": [
+        {
+          "subject": "March 14, 1879",
+          "relation": "bear_DATE_to_GPE",
+          "object": "Germany"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "receive",
+          "object": "Prize"
+        },
+        {
+          "subject": "1921",
+          "relation": "receive_DATE_to_WORK_OF_ART",
+          "object": "the Nobel Prize in Physics"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "receive_PERSON_to_WORK_OF_ART",
+          "object": "the Nobel Prize in Physics"
+        },
+        {
+          "subject": "Albert Einstein",
+          "relation": "bear_PERSON_to_GPE",
+          "object": "Germany"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "receive_PERSON_to_DATE",
+          "object": "1921"
+        },
+        {
+          "subject": "theory",
+          "relation": "introduce",
+          "object": "equation"
+        },
+        {
+          "subject": "the Nobel Prize in Physics",
+          "relation": "receive_WORK_OF_ART_to_DATE",
+          "object": "1921"
+        },
+        {
+          "subject": "the Nobel Prize in Physics",
+          "relation": "explain_WORK_OF_ART_to_DATE",
+          "object": "1921"
+        },
+        {
+          "subject": "Ulm",
+          "relation": "bear_GPE_to_GPE",
+          "object": "Germany"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "explain_PERSON_to_WORK_OF_ART",
+          "object": "the Nobel Prize in Physics"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "explain_PERSON_to_DATE",
+          "object": "1921"
+        },
+        {
+          "subject": "Albert Einstein",
+          "relation": "bear_PERSON_to_DATE",
+          "object": "March 14, 1879"
+        },
+        {
+          "subject": "March 14, 1879",
+          "relation": "bear_DATE_to_PERSON",
+          "object": "Albert Einstein"
+        },
+        {
+          "subject": "Germany",
+          "relation": "bear_GPE_to_PERSON",
+          "object": "Albert Einstein"
+        },
+        {
+          "subject": "Ulm",
+          "relation": "bear_GPE_to_PERSON",
+          "object": "Albert Einstein"
+        },
+        {
+          "subject": "1921",
+          "relation": "explain_DATE_to_WORK_OF_ART",
+          "object": "the Nobel Prize in Physics"
+        },
+        {
+          "subject": "1921",
+          "relation": "explain_DATE_to_PERSON",
+          "object": "Einstein"
+        },
+        {
+          "subject": "theory",
+          "relation": "introduce",
+          "object": "mc²"
+        },
+        {
+          "subject": "March 14, 1879",
+          "relation": "bear_DATE_to_GPE",
+          "object": "Ulm"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 1.0,
+      "metadata": {
+        "num_nodes": 12,
+        "num_edges": 22,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 3.4098024368286133
+    },
+    {
+      "query": "What position was Einstein offered in 1952?",
+      "answer": "Based on the validated knowledge provided, Einstein was offered the **presidency of Israel** in 1952. He declined the offer. \n\nThe answer is: **the presidency of Israel**.",
+      "ground_truth": "Einstein was offered the presidency of Israel in 1952.",
+      "retrieved_docs": [
+        "Einstein was offered the presidency of Israel in 1952 but declined.",
+        "Einstein emigrated to the United States in 1933 and worked at Princeton.",
+        "Einstein died on April 18, 1955, in Princeton, New Jersey.",
+        "Albert Einstein was born on March 14, 1879, in Ulm, Germany."
+      ],
+      "graph_triplets": [
+        {
+          "subject": "April 18, 1955",
+          "relation": "die_DATE_to_GPE",
+          "object": "Princeton"
+        },
+        {
+          "subject": "1952",
+          "relation": "decline_DATE_to_PERSON",
+          "object": "Einstein"
+        },
+        {
+          "subject": "Israel",
+          "relation": "offer_GPE_to_DATE",
+          "object": "1952"
+        },
+        {
+          "subject": "1933",
+          "relation": "emigrate_DATE_to_PERSON",
+          "object": "Einstein"
+        },
+        {
+          "subject": "March 14, 1879",
+          "relation": "bear_DATE_to_GPE",
+          "object": "Germany"
+        },
+        {
+          "subject": "the United States",
+          "relation": "work_GPE_to_PERSON",
+          "object": "Einstein"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "emigrate_PERSON_to_DATE",
+          "object": "1933"
+        },
+        {
+          "subject": "1933",
+          "relation": "work_DATE_to_GPE",
+          "object": "the United States"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "decline_PERSON_to_DATE",
+          "object": "1952"
+        },
+        {
+          "subject": "1952",
+          "relation": "offer_DATE_to_PERSON",
+          "object": "Einstein"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "decline_PERSON_to_GPE",
+          "object": "Israel"
+        },
+        {
+          "subject": "Albert Einstein",
+          "relation": "bear_PERSON_to_GPE",
+          "object": "Germany"
+        },
+        {
+          "subject": "Princeton",
+          "relation": "work_GPE_to_PERSON",
+          "object": "Einstein"
+        },
+        {
+          "subject": "1933",
+          "relation": "work_DATE_to_GPE",
+          "object": "Princeton"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "offer",
+          "object": "presidency"
+        },
+        {
+          "subject": "Princeton",
+          "relation": "die_GPE_to_GPE",
+          "object": "New Jersey"
+        },
+        {
+          "subject": "Israel",
+          "relation": "offer_GPE_to_PERSON",
+          "object": "Einstein"
+        },
+        {
+          "subject": "1952",
+          "relation": "decline_DATE_to_GPE",
+          "object": "Israel"
+        },
+        {
+          "subject": "the United States",
+          "relation": "work_GPE_to_GPE",
+          "object": "Princeton"
+        },
+        {
+          "subject": "Einstein",
+          "relation": "work_PERSON_to_DATE",
+          "object": "1933"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 1.0,
+      "metadata": {
+        "num_nodes": 13,
+        "num_edges": 37,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "model": "deepseek/deepseek-chat"
+      },
+      "time": 5.973855972290039
+    }
+  ],
+  "comparison": {
+    "baseline": {
+      "factual_accuracy": 0.4644389086879459,
+      "logical_consistency": 0.5,
+      "hallucination_rate": 0.375645250581589,
+      "response_coherence": 1.0,
+      "graph_completeness": 0.0,
+      "avg_response_time": 2.66849023103714
+    },
+    "graph_augmented": {
+      "factual_accuracy": 0.47847972391690563,
+      "logical_consistency": 1.0,
+      "hallucination_rate": 0.3888633743648878,
+      "response_coherence": 1.0,
+      "graph_completeness": 0.6666666666666666,
+      "avg_response_time": 5.732481807470322
+    },
+    "improvements_pct": {
+      "factual_accuracy": 3.023178068483852,
+      "logical_consistency": 100.0,
+      "hallucination_rate": -3.518778358793041,
+      "response_coherence": 0.0,
+      "graph_completeness": 0,
+      "avg_response_time": 114.82116519655857
+    },
+    "summary": {
+      "accuracy_gain": 3.023178068483852,
+      "consistency_gain": 100.0,
+      "hallucination_reduction": -3.518778358793041
+    }
+  }
+}

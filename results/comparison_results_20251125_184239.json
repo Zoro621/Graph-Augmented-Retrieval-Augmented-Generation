@@ -1,0 +1,46 @@
+{
+  "baseline": {
+    "factual_accuracy": 0.0,
+    "logical_consistency": 0.5,
+    "hallucination_rate": 0.1,
+    "response_coherence": 0.8333333333333333,
+    "graph_completeness": 0.0,
+    "avg_response_time": 2.7191087007522583,
+    "factual_grounding": 0.0,
+    "graph_coverage": 0.0,
+    "context_precision": 0.0,
+    "bleu": 1.0000000000000007e-09,
+    "rouge_l": 0.0
+  },
+  "graph_augmented": {
+    "factual_accuracy": 0.0,
+    "logical_consistency": 1.0,
+    "hallucination_rate": 0.21428571428571427,
+    "response_coherence": 1.0,
+    "graph_completeness": 0.1995,
+    "avg_response_time": 23.136048674583435,
+    "factual_grounding": 0.25,
+    "graph_coverage": 0.6785714285714286,
+    "context_precision": 0.75,
+    "bleu": 1.0000000000000007e-09,
+    "rouge_l": 0.0
+  },
+  "improvements_pct": {
+    "factual_accuracy": 0,
+    "logical_consistency": 100.0,
+    "hallucination_rate": -114.28571428571426,
+    "response_coherence": 20.00000000000001,
+    "graph_completeness": 0,
+    "avg_response_time": 750.8688405205244,
+    "factual_grounding": 0,
+    "graph_coverage": 0,
+    "context_precision": 0,
+    "bleu": 0.0,
+    "rouge_l": 0
+  },
+  "summary": {
+    "accuracy_gain": 0,
+    "consistency_gain": 100.0,
+    "hallucination_reduction": -114.28571428571426
+  }
+}

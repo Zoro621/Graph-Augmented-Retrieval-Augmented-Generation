@@ -1,0 +1,31 @@
+{
+  "baseline": {
+    "factual_accuracy": 0.4644389086879459,
+    "logical_consistency": 0.5,
+    "hallucination_rate": 0.375645250581589,
+    "response_coherence": 1.0,
+    "graph_completeness": 0.0,
+    "avg_response_time": 2.66849023103714
+  },
+  "graph_augmented": {
+    "factual_accuracy": 0.47847972391690563,
+    "logical_consistency": 1.0,
+    "hallucination_rate": 0.3888633743648878,
+    "response_coherence": 1.0,
+    "graph_completeness": 0.6666666666666666,
+    "avg_response_time": 5.732481807470322
+  },
+  "improvements_pct": {
+    "factual_accuracy": 3.023178068483852,
+    "logical_consistency": 100.0,
+    "hallucination_rate": -3.518778358793041,
+    "response_coherence": 0.0,
+    "graph_completeness": 0,
+    "avg_response_time": 114.82116519655857
+  },
+  "summary": {
+    "accuracy_gain": 3.023178068483852,
+    "consistency_gain": 100.0,
+    "hallucination_reduction": -3.518778358793041
+  }
+}

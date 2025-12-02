@@ -1,0 +1,178 @@
+# ================================================
+# GA-RAG Project .gitignore
+# ================================================
+
+# ================================================
+# Python
+# ================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ================================================
+# Virtual Environment
+# ================================================
+venv/
+ENV/
+env/
+.venv/
+.ENV/
+
+# ================================================
+# Environment Variables (IMPORTANT: Contains API keys)
+# ================================================
+.env
+.env.local
+.env.*.local
+*.env
+
+# ================================================
+# Data and Datasets (670MB+ - Too large for GitHub)
+# ================================================
+data/
+datasets/
+*.jsonl
+*.json.gz
+
+# Keep the wiki cache structure but not the actual cache
+# !data/.gitkeep
+
+# ================================================
+# IDE and Editor
+# ================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# ================================================
+# Jupyter Notebooks
+# ================================================
+.ipynb_checkpoints/
+*.ipynb_checkpoints/
+
+# ================================================
+# OS Generated
+# ================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ================================================
+# Logs and Temporary Files
+# ================================================
+*.log
+*.tmp
+*.temp
+*.bak
+logs/
+
+# ================================================
+# Results (Optional - uncomment if you want to exclude)
+# ================================================
+# results/
+# experiments/
+
+# ================================================
+# Large Binary Files
+# ================================================
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+*.model
+*.bin
+*.pt
+*.pth
+*.ckpt
+
+# ================================================
+# PDF Files (Optional - research papers)
+# ================================================
+# *.pdf
+
+# ================================================
+# LaTeX Build Files
+# ================================================
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+
+# ================================================
+# spaCy Models (downloaded separately)
+# ================================================
+en_core_web_sm/
+en_core_web_md/
+en_core_web_lg/
+
+# ================================================
+# FAISS Index Files
+# ================================================
+*.faiss
+faiss_index/
+
+# ================================================
+# Coverage Reports
+# ================================================
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+
+# ================================================
+# pytest
+# ================================================
+.pytest_cache/
+.cache/
+
+# ================================================
+# mypy
+# ================================================
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# ================================================
+# Profiling
+# ================================================
+*.prof
+profile_output/

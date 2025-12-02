@@ -1,0 +1,468 @@
+{
+  "experiment_info": {
+    "timestamp": "20251125_013826",
+    "dataset": "fever",
+    "num_queries": 5,
+    "model": "gpt-4o-mini",
+    "configuration": {
+      "use_spacy": false,
+      "consistency_threshold": 0.7,
+      "k_retrieve": 4
+    }
+  },
+  "baseline_results": [
+    {
+      "query": "Nikolaj Coster-Waldau worked with the Fox Broadcasting Company.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Nikolaj_Coster-Waldau",
+        "Fox_Broadcasting_Company",
+        "Roman_Atwood",
+        "Adrienne_Bailon"
+      ],
+      "time": 2.2758302688598633,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Roman Atwood is a content creator.",
+      "answer": "Yes, Roman Atwood is a content creator.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Roman_Atwood",
+        "Nikolaj_Coster-Waldau",
+        "Adrienne_Bailon",
+        "Fox_Broadcasting_Company"
+      ],
+      "time": 2.016345977783203,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "History of art includes architecture, dance, sculpture, music, painting, poetry literature, theatre, narrative, film, photography and graphic arts.",
+      "answer": "The history of art encompasses various forms including architecture, dance, sculpture, music, painting, poetry, literature, theatre, narrative, film, photography, and graphic arts.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "History_of_art",
+        "Roman_Atwood",
+        "Adrienne_Bailon",
+        "Nikolaj_Coster-Waldau"
+      ],
+      "time": 2.6040921211242676,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Adrienne Bailon is an accountant.",
+      "answer": "I don't know.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Adrienne_Bailon",
+        "Roman_Atwood",
+        "Nikolaj_Coster-Waldau",
+        "Fox_Broadcasting_Company"
+      ],
+      "time": 2.1062698364257812,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "System of a Down briefly disbanded in limbo.",
+      "answer": "I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Roman_Atwood",
+        "Fox_Broadcasting_Company",
+        "Nikolaj_Coster-Waldau",
+        "History_of_art"
+      ],
+      "time": 1.2707264423370361,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    }
+  ],
+  "ga_rag_results": [
+    {
+      "query": "Nikolaj Coster-Waldau worked with the Fox Broadcasting Company.",
+      "answer": "[Low grounding 0.00] I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Nikolaj_Coster-Waldau",
+        "Fox_Broadcasting_Company",
+        "Roman_Atwood",
+        "Adrienne_Bailon"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Nikolaj Coster-Waldau",
+          "relation": "is_a",
+          "object": "person"
+        },
+        {
+          "subject": "Fox_Broadcasting_Company",
+          "relation": "is_a",
+          "object": "company"
+        },
+        {
+          "subject": "Nikolaj Coster-Waldau",
+          "relation": "has_profession",
+          "object": "actor"
+        },
+        {
+          "subject": "Fox_Broadcasting_Company",
+          "relation": "is_a",
+          "object": "broadcasting_company"
+        },
+        {
+          "subject": "Nikolaj Coster-Waldau",
+          "relation": "works_for",
+          "object": "broadcasting_company"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.76,
+      "metadata": {
+        "num_nodes": 6,
+        "num_edges": 5,
+        "num_triplets_total": 5,
+        "num_triplets_ranked": 5,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 0,
+        "avg_triplets_per_doc": 0.5,
+        "inferred_triplets": 3,
+        "coverage_ok": true,
+        "answer_source": "baseline",
+        "grounding_backoff": true,
+        "retrieval_expansion": {
+          "extra_docs": 0,
+          "entities_used": [],
+          "candidate_entities": [
+            "Nikolaj Coster",
+            "Waldau",
+            "Fox Broadcasting",
+            "Company"
+          ]
+        },
+        "graph_viz_path": "results\\figures\\knowledge_graphs\\nikolaj_coster_waldau_worked_with_the_fox_broadcasting_compa_20251125_013719.png",
+        "model": "gpt-4o-mini"
+      },
+      "time": 15.853452444076538
+    },
+    {
+      "query": "Roman Atwood is a content creator.",
+      "answer": "[Low grounding 0.00] Yes, Roman Atwood is a content creator.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Roman_Atwood",
+        "Nikolaj_Coster-Waldau",
+        "Adrienne_Bailon",
+        "Fox_Broadcasting_Company"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Nikolaj Coster-Waldau",
+          "relation": "is_a",
+          "object": "person"
+        },
+        {
+          "subject": "Fox_Broadcasting_Company",
+          "relation": "is_a",
+          "object": "company"
+        },
+        {
+          "subject": "Nikolaj Coster-Waldau",
+          "relation": "has_profession",
+          "object": "actor"
+        },
+        {
+          "subject": "Fox_Broadcasting_Company",
+          "relation": "is_a",
+          "object": "broadcasting_company"
+        },
+        {
+          "subject": "Nikolaj Coster-Waldau",
+          "relation": "works_for",
+          "object": "broadcasting_company"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.77,
+      "metadata": {
+        "num_nodes": 6,
+        "num_edges": 5,
+        "num_triplets_total": 5,
+        "num_triplets_ranked": 5,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 4,
+        "avg_triplets_per_doc": 0.5,
+        "inferred_triplets": 3,
+        "coverage_ok": true,
+        "answer_source": "baseline",
+        "grounding_backoff": true,
+        "retrieval_expansion": {
+          "extra_docs": 0,
+          "entities_used": [],
+          "candidate_entities": [
+            "Roman Atwood",
+            "Roman_Atwood\nNikolaj_Coster",
+            "Waldau"
+          ]
+        },
+        "graph_viz_path": "results\\figures\\knowledge_graphs\\roman_atwood_is_a_content_creator_20251125_013726.png",
+        "model": "gpt-4o-mini"
+      },
+      "time": 6.600728273391724
+    },
+    {
+      "query": "History of art includes architecture, dance, sculpture, music, painting, poetry literature, theatre, narrative, film, photography and graphic arts.",
+      "answer": "[Low grounding 0.00] The history of art indeed encompasses a wide range of disciplines, including architecture, dance, sculpture, music, painting, poetry, literature, theatre, narrative, film, photography, and graphic arts.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "History_of_art",
+        "Roman_Atwood",
+        "Adrienne_Bailon",
+        "Nikolaj_Coster-Waldau",
+        "Fox_Broadcasting_Company"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Nikolaj Coster-Waldau",
+          "relation": "is_a",
+          "object": "person"
+        },
+        {
+          "subject": "Fox_Broadcasting_Company",
+          "relation": "is_a",
+          "object": "company"
+        },
+        {
+          "subject": "Nikolaj Coster-Waldau",
+          "relation": "has_profession",
+          "object": "actor"
+        },
+        {
+          "subject": "Fox_Broadcasting_Company",
+          "relation": "is_a",
+          "object": "broadcasting_company"
+        },
+        {
+          "subject": "Nikolaj Coster-Waldau",
+          "relation": "works_for",
+          "object": "broadcasting_company"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.76,
+      "metadata": {
+        "num_nodes": 6,
+        "num_edges": 5,
+        "num_triplets_total": 5,
+        "num_triplets_ranked": 5,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 4,
+        "avg_triplets_per_doc": 0.4,
+        "inferred_triplets": 3,
+        "coverage_ok": true,
+        "answer_source": "baseline",
+        "grounding_backoff": true,
+        "retrieval_expansion": {
+          "extra_docs": 1,
+          "entities_used": [
+            "History"
+          ],
+          "candidate_entities": [
+            "History",
+            "History_of_art\nRoman_Atwood"
+          ]
+        },
+        "graph_viz_path": "results\\figures\\knowledge_graphs\\history_of_art_includes_architecture_dance_sculpture_music_p_20251125_013733.png",
+        "model": "gpt-4o-mini"
+      },
+      "time": 7.336410284042358
+    },
+    {
+      "query": "Adrienne Bailon is an accountant.",
+      "answer": "[Low grounding 0.00] I don't know.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Adrienne_Bailon",
+        "Roman_Atwood",
+        "Nikolaj_Coster-Waldau",
+        "Fox_Broadcasting_Company"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Nikolaj Coster-Waldau",
+          "relation": "has_profession",
+          "object": "actor"
+        },
+        {
+          "subject": "Fox_Broadcasting_Company",
+          "relation": "is_a",
+          "object": "broadcasting_company"
+        },
+        {
+          "subject": "Nikolaj Coster-Waldau",
+          "relation": "is_a",
+          "object": "person"
+        },
+        {
+          "subject": "Fox_Broadcasting_Company",
+          "relation": "is_a",
+          "object": "company"
+        },
+        {
+          "subject": "Nikolaj Coster-Waldau",
+          "relation": "works_for",
+          "object": "broadcasting_company"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.75,
+      "metadata": {
+        "num_nodes": 6,
+        "num_edges": 5,
+        "num_triplets_total": 5,
+        "num_triplets_ranked": 5,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 4,
+        "avg_triplets_per_doc": 0.5,
+        "inferred_triplets": 3,
+        "coverage_ok": true,
+        "answer_source": "baseline",
+        "grounding_backoff": true,
+        "retrieval_expansion": {
+          "extra_docs": 0,
+          "entities_used": [],
+          "candidate_entities": [
+            "Adrienne Bailon",
+            "Adrienne_Bailon\nRoman_Atwood"
+          ]
+        },
+        "graph_viz_path": "results\\figures\\knowledge_graphs\\adrienne_bailon_is_an_accountant_20251125_013746.png",
+        "model": "gpt-4o-mini"
+      },
+      "time": 12.721323013305664
+    },
+    {
+      "query": "System of a Down briefly disbanded in limbo.",
+      "answer": "[Low grounding 0.00] I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "Roman_Atwood",
+        "Fox_Broadcasting_Company",
+        "Nikolaj_Coster-Waldau",
+        "History_of_art",
+        "Adrienne_Bailon"
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Nikolaj Coster-Waldau",
+          "relation": "is_a",
+          "object": "person"
+        },
+        {
+          "subject": "Fox_Broadcasting_Company",
+          "relation": "is_a",
+          "object": "company"
+        },
+        {
+          "subject": "Fox_Broadcasting_Company",
+          "relation": "is_a",
+          "object": "broadcasting_company"
+        },
+        {
+          "subject": "Nikolaj Coster-Waldau",
+          "relation": "has_profession",
+          "object": "actor"
+        },
+        {
+          "subject": "Nikolaj Coster-Waldau",
+          "relation": "works_in",
+          "object": "broadcasting_industry"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.77,
+      "metadata": {
+        "num_nodes": 7,
+        "num_edges": 5,
+        "num_triplets_total": 5,
+        "num_triplets_ranked": 5,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 5,
+        "avg_triplets_per_doc": 0.4,
+        "inferred_triplets": 3,
+        "coverage_ok": true,
+        "answer_source": "baseline",
+        "grounding_backoff": true,
+        "retrieval_expansion": {
+          "extra_docs": 1,
+          "entities_used": [
+            "Down"
+          ],
+          "candidate_entities": [
+            "System",
+            "Down",
+            "Roman_Atwood\nFox_Broadcasting_Company"
+          ]
+        },
+        "graph_viz_path": "results\\figures\\knowledge_graphs\\system_of_a_down_briefly_disbanded_in_limbo_20251125_013753.png",
+        "model": "gpt-4o-mini"
+      },
+      "time": 5.997722625732422
+    }
+  ],
+  "comparison": {
+    "baseline": {
+      "factual_accuracy": 0.6599999999999999,
+      "logical_consistency": 0.5,
+      "hallucination_rate": 0.33947368421052626,
+      "response_coherence": 0.7999999999999999,
+      "graph_completeness": 0.0,
+      "avg_response_time": 2.0546529293060303
+    },
+    "graph_augmented": {
+      "factual_accuracy": 0.8,
+      "logical_consistency": 1.0,
+      "hallucination_rate": 0.36273291925465834,
+      "response_coherence": 0.9400000000000001,
+      "graph_completeness": 0.15295,
+      "avg_response_time": 9.701927328109742
+    },
+    "improvements_pct": {
+      "factual_accuracy": 21.212121212121236,
+      "logical_consistency": 100.0,
+      "hallucination_rate": -6.8515576098993725,
+      "response_coherence": 17.500000000000018,
+      "graph_completeness": 0,
+      "avg_response_time": 372.19300105281616
+    },
+    "summary": {
+      "accuracy_gain": 21.212121212121236,
+      "consistency_gain": 100.0,
+      "hallucination_reduction": -6.8515576098993725
+    }
+  }
+}

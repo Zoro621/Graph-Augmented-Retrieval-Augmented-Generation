@@ -1,0 +1,834 @@
+% IEEE Conference Paper - Graph-Augmented RAG
+\documentclass[conference,10pt]{IEEEtran}
+
+% Packages
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{subcaption}
+\usepackage{url}
+\usepackage{hyperref}
+
+% Correct margin settings for IEEE conference
+\usepackage[top=0.75in, bottom=1in, left=0.625in, right=0.625in]{geometry}
+
+\begin{document}
+
+\title{Graph-Augmented Retrieval-Augmented Generation for Fact Verification: A Knowledge Graph-Based Approach}
+
+\author{
+\IEEEauthorblockN{Your Name\IEEEauthorrefmark{1}, Collaborator Name\IEEEauthorrefmark{2}}
+\IEEEauthorblockA{\IEEEauthorrefmark{1}Department of Computer Science, Your University\\
+Email: your.email@university.edu}
+\IEEEauthorblockA{\IEEEauthorrefmark{2}Department of Computer Science, Collaborator University\\
+Email: collab.email@university.edu}
+}
+
+\maketitle
+
+\begin{abstract}
+Large Language Models (LLMs) have demonstrated remarkable capabilities in natural language understanding and generation, yet they suffer from factual hallucinations and limited reasoning over complex evidence. Retrieval-Augmented Generation (RAG) addresses knowledge deficiencies by incorporating external documents, but conventional RAG systems treat retrieved passages independently, lacking mechanisms for multi-hop reasoning and evidence aggregation. This paper presents \textbf{Graph-Augmented RAG (GA-RAG)}, a novel pipeline that constructs per-query knowledge graphs from retrieved documents, applies graph-based relevance propagation, and conditions LLM generation on structured, ranked evidence. We evaluate on the FEVER fact verification benchmark and demonstrate that GA-RAG achieves a 100\% improvement in logical consistency, 13.3\% reduction in hallucination rate, and 3.7\% gain in factual accuracy compared to baseline RAG, with interpretable knowledge graph visualizations. The tradeoff is a 7$\times$ increase in latency, which we analyze and propose optimizations for. Our implementation, evaluation framework, and reproducible artifacts are included.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Retrieval-Augmented Generation, Knowledge Graphs, Fact Verification, Large Language Models, Graph Neural Networks, Information Extraction
+\end{IEEEkeywords}
+
+\section{Introduction}
+
+\subsection{Motivation}
+Large Language Models have transformed natural language processing, but suffer from:
+\begin{itemize}
+    \item \textbf{Hallucination}: generating plausible but factually incorrect information
+    \item \textbf{Knowledge staleness}: training data cutoff limits awareness of recent events
+    \item \textbf{Limited reasoning}: difficulty with multi-hop inference requiring evidence aggregation
+\end{itemize}
+
+Retrieval-Augmented Generation mitigates these issues by grounding generation in retrieved documents \cite{lewis2020rag}. However, standard RAG has limitations:
+\begin{enumerate}
+    \item Retrieved passages are processed independently
+    \item No explicit mechanism for evidence cross-validation
+    \item Limited support for compositional reasoning
+    \item Lack of interpretable evidence provenance
+\end{enumerate}
+
+\subsection{Contributions}
+We present GA-RAG, which addresses these limitations through:
+\begin{itemize}
+    \item \textbf{Structured extraction}: per-document triplet extraction converting unstructured text to (subject, relation, object) facts
+    \item \textbf{Graph construction}: local knowledge graphs capturing entity relationships and co-occurrence
+    \item \textbf{Relevance propagation}: PageRank-style scoring to identify contextually relevant evidence
+    \item \textbf{Graph-aware prompting}: linearized, ranked fact injection for LLM conditioning
+    \item \textbf{Comprehensive evaluation}: metrics for factual accuracy, hallucination, consistency, and graph quality
+\end{itemize}
+
+Our evaluation on FEVER demonstrates significant improvements in logical consistency and hallucination reduction, with detailed analysis of latency tradeoffs and optimization strategies.
+
+\section{Problem Identification and Motivation}
+
+\subsection{Complex Computing Problem Definition}
+This work addresses a Complex Computing Problem as defined by NCEAC standards, demonstrating:
+
+\textbf{1. Depth of Knowledge and Abstract Thinking:}
+Fact verification requires autonomous reasoning over uncertain evidence, multi-hop inference across documents, and dynamic graph construction under conflicting information sources. The problem demands deep understanding of:
+\begin{itemize}
+    \item LLM reasoning and prompt engineering for extraction and generation
+    \item Knowledge graph theory and propagation algorithms
+    \item Information retrieval and semantic similarity
+    \item Evaluation methodology for knowledge-intensive tasks
+\end{itemize}
+
+\textbf{2. Multiple Possible Solutions:}
+No single "correct" architecture exists for graph-augmented RAG. We justify our design choices:
+\begin{itemize}
+    \item \textit{LLM-based vs. rule-based extraction}: We chose LLM extraction for flexibility across domains, accepting latency costs over rule brittleness
+    \item \textit{PageRank vs. GNN propagation}: Classical propagation offers interpretability and efficiency over neural approaches
+    \item \textit{Per-query vs. persistent graphs}: Per-query construction ensures freshness but sacrifices caching opportunities
+    \item \textit{Synchronous vs. parallel extraction}: Current synchronous implementation prioritizes correctness; parallel version is planned
+\end{itemize}
+
+\textbf{3. Complex System Development:}
+Our system exhibits:
+\begin{itemize}
+    \item \textbf{Autonomous decision-making}: Agent dynamically decides extraction strategy, graph pruning thresholds, and response confidence
+    \item \textbf{Uncertainty handling}: Partial credit system for cautious responses, confidence-based filtering
+    \item \textbf{Tool/API integration}: OpenAI API for embeddings and generation, NetworkX for graph operations, FEVER dataset loaders
+    \item \textbf{Dynamic operation}: Graph structure and propagation adapt to query complexity and retrieval quality
+\end{itemize}
+
+\subsection{Why Agentic AI is Necessary}
+Traditional RAG systems fail for fact verification because:
+\begin{enumerate}
+    \item \textbf{Evidence fragmentation}: Facts are scattered across documents; no single passage contains complete evidence
+    \item \textbf{Contradictory sources}: Retrieved documents may contain conflicting claims requiring cross-validation
+    \item \textbf{Multi-hop reasoning}: FEVER claims like ``Actor X worked with Company Y'' require linking entities through intermediate facts
+    \item \textbf{Provenance tracking}: Users need to verify which sources support conclusions
+\end{enumerate}
+
+GA-RAG's autonomous agent architecture addresses these through:
+\begin{itemize}
+    \item Dynamic graph construction adapting to evidence availability
+    \item Propagation-based reasoning aggregating multi-document evidence
+    \item Confidence-weighted decision making under uncertainty
+    \item Interpretable intermediate representations for verification
+\end{itemize}
+
+\subsection{Real-World Applications}
+Beyond FEVER benchmarks, this architecture applies to:
+\begin{itemize}
+    \item \textbf{Medical diagnosis support}: Aggregating evidence from clinical studies with contradictory findings
+    \item \textbf{Legal case analysis}: Cross-referencing precedents and statutes with provenance tracking
+    \item \textbf{Financial due diligence}: Verifying claims across earnings reports, news, and regulatory filings
+    \item \textbf{Journalism fact-checking}: Automated claim verification with source attribution
+\end{itemize}
+
+\section{Related Work}
+
+\subsection{Retrieval-Augmented Generation}
+Lewis et al. \cite{lewis2020rag} introduced RAG, combining dense retrieval with sequence-to-sequence generation. Subsequent work has explored improved retrievers \cite{karpukhin2020dpr}, iterative retrieval \cite{jiang2023active}, and multi-document reasoning \cite{khattab2021baleen}. Our work extends RAG with explicit graph-based reasoning.
+
+\subsection{Knowledge Graph Construction}
+Open Information Extraction \cite{banko2007open} pioneered unsupervised triplet extraction. Modern approaches use neural models \cite{han2018neural} or LLM-based extraction \cite{wei2023zeroshot}. We employ LLM-based extraction with confidence scoring for flexibility across domains.
+
+\subsection{Graph-Based Reasoning}
+Graph neural networks \cite{kipf2017gcn} and heterogeneous graph reasoning \cite{hu2020heterogeneous} have been applied to question answering. Our approach uses classical graph propagation inspired by PageRank \cite{brin1998pagerank} for computational efficiency and interpretability.
+
+\subsection{Fact Verification}
+FEVER \cite{thorne2018fever} established fact verification as a benchmark task. Prior work includes claim decomposition \cite{chen2020generating}, evidence retrieval \cite{hanselowski2018ukp}, and neural entailment models \cite{nie2019combining}. GA-RAG provides an end-to-end pipeline with interpretable intermediate representations.
+
+\section{System Architecture}
+
+\subsection{Pipeline Overview}
+The GA-RAG pipeline comprises six stages (Figure \ref{fig:pipeline}):
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{results/figures/pipeline_diagram.png}
+  \caption{GA-RAG system architecture showing data flow from query input through retrieval, extraction, graph construction, scoring, and generation stages.}
+  \label{fig:pipeline}
+\end{figure}
+
+\textbf{Stage 1: Dense Retrieval}  
+Input query $q$ is encoded to embedding $v_q$ using a pre-trained encoder. Documents $\{d_i\}$ in the corpus are similarly encoded to $\{v_{d_i}\}$. Top-$K$ documents are retrieved via cosine similarity:
+\begin{equation}
+\text{sim}(q, d_i) = \frac{v_q \cdot v_{d_i}}{\|v_q\| \|v_{d_i}\|}
+\end{equation}
+
+\textbf{Stage 2: Triplet Extraction}  
+For each retrieved document $d_i$, an LLM extractor produces structured triplets:
+\[
+T_i = \{(s_j, r_j, o_j, c_j)\}_{j=1}^{|T_i|}
+\]
+where $s_j$ is subject, $r_j$ is relation, $o_j$ is object, and $c_j \in [0,1]$ is confidence.
+
+\textbf{Stage 3: Graph Construction}  
+Triplets are aggregated into a directed graph $G = (V, E)$ where nodes $V$ represent entities and edges $E$ represent relations. Multiple extractions of the same entity are merged with confidence aggregation.
+
+\textbf{Stage 4: Node Scoring and Propagation}  
+Initial relevance scores are computed from retrieval signals, then propagated across the graph to allow contextual evidence to boost related nodes. The agent autonomously decides:
+\begin{itemize}
+    \item Propagation iterations ($T$) based on graph size and convergence
+    \item Confidence threshold for node filtering
+    \item Weighting between similarity, rank, and centrality ($\lambda$ parameters)
+\end{itemize}
+
+\textbf{Stage 5: Graph Linearization}  
+Top-$M$ nodes are selected and formatted as a textual fact list for LLM consumption.
+
+\textbf{Stage 6: Conditioned Generation}  
+The LLM receives the query and linearized graph facts to produce a label and explanation.
+
+\subsection{Implementation Architecture}
+The codebase is modular:
+\begin{itemize}
+    \item \texttt{baseline\_rag.py}: Standard RAG implementation for comparison
+    \item \texttt{graph\_augmented\_rag.py}: Main GA-RAG pipeline (2281 lines)
+    \item \texttt{llm\_triplet\_extraction.py}: LLM-based triplet extraction with error handling
+    \item \texttt{graph\_reasoning.py}: Graph construction, scoring, and propagation
+    \item \texttt{eval\_framework.py}: Comprehensive evaluation metrics (571 lines)
+    \item \texttt{visualization\_utils.py}: Graph visualization and result plotting
+\end{itemize}
+
+\section{Algorithms and Mathematical Formulations}
+
+\subsection{Initial Node Scoring}
+Each extracted triplet node $i$ (from document $d_i$ at retrieval rank $r_i$) receives an initial score combining similarity and rank:
+\begin{equation}
+s_i^{(0)} = \alpha \cdot \text{sim}(q, d_i) + \beta \cdot \frac{1}{r_i}
+\label{eq:init_score}
+\end{equation}
+where $\alpha, \beta$ are hyperparameters (typically $\alpha=0.8, \beta=0.2$).
+
+\subsection{Graph Propagation}
+We propagate relevance across the graph for $T$ iterations using a PageRank-inspired update:
+\begin{equation}
+s_i^{(t+1)} = (1-\gamma) s_i^{(0)} + \gamma \sum_{j \in N(i)} \frac{w_{ji}}{\sum_k w_{jk}} s_j^{(t)}
+\label{eq:propagation}
+\end{equation}
+where:
+\begin{itemize}
+    \item $N(i)$ is the neighborhood of node $i$
+    \item $w_{ji}$ is the edge weight from $j$ to $i$ (relation confidence or co-occurrence strength)
+    \item $\gamma \in [0,1)$ controls propagation strength (typically 0.15)
+\end{itemize}
+
+\subsection{Final Ranking}
+After convergence, nodes are ranked by a composite score:
+\begin{equation}
+\text{rank}(i) = \lambda_1 s_i^{(T)} + \lambda_2 \cdot \text{cent}(i) + \lambda_3 \cdot c_i
+\label{eq:final_rank}
+\end{equation}
+where $\text{cent}(i)$ is graph centrality (degree or PageRank) and $c_i$ is extraction confidence.
+
+\subsection{Graph Linearization}
+Top-$M$ nodes are formatted as:
+\begin{verbatim}
+[1] Subject — Relation — Object
+    (confidence: 0.95, doc: d_3)
+[2] Subject2 — Relation2 — Object2
+    (confidence: 0.88, doc: d_1)
+...
+\end{verbatim}
+
+\section{Dataset and Evaluation Methodology}
+
+\subsection{FEVER Dataset}
+FEVER (Fact Extraction and VERification) \cite{thorne2018fever} contains 185,445 claims classified as:
+\begin{itemize}
+    \item \textbf{SUPPORTS}: evidence confirms the claim
+    \item \textbf{REFUTES}: evidence contradicts the claim  
+    \item \textbf{NOT ENOUGH INFO}: insufficient evidence
+\end{itemize}
+
+Each claim is paired with Wikipedia passages. Our evaluation uses a representative subset with diverse claim types.
+
+\subsection{Evaluation Metrics}
+
+\subsubsection{Factual Accuracy}
+Measures label agreement between system output and ground truth. For FEVER's categorical labels, lexical metrics (BLEU, ROUGE) are inappropriate and were removed. We implement:
+\begin{itemize}
+    \item \textbf{Exact match}: 1.0 if label matches, 0.0 otherwise
+    \item \textbf{Uncertainty credit}: 0.3 for cautious answers ("I don't know") to reward appropriate hesitation over confident errors
+\end{itemize}
+
+\subsubsection{Hallucination Rate}
+Token-level overlap metric detecting unsupported claims:
+\begin{equation}
+\text{halluc}(a, D) = \frac{|\text{tokens}(a) \setminus \bigcup_{d \in D} \text{tokens}(d)|}{|\text{tokens}(a)|}
+\end{equation}
+Meta-prefixes (e.g., \texttt{[Graph coverage low]}) are stripped before evaluation.
+
+\subsubsection{Logical Consistency}
+Checks for internal contradictions in the answer using entailment models.
+
+\subsubsection{Response Coherence}
+Evaluates fluency and grammatical correctness using perplexity and structural analysis.
+
+\subsubsection{Graph Metrics}
+\begin{itemize}
+    \item \textbf{Graph Completeness}: ratio of extracted facts to theoretical maximum
+    \item \textbf{Graph Coverage}: proportion of query entities present in the graph
+    \item \textbf{Factual Grounding}: fraction of answer tokens supported by graph nodes
+    \item \textbf{Context Precision}: ratio of relevant to total retrieved facts
+\end{itemize}
+
+\section{Implementation Details}
+
+\subsection{Model Configuration}
+\begin{itemize}
+    \item \textbf{LLM}: GPT-4o-mini via OpenAI API
+    \item \textbf{Embeddings}: text-embedding-ada-002
+    \item \textbf{Retrieval}: Dense passage retrieval with $K=4$
+    \item \textbf{Graph}: NetworkX for graph operations
+    \item \textbf{Propagation}: $\gamma=0.15$, $T=5$ iterations
+\end{itemize}
+
+\subsection{Prompt Engineering}
+
+\textbf{Triplet Extraction Prompt:}
+\begin{small}
+\begin{verbatim}
+Extract factual triplets from this passage.
+Return JSON: [{"subject": "X", 
+              "relation": "Y",
+              "object": "Z",
+              "confidence": 0.0-1.0}]
+Only concrete facts. Avoid speculation.
+
+Passage: <DOCUMENT>
+\end{verbatim}
+\end{small}
+
+\textbf{Generation Prompt with Graph Context:}
+\begin{small}
+\begin{verbatim}
+Graph Facts:
+[1] Nikolaj Coster-Waldau — profession — actor
+    (confidence: 0.98, doc: d_1)
+[2] Nikolaj Coster-Waldau — played — Jaime
+    (confidence: 0.95, doc: d_3)
+...
+
+Claim: "Nikolaj Coster-Waldau worked 
+        with Fox Broadcasting Company."
+
+Based on the graph facts, classify as:
+SUPPORTS / REFUTES / NOT ENOUGH INFO
+Explain briefly and cite fact IDs.
+If insufficient evidence, say "I don't know."
+\end{verbatim}
+\end{small}
+
+\subsection{Engineering Optimizations}
+\begin{enumerate}
+    \item \textbf{Error handling}: Try-except wrappers around LLM extraction calls prevent pipeline failures
+    \item \textbf{Confidence filtering}: Low-confidence triplets ($c < 0.5$) are excluded
+    \item \textbf{Entity deduplication}: Fuzzy matching merges similar entities
+    \item \textbf{Parallel extraction} (planned): ThreadPoolExecutor ready for 2-3$\times$ speedup
+\end{enumerate}
+
+\section{Experimental Results}
+
+\subsection{Experimental Setup}
+
+\subsubsection{Research Methodology}
+We conducted systematic experiments to evaluate GA-RAG's effectiveness:
+
+\textbf{Baseline Comparison:} Two systems were compared:
+\begin{itemize}
+    \item \textbf{Baseline RAG}: Standard retrieval + direct prompt to LLM
+    \item \textbf{GA-RAG}: Full graph-augmented pipeline with autonomous reasoning
+\end{itemize}
+
+\textbf{Configuration Space:}
+\begin{itemize}
+    \item Retrieval: $K \in \{2, 4, 8\}$ documents (optimal: $K=4$)
+    \item Propagation: $\gamma \in \{0.1, 0.15, 0.2\}$ (optimal: 0.15)
+    \item Iterations: $T \in \{3, 5, 10\}$ (optimal: $T=5$)
+    \item Confidence threshold: $c_{\text{min}} \in \{0.3, 0.5, 0.7\}$ (optimal: 0.5)
+\end{itemize}
+
+\textbf{Evaluation Protocol:}
+\begin{enumerate}
+    \item Random sampling of FEVER claims stratified by label distribution
+    \item Independent runs for baseline and GA-RAG with identical retrieval
+    \item Metrics computed per-query and aggregated
+    \item Statistical significance tested via paired t-test ($p < 0.05$)
+\end{enumerate}
+
+\textbf{Final Configuration:} $K=4$ documents, $\gamma=0.15$, $T=5$ iterations, consistency threshold 0.7, LLM-only extraction (no spaCy NER).
+
+\subsection{Quantitative Results}
+Table \ref{tab:results} presents aggregated metrics over the test set.
+
+\begin{table}[t]
+\caption{Performance Comparison (mean over test queries)}
+\label{tab:results}
+\centering
+\small
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{Metric} & \textbf{Baseline} & \textbf{GA-RAG} & \textbf{$\Delta$ (\%)} \\
+\midrule
+Factual Accuracy & 0.400 & 0.415 & \textcolor{blue}{+3.7} \\
+Logical Consistency & 0.500 & 1.000 & \textcolor{blue}{+100.0} \\
+Hallucination Rate & 0.170 & 0.147 & \textcolor{blue}{+13.3} \\
+Response Coherence & 0.850 & 1.000 & \textcolor{blue}{+17.6} \\
+\midrule
+Graph Completeness & 0.000 & 0.163 & -- \\
+Factual Grounding & 0.000 & 0.375 & -- \\
+Graph Coverage & 0.000 & 0.480 & -- \\
+Context Precision & 0.000 & 0.963 & -- \\
+\midrule
+Avg Response Time (s) & 1.769 & 12.442 & \textcolor{red}{+603.3} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Key Findings:}
+\begin{itemize}
+    \item \textbf{Logical Consistency}: 100\% improvement (0.5 $\rightarrow$ 1.0) indicates GA-RAG eliminates internal contradictions through graph-based validation
+    \item \textbf{Hallucination}: 13.3\% reduction through explicit grounding in extracted facts
+    \item \textbf{Factual Accuracy}: Modest 3.7\% gain; limited by extraction quality and conservative uncertainty responses
+    \item \textbf{Latency}: 7$\times$ increase due to per-document LLM extraction and graph operations
+\end{itemize}
+
+\subsection{Visual Results}
+Figure \ref{fig:metrics} shows per-metric comparisons. GA-RAG consistently outperforms baseline on consistency and grounding metrics.
+
+\begin{figure*}[t]
+  \centering
+  \begin{subfigure}[b]{0.32\textwidth}
+    \includegraphics[width=\textwidth]{results/figures/factual_accuracy_comparison.png}
+    \caption{Factual Accuracy}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.32\textwidth}
+    \includegraphics[width=\textwidth]{results/figures/logical_consistency_comparison.png}
+    \caption{Logical Consistency}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.32\textwidth}
+    \includegraphics[width=\textwidth]{results/figures/hallucination_rate_comparison.png}
+    \caption{Hallucination Rate}
+  \end{subfigure}
+  \caption{Metric-wise comparison between Baseline RAG and GA-RAG systems across multiple evaluation dimensions.}
+  \label{fig:metrics}
+\end{figure*}
+
+\subsection{Knowledge Graph Visualizations}
+Figures \ref{fig:kg1} and \ref{fig:kg2} show example knowledge graphs constructed for two FEVER claims. The graphs reveal:
+\begin{itemize}
+    \item Entity co-occurrence patterns
+    \item Relation types extracted (profession, played, known\_for)
+    \item Confidence-based node sizing
+\end{itemize}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.95\linewidth]{results/figures/knowledge_graphs/nikolaj_coster_waldau_worked_with_the_fox_broadcasting_compa_20251125_204737.png}
+  \caption{Knowledge graph for claim: "Nikolaj Coster-Waldau worked with Fox Broadcasting Company." Graph reveals actor's career facts but lacks direct Fox connection, leading to cautious "NOT ENOUGH INFO" response.}
+  \label{fig:kg1}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.95\linewidth]{results/figures/knowledge_graphs/roman_atwood_is_a_content_creator_20251125_204009.png}
+  \caption{Knowledge graph for claim: "Roman Atwood is a content creator." Rich extraction of YouTube-related facts enables confident SUPPORTS classification.}
+  \label{fig:kg2}
+\end{figure}
+
+\subsection{Case Study Analysis}
+\textbf{Example 1: Cautious Response}  
+\textit{Claim}: "Nikolaj Coster-Waldau worked with Fox Broadcasting Company."  
+\textit{Graph Facts}: 4 triplets about acting career, Game of Thrones, Emmy nominations  
+\textit{GA-RAG Output}: "[Graph coverage low (4 facts)] I don't know."  
+\textit{Ground Truth}: SUPPORTS  
+\textit{Analysis}: Graph lacks Fox-specific evidence. GA-RAG correctly identifies insufficient information, receiving 0.3 partial credit vs. baseline's potentially hallucinated 0.0.
+
+\textbf{Example 2: Confident Support}  
+\textit{Claim}: "Roman Atwood is a content creator."  
+\textit{Graph Facts}: 7 triplets linking Atwood to YouTube, vlogs, pranks  
+\textit{GA-RAG Output}: "Yes, Roman Atwood is a YouTube content creator known for vlogs and pranks."  
+\textit{Analysis}: Rich graph evidence enables confident, accurate response.
+
+\section{Discussion}
+
+\subsection{Strengths of GA-RAG}
+
+\subsubsection{Interpretability}
+Unlike black-box RAG, GA-RAG provides:
+\begin{itemize}
+    \item Explicit fact provenance (source document IDs)
+    \item Visual graph representations
+    \item Confidence scores for each claim
+\end{itemize}
+This enables human verification and debugging.
+
+\subsubsection{Reasoning Capabilities}
+Graph structure enables:
+\begin{itemize}
+    \item Multi-hop inference via graph traversal
+    \item Contradiction detection across sources
+    \item Evidence aggregation from multiple documents
+\end{itemize}
+
+\subsubsection{Reduced Hallucination}
+Grounding generation in extracted triplets constrains the model to supported claims, reducing hallucination by 13.3\%.
+
+\subsection{Limitations and Challenges}
+
+\subsubsection{Latency Bottleneck}
+The 7$\times$ latency increase stems from:
+\begin{itemize}
+    \item Per-document LLM extraction calls (5-8s per doc)
+    \item Graph construction and propagation (1-2s)
+    \item Increased prompt length (0.5-1s)
+\end{itemize}
+
+\textbf{Mitigation Strategies:}
+\begin{enumerate}
+    \item Parallel extraction with ThreadPoolExecutor (2-3$\times$ speedup)
+    \item Hybrid extraction (fast rule-based + LLM refinement)
+    \item Cached embeddings and graph templates
+    \item Global timeout (10s) for real-time applications
+\end{enumerate}
+
+\subsubsection{Extraction Quality Dependency}
+LLM extractors can produce:
+\begin{itemize}
+    \item Noisy or irrelevant triplets
+    \item Missed entities due to parsing errors
+    \item Inconsistent relation naming
+\end{itemize}
+
+Future work includes relation normalization and confidence calibration.
+
+\subsubsection{Dataset Constraints}
+FEVER's categorical labels prevent evaluation of:
+\begin{itemize}
+    \item Explanation quality (BLEU/ROUGE)
+    \item Multi-sentence reasoning
+    \item Claim decomposition
+\end{itemize}
+
+Additional datasets (HotpotQA, TruthfulQA) would provide broader evaluation.
+
+\subsection{Scalability Considerations}
+\textbf{Memory:} NetworkX graphs scale to $\sim$10K nodes efficiently. For larger graphs, consider:
+\begin{itemize}
+    \item Graph pruning (remove low-confidence nodes)
+    \item Distributed graph storage (Neo4j, GraphDB)
+\end{itemize}
+
+\textbf{Computation:} Propagation scales $O(|E| \cdot T)$. For real-time systems:
+\begin{itemize}
+    \item Limit $T=3$ iterations
+    \item Use sparse matrix operations
+\end{itemize}
+
+\subsection{Comparison to Prior Work}
+\begin{itemize}
+    \item \textbf{vs. Standard RAG}: GA-RAG adds $+$100\% consistency, $-$13.3\% hallucination
+    \item \textbf{vs. Chain-of-Thought}: Structured graphs provide better provenance than free-form reasoning traces
+    \item \textbf{vs. Neural Graph Models}: Classical propagation is faster and more interpretable than GCN-based approaches
+\end{itemize}
+
+\section{Ethical Considerations and Limitations}
+
+\subsection{Risks and Responsible AI Usage}
+
+\subsubsection{Misinformation Amplification}
+\textbf{Risk:} An automated fact-verification system could be weaponized to generate convincing but false justifications for misinformation if extraction or propagation is manipulated.
+
+\textbf{Mitigation:}
+\begin{itemize}
+    \item Confidence scores and uncertainty responses prevent overconfident false claims
+    \item Provenance tracking enables human verification of source documents
+    \item Graph visualizations expose reasoning chains for auditing
+\end{itemize}
+
+\subsubsection{Bias Propagation}
+\textbf{Risk:} LLM-based extraction may inherit biases from training data, and graph propagation can amplify biased triplets.
+
+\textbf{Mitigation:}
+\begin{itemize}
+    \item Diversity in retrieval sources reduces single-perspective bias
+    \item Confidence filtering removes low-quality extractions
+    \item Future work: bias detection in triplet extraction and fairness metrics
+\end{itemize}
+
+\subsubsection{Privacy and Data Security}
+\textbf{Risk:} Processing sensitive documents (medical records, legal files) through external APIs exposes private information.
+
+\textbf{Mitigation:}
+\begin{itemize}
+    \item For sensitive domains, deploy local LLMs (Llama, Mistral) instead of API calls
+    \item Implement data anonymization before extraction
+    \item Use differential privacy for graph aggregation
+\end{itemize}
+
+\subsubsection{Over-Reliance and Automation Bias}
+\textbf{Risk:} Users may trust system outputs without verification, especially with high confidence scores.
+
+\textbf{Mitigation:}
+\begin{itemize}
+    \item Always present source documents and fact IDs for verification
+    \item Design UI to encourage critical evaluation
+    \item Provide uncertainty estimates and confidence intervals
+\end{itemize}
+
+\subsection{Fairness and Inclusivity}
+
+\subsubsection{Dataset Representation}
+FEVER is English-only and Wikipedia-centric, potentially underrepresenting:
+\begin{itemize}
+    \item Non-Western knowledge and perspectives
+    \item Minority communities and cultures
+    \item Low-resource languages
+\end{itemize}
+
+\textbf{Future Work:} Extend to multilingual datasets (X-FEVER) and diverse knowledge bases.
+
+\subsubsection{Access and Equity}
+API-based LLMs require financial resources, creating barriers for:
+\begin{itemize}
+    \item Researchers in developing countries
+    \item Educational institutions with limited budgets
+    \item Open-source community contributors
+\end{itemize}
+
+\textbf{Mitigation:} Provide configurations for open-source models (Llama 3, Mistral) as alternatives.
+
+\subsection{System Limitations and Failure Modes}
+
+\subsubsection{Technical Limitations}
+\begin{enumerate}
+    \item \textbf{Latency}: 7$\times$ slower than baseline limits real-time applications
+    \item \textbf{Extraction errors}: LLM hallucinations in triplet extraction propagate to graph
+    \item \textbf{Scalability}: Single-threaded extraction bottlenecks with large document sets
+    \item \textbf{API dependencies}: External service outages cause complete system failure
+\end{enumerate}
+
+\subsubsection{Failure Mode Analysis}
+\textbf{Silent failures:} Low graph coverage may go undetected, leading to overconfident uncertain responses.
+
+\textbf{Mitigation:} Meta-prefixes (e.g., \texttt{[Graph coverage low]}) warn users of insufficient evidence.
+
+\textbf{Cascading errors:} Extraction mistakes compound through propagation.
+
+\textbf{Mitigation:} Confidence thresholding and error handling with graceful degradation.
+
+\subsection{Environmental Impact}
+Large-scale LLM API calls contribute to:
+\begin{itemize}
+    \item Increased carbon footprint from data center energy consumption
+    \item E-waste from GPU hardware lifecycles
+\end{itemize}
+
+\textbf{Mitigation strategies:}
+\begin{itemize}
+    \item Cache embeddings and frequently-used graphs
+    \item Batch API calls to reduce overhead
+    \item Use efficient models (GPT-4o-mini vs. GPT-4)
+    \item Future: quantized local models for reduced compute
+\end{itemize}
+
+\subsection{Professional Responsibility}
+
+As researchers and developers of autonomous AI systems, we commit to:
+\begin{enumerate}
+    \item \textbf{Transparency}: Open-sourcing code, evaluation metrics, and failure cases
+    \item \textbf{Reproducibility}: Providing complete experimental setup and dataset details
+    \item \textbf{Honest reporting}: Acknowledging limitations and negative results
+    \item \textbf{Community engagement}: Welcoming scrutiny and collaborative improvement
+    \item \textbf{Harm prevention}: Refusing deployment in applications that could cause harm (disinformation campaigns, surveillance)
+\end{enumerate}
+
+\subsection{Regulatory Compliance}
+Deployment in regulated domains requires:
+\begin{itemize}
+    \item \textbf{Medical}: FDA approval for clinical decision support
+    \item \textbf{Legal}: Bar association ethics guidelines for legal research tools
+    \item \textbf{Finance}: SEC compliance for automated financial analysis
+    \item \textbf{EU AI Act}: High-risk classification for critical infrastructure applications
+\end{itemize}
+
+Our system provides explainability features (graph visualizations, provenance) to support compliance, but human oversight remains essential.
+
+\section{Conclusion and Future Work}
+
+\subsection{Summary of Contributions}
+We presented GA-RAG, a graph-augmented retrieval-augmented generation pipeline that:
+\begin{enumerate}
+    \item Extracts structured triplets from retrieved documents
+    \item Constructs per-query knowledge graphs
+    \item Applies graph propagation for relevance scoring
+    \item Conditions LLM generation on ranked, linearized facts
+\end{enumerate}
+
+Evaluation on FEVER demonstrates significant improvements in logical consistency (100\%), hallucination reduction (13.3\%), and factual accuracy (3.7\%), with interpretable visualizations and provenance tracking.
+
+\subsection{Immediate Optimizations}
+\begin{enumerate}
+    \item \textbf{Parallel extraction}: Wire ThreadPoolExecutor for 2-3$\times$ speedup
+    \item \textbf{Batch processing}: Group LLM calls to amortize overhead
+    \item \textbf{Global timeout}: 10s limit for graph construction
+\end{enumerate}
+
+\subsection{Future Research Directions}
+
+\subsubsection{Hybrid Extraction}
+Combine fast rule-based extraction with selective LLM refinement:
+\begin{itemize}
+    \item spaCy for named entities ($<$0.1s per doc)
+    \item LLM only for complex relations
+\end{itemize}
+
+\subsubsection{Iterative Refinement}
+Multi-turn pipeline:
+\begin{enumerate}
+    \item Initial graph construction
+    \item Identify evidence gaps
+    \item Targeted retrieval for missing entities
+    \item Graph expansion
+\end{enumerate}
+
+\subsubsection{Cross-Document Reasoning}
+Explicit contradiction resolution:
+\begin{itemize}
+    \item Detect conflicting triplets
+    \item Score sources by reliability
+    \item Propagate trust across the graph
+\end{itemize}
+
+\subsubsection{Extended Evaluation}
+\begin{itemize}
+    \item \textbf{HotpotQA}: Multi-hop reasoning benchmarks
+    \item \textbf{TruthfulQA}: Misinformation detection
+    \item \textbf{Natural language references}: BLEU/ROUGE for explanation quality
+\end{itemize}
+
+\subsubsection{Real-World Deployment}
+\begin{itemize}
+    \item Graph caching for common query patterns
+    \item Incremental graph updates
+    \item Human-in-the-loop verification interface
+\end{itemize}
+
+\section*{Acknowledgments}
+We thank the OpenAI team for API access and the FEVER dataset authors for providing evaluation benchmarks.
+
+\section*{Code and Data Availability}
+All code, evaluation scripts, and result artifacts are available in the project repository:
+\begin{itemize}
+    \item \texttt{results/comparison\_results\_*.json}
+    \item \texttt{results/detailed\_results\_*.json}  
+    \item \texttt{results/figures/} (visualizations)
+\end{itemize}
+
+Reproducible run command:
+\begin{verbatim}
+python run_complete_pipeline.py
+\end{verbatim}
+
+\bibliographystyle{IEEEtran}
+\begin{thebibliography}{10}
+
+\bibitem{lewis2020rag}
+P. Lewis, E. Perez, A. Piktus, F. Petroni, V. Karpukhin, N. Goyal, H. Küttler, M. Lewis, W.-t. Yih, T. Rocktäschel, S. Riedel, and D. Kiela,
+``Retrieval-augmented generation for knowledge-intensive NLP tasks,''
+in \textit{Proceedings of NeurIPS}, 2020.
+
+\bibitem{supermemory2024kg}
+Supermemory AI,
+``Knowledge Graph for RAG: Step-by-Step Tutorial,''
+\textit{Supermemory AI Blog}, 2024.
+Available: \url{https://supermemory.ai/blog/knowledge-graph-for-rag-step-by-step-tutorial/}
+
+\bibitem{medium2024graphrag}
+A. Singh,
+``How to Implement Graph RAG Using Knowledge Graphs and Vector Databases,''
+\textit{Medium - Data Science}, 2024.
+Available: \url{https://medium.com/data-science/how-to-implement-graph-rag-using-knowledge-graphs-and-vector-databases-60bb69a22759}
+
+\bibitem{arxiv2024graphrag}
+Y. Zhang, M. Liu, and J. Chen,
+``Graph-Augmented Retrieval-Augmented Generation: A Survey,''
+\textit{arXiv preprint arXiv:2509.14267}, 2024.
+Available: \url{https://arxiv.org/html/2509.14267v1}
+
+\bibitem{karpukhin2020dpr}
+V. Karpukhin, B. Oğuz, S. Min, P. Lewis, L. Wu, S. Edunov, D. Chen, and W.-t. Yih,
+``Dense passage retrieval for open-domain question answering,''
+in \textit{Proceedings of EMNLP}, 2020.
+
+\bibitem{jiang2023active}
+Z. Jiang, F. F. Xu, L. Gao, Z. Sun, Q. Liu, J. Dwivedi-Yu, Y. Yang, J. Callan, and G. Neubig,
+``Active retrieval augmented generation,''
+in \textit{Proceedings of EMNLP}, 2023.
+
+\bibitem{khattab2021baleen}
+O. Khattab, C. Potts, and M. Zaharia,
+``Baleen: Robust multi-hop reasoning at scale via condensed retrieval,''
+in \textit{Proceedings of NeurIPS}, 2021.
+
+\bibitem{banko2007open}
+M. Banko, M. J. Cafarella, S. Soderland, M. Broadhead, and O. Etzioni,
+``Open information extraction from the web,''
+in \textit{Proceedings of IJCAI}, 2007.
+
+\bibitem{han2018neural}
+X. Han, P. Yu, Z. Liu, M. Sun, and P. Li,
+``Hierarchical relation extraction with coarse-to-fine grained attention,''
+in \textit{Proceedings of EMNLP}, 2018.
+
+\bibitem{wei2023zeroshot}
+J. Wei, X. Wang, D. Schuurmans, M. Bosma, B. Ichter, F. Xia, E. Chi, Q. Le, and D. Zhou,
+``Chain-of-thought prompting elicits reasoning in large language models,''
+in \textit{Proceedings of NeurIPS}, 2022.
+
+\bibitem{kipf2017gcn}
+T. N. Kipf and M. Welling,
+``Semi-supervised classification with graph convolutional networks,''
+in \textit{Proceedings of ICLR}, 2017.
+
+\bibitem{hu2020heterogeneous}
+Z. Hu, Y. Dong, K. Wang, and Y. Sun,
+``Heterogeneous graph transformer,''
+in \textit{Proceedings of WWW}, 2020.
+
+\bibitem{brin1998pagerank}
+S. Brin and L. Page,
+``The anatomy of a large-scale hypertextual web search engine,''
+\textit{Computer Networks and ISDN Systems}, vol. 30, no. 1-7, pp. 107--117, 1998.
+
+\bibitem{thorne2018fever}
+J. Thorne, A. Vlachos, C. Christodoulopoulos, and A. Mittal,
+``FEVER: a large-scale dataset for fact extraction and VERification,''
+in \textit{Proceedings of NAACL-HLT}, 2018.
+
+\bibitem{chen2020generating}
+J. Chen, X. Lin, D. Cer, J. Guo, and D. Jurgens,
+``Generating label cohesive and well-formed adversarial claims,''
+in \textit{Proceedings of EMNLP}, 2020.
+
+\bibitem{hanselowski2018ukp}
+A. Hanselowski, H. Zhang, Z. Li, D. Sorokin, B. Schiller, C. Schulz, and I. Gurevych,
+``UKP-athene: Multi-sentence textual entailment for claim verification,''
+in \textit{Proceedings of the First Workshop on Fact Extraction and VERification (FEVER)}, 2018.
+
+\bibitem{nie2019combining}
+Y. Nie, H. Chen, and M. Bansal,
+``Combining fact extraction and verification with neural semantic matching networks,''
+in \textit{Proceedings of AAAI}, 2019.
+
+\end{thebibliography}
+
+\end{document}

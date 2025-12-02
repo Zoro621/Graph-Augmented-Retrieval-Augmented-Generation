@@ -1,0 +1,3 @@
+Query_ID,Query,Baseline_Accuracy,GA_RAG_Accuracy,Baseline_Consistency,GA_RAG_Consistency,Baseline_Hallucination,GA_RAG_Hallucination,Baseline_Time,GA_RAG_Time
+1,Nikolaj Coster-Waldau worked with the Fox Broadcas...,0.000,0.000,0.500,1.000,0.000,0.000,1.12s,19.34s
+2,Roman Atwood is a content creator....,0.000,0.000,0.500,1.000,0.200,0.200,4.63s,20.65s

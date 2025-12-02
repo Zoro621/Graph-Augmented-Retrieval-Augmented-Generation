@@ -1,0 +1,1569 @@
+{
+  "experiment_info": {
+    "timestamp": "20251125_024521",
+    "dataset": "fever",
+    "num_queries": 5,
+    "model": "gpt-4o-mini",
+    "configuration": {
+      "use_spacy": false,
+      "consistency_threshold": 0.7,
+      "k_retrieve": 4
+    }
+  },
+  "baseline_results": [
+    {
+      "query": "Nikolaj Coster-Waldau worked with the Fox Broadcasting Company.",
+      "answer": "I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Nikolaj William Coster-Waldau is a Danish actor. He had his breakthrough role in Denmark with the film Nightwatch in 1994. He played Jaime Lannister in the HBO fantasy drama series Game of Thrones, for which he received two Primetime Emmy Award nominations for Outstanding Supporting Actor in a Drama Series.",
+        "Fox Broadcasting Company, LLC is an American commercial broadcast television network serving as the flagship namesake property of Fox Corporation and operated through Fox Entertainment. Fox is based at Fox Corporation's corporate headquarters at 1211 Avenue of the Americas in Midtown Manhattan, New York City, and it hosts additional offices at the Fox Network Center in Los Angeles and at the Fox Media Center in Tempe, Arizona. The channel was launched by News Corporation on October 9, 1986 as a",
+        "by News Corporation on October 9, 1986 as a competitor to the Big Three television networks, which are the American Broadcasting Company (ABC), the Columbia Broadcasting System (CBS), and the National Broadcasting Company (NBC).",
+        "He became the second YouTuber after Germán Garmendia to receive two Diamond Play Buttons for his first two channels."
+      ],
+      "time": 1.787003755569458,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Roman Atwood is a content creator.",
+      "answer": "Yes, Roman Atwood is a content creator, best known for his vlogs and prank videos on YouTube.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Roman Bernard Atwood is an American YouTube personality and prankster. He is best known for his vlogs, where he posts updates about his life. His vlogging channel, \"RomanAtwoodVlogs\", has a total of 5 billion views and 15 million subscribers. He also has another YouTube channel called \"RomanAtwood\", where he used to post prank videos. The channel has been inactive since 2016. His pranks have gained over 1.4 billion views and 10.4 million subscribers. He became the second YouTuber after Germán",
+        "He became the second YouTuber after Germán Garmendia to receive two Diamond Play Buttons for his first two channels.",
+        "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singer, and actress. She is a former member of the girl groups 3LW and The Cheetah Girls. From 2013 to 2022, Bailon was a co-host of the daytime talk show The Real; for which she won a Daytime Emmy Award. From 2022 to 2023, Bailon-Houghton was a co-anchor of the entertainment news show, E! News.",
+        "painting, film, photography, and graphic arts. In recent years, technological advances have led to video art, computer art, performance art, animation, television, and videogames."
+      ],
+      "time": 3.931368350982666,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "History of art includes architecture, dance, sculpture, music, painting, poetry literature, theatre, narrative, film, photography and graphic arts.",
+      "answer": "The context provided does not explicitly mention dance, music, poetry, or literature as part of the history of art. It primarily emphasizes visual art forms such as architecture, sculpture, painting, film, photography, and graphic arts. Therefore, while the history of art may encompass a broader range of disciplines, the specific context given focuses on visual arts and does not confirm the inclusion of dance, music, poetry, or literature.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "The history of art focuses on objects made by humans for any number of spiritual, narrative, philosophical, symbolic, conceptual, documentary, decorative, and even functional and other purposes, but with a primary emphasis on its aesthetic visual form. Visual art can be classified in diverse ways, such as separating fine arts from applied arts; inclusively focusing on human creativity; or focusing on different media such as architecture, sculpture, painting, film, photography, and graphic arts.",
+        "painting, film, photography, and graphic arts. In recent years, technological advances have led to video art, computer art, performance art, animation, television, and videogames.",
+        "by News Corporation on October 9, 1986 as a competitor to the Big Three television networks, which are the American Broadcasting Company (ABC), the Columbia Broadcasting System (CBS), and the National Broadcasting Company (NBC).",
+        "He became the second YouTuber after Germán Garmendia to receive two Diamond Play Buttons for his first two channels."
+      ],
+      "time": 5.49300217628479,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "Adrienne Bailon is an accountant.",
+      "answer": "The statement \"Adrienne Bailon is an accountant\" is not correct based on the provided context. She is a television personality, singer, and actress, known for her work in girl groups and as a co-host on a talk show.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singer, and actress. She is a former member of the girl groups 3LW and The Cheetah Girls. From 2013 to 2022, Bailon was a co-host of the daytime talk show The Real; for which she won a Daytime Emmy Award. From 2022 to 2023, Bailon-Houghton was a co-anchor of the entertainment news show, E! News.",
+        "He became the second YouTuber after Germán Garmendia to receive two Diamond Play Buttons for his first two channels.",
+        "Roman Bernard Atwood is an American YouTube personality and prankster. He is best known for his vlogs, where he posts updates about his life. His vlogging channel, \"RomanAtwoodVlogs\", has a total of 5 billion views and 15 million subscribers. He also has another YouTube channel called \"RomanAtwood\", where he used to post prank videos. The channel has been inactive since 2016. His pranks have gained over 1.4 billion views and 10.4 million subscribers. He became the second YouTuber after Germán",
+        "Nikolaj William Coster-Waldau is a Danish actor. He had his breakthrough role in Denmark with the film Nightwatch in 1994. He played Jaime Lannister in the HBO fantasy drama series Game of Thrones, for which he received two Primetime Emmy Award nominations for Outstanding Supporting Actor in a Drama Series."
+      ],
+      "time": 2.045950412750244,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "query": "System of a Down briefly disbanded in limbo.",
+      "answer": "I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "He became the second YouTuber after Germán Garmendia to receive two Diamond Play Buttons for his first two channels.",
+        "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singer, and actress. She is a former member of the girl groups 3LW and The Cheetah Girls. From 2013 to 2022, Bailon was a co-host of the daytime talk show The Real; for which she won a Daytime Emmy Award. From 2022 to 2023, Bailon-Houghton was a co-anchor of the entertainment news show, E! News.",
+        "by News Corporation on October 9, 1986 as a competitor to the Big Three television networks, which are the American Broadcasting Company (ABC), the Columbia Broadcasting System (CBS), and the National Broadcasting Company (NBC).",
+        "Fox Broadcasting Company, LLC is an American commercial broadcast television network serving as the flagship namesake property of Fox Corporation and operated through Fox Entertainment. Fox is based at Fox Corporation's corporate headquarters at 1211 Avenue of the Americas in Midtown Manhattan, New York City, and it hosts additional offices at the Fox Network Center in Los Angeles and at the Fox Media Center in Tempe, Arizona. The channel was launched by News Corporation on October 9, 1986 as a"
+      ],
+      "time": 1.4945037364959717,
+      "metadata": {
+        "num_retrieved": 4,
+        "model": "gpt-4o-mini"
+      }
+    }
+  ],
+  "ga_rag_results": [
+    {
+      "query": "Nikolaj Coster-Waldau worked with the Fox Broadcasting Company.",
+      "answer": "[Low grounding 0.00] I don't know.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Nikolaj William Coster-Waldau is a Danish actor. He had his breakthrough role in Denmark with the film Nightwatch in 1994. He played Jaime Lannister in the HBO fantasy drama series Game of Thrones, for which he received two Primetime Emmy Award nominations for Outstanding Supporting Actor in a Drama Series.",
+        "Fox Broadcasting Company, LLC is an American commercial broadcast television network serving as the flagship namesake property of Fox Corporation and operated through Fox Entertainment. Fox is based at Fox Corporation's corporate headquarters at 1211 Avenue of the Americas in Midtown Manhattan, New York City, and it hosts additional offices at the Fox Network Center in Los Angeles and at the Fox Media Center in Tempe, Arizona. The channel was launched by News Corporation on October 9, 1986 as a",
+        "by News Corporation on October 9, 1986 as a competitor to the Big Three television networks, which are the American Broadcasting Company (ABC), the Columbia Broadcasting System (CBS), and the National Broadcasting Company (NBC).",
+        "He became the second YouTuber after Germán Garmendia to receive two Diamond Play Buttons for his first two channels.",
+        "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singer, and actress. She is a former member of the girl groups 3LW and The Cheetah Girls. From 2013 to 2022, Bailon was a co-host of the daytime talk show The Real; for which she won a Daytime Emmy Award. From 2022 to 2023, Bailon-Houghton was a co-anchor of the entertainment news show, E! News."
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Nikolaj William Coster-Waldau",
+          "relation": "has_profession",
+          "object": "actor"
+        },
+        {
+          "subject": "Nikolaj William Coster-Waldau",
+          "relation": "had_breakthrough_role_in",
+          "object": "Denmark"
+        },
+        {
+          "subject": "Nikolaj William Coster-Waldau",
+          "relation": "played",
+          "object": "Jaime Lannister"
+        },
+        {
+          "subject": "Nikolaj William Coster-Waldau",
+          "relation": "appeared_in",
+          "object": "Game of Thrones"
+        },
+        {
+          "subject": "Game of Thrones",
+          "relation": "is_a",
+          "object": "HBO fantasy drama series"
+        },
+        {
+          "subject": "Nikolaj William Coster-Waldau",
+          "relation": "received",
+          "object": "two Primetime Emmy Award nominations"
+        },
+        {
+          "subject": "two Primetime Emmy Award nominations",
+          "relation": "for",
+          "object": "Outstanding Supporting Actor in a Drama Series"
+        },
+        {
+          "subject": "Nightwatch",
+          "relation": "was_released_in",
+          "object": "1994"
+        },
+        {
+          "subject": "Fox Broadcasting Company, LLC",
+          "relation": "is",
+          "object": "American commercial broadcast television network"
+        },
+        {
+          "subject": "Fox Broadcasting Company, LLC",
+          "relation": "serves_as",
+          "object": "flagship namesake property of Fox Corporation"
+        },
+        {
+          "subject": "Fox Broadcasting Company, LLC",
+          "relation": "operated_through",
+          "object": "Fox Entertainment"
+        },
+        {
+          "subject": "Fox Broadcasting Company, LLC",
+          "relation": "based_at",
+          "object": "Fox Corporation's corporate headquarters"
+        },
+        {
+          "subject": "Fox Corporation's corporate headquarters",
+          "relation": "located_in",
+          "object": "1211 Avenue of the Americas, Midtown Manhattan, New York City"
+        },
+        {
+          "subject": "Fox Broadcasting Company, LLC",
+          "relation": "hosts_offices_at",
+          "object": "Fox Network Center in Los Angeles"
+        },
+        {
+          "subject": "News Corporation",
+          "relation": "launched",
+          "object": "Fox Broadcasting Company, LLC"
+        },
+        {
+          "subject": "Fox Broadcasting Company, LLC",
+          "relation": "launched_on",
+          "object": "October 9, 1986"
+        },
+        {
+          "subject": "News Corporation",
+          "relation": "created",
+          "object": "competitor to the Big Three television networks"
+        },
+        {
+          "subject": "Big Three television networks",
+          "relation": "includes",
+          "object": "American Broadcasting Company"
+        },
+        {
+          "subject": "YouTuber",
+          "relation": "became",
+          "object": "second YouTuber"
+        },
+        {
+          "subject": "Germán Garmendia",
+          "relation": "received",
+          "object": "two Diamond Play Buttons"
+        }
+      ],
+      "ranked_triplets": [
+        {
+          "subject": "Nikolaj William Coster-Waldau",
+          "relation": "has_profession",
+          "object": "actor",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "Nikolaj William Coster-Waldau is a Danish actor. He had his breakthrough role in Denmark with the fi"
+        },
+        {
+          "subject": "Nikolaj William Coster-Waldau",
+          "relation": "had_breakthrough_role_in",
+          "object": "Denmark",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "Nikolaj William Coster-Waldau is a Danish actor. He had his breakthrough role in Denmark with the fi"
+        },
+        {
+          "subject": "Nikolaj William Coster-Waldau",
+          "relation": "played",
+          "object": "Jaime Lannister",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "Nikolaj William Coster-Waldau is a Danish actor. He had his breakthrough role in Denmark with the fi"
+        },
+        {
+          "subject": "Nikolaj William Coster-Waldau",
+          "relation": "appeared_in",
+          "object": "Game of Thrones",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "Nikolaj William Coster-Waldau is a Danish actor. He had his breakthrough role in Denmark with the fi"
+        },
+        {
+          "subject": "Nikolaj William Coster-Waldau",
+          "relation": "received",
+          "object": "two Primetime Emmy Award nominations",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "Nikolaj William Coster-Waldau is a Danish actor. He had his breakthrough role in Denmark with the fi"
+        },
+        {
+          "subject": "Fox Broadcasting Company, LLC",
+          "relation": "is",
+          "object": "American commercial broadcast television network",
+          "confidence": 0.95,
+          "relevance_score": 1.3898499999999998,
+          "source": "Fox Broadcasting Company, LLC is an American commercial broadcast television network serving as the "
+        },
+        {
+          "subject": "Fox Broadcasting Company, LLC",
+          "relation": "serves_as",
+          "object": "flagship namesake property of Fox Corporation",
+          "confidence": 0.95,
+          "relevance_score": 1.3898499999999998,
+          "source": "Fox Broadcasting Company, LLC is an American commercial broadcast television network serving as the "
+        },
+        {
+          "subject": "Fox Broadcasting Company, LLC",
+          "relation": "operated_through",
+          "object": "Fox Entertainment",
+          "confidence": 0.95,
+          "relevance_score": 1.3898499999999998,
+          "source": "Fox Broadcasting Company, LLC is an American commercial broadcast television network serving as the "
+        },
+        {
+          "subject": "Fox Broadcasting Company, LLC",
+          "relation": "based_at",
+          "object": "Fox Corporation's corporate headquarters",
+          "confidence": 0.95,
+          "relevance_score": 1.3898499999999998,
+          "source": "Fox Broadcasting Company, LLC is an American commercial broadcast television network serving as the "
+        },
+        {
+          "subject": "Fox Corporation's corporate headquarters",
+          "relation": "located_in",
+          "object": "1211 Avenue of the Americas, Midtown Manhattan, New York City",
+          "confidence": 0.95,
+          "relevance_score": 1.3898499999999998,
+          "source": "Fox Broadcasting Company, LLC is an American commercial broadcast television network serving as the "
+        },
+        {
+          "subject": "Fox Broadcasting Company, LLC",
+          "relation": "hosts_offices_at",
+          "object": "Fox Network Center in Los Angeles",
+          "confidence": 0.95,
+          "relevance_score": 1.3898499999999998,
+          "source": "Fox Broadcasting Company, LLC is an American commercial broadcast television network serving as the "
+        },
+        {
+          "subject": "News Corporation",
+          "relation": "launched",
+          "object": "Fox Broadcasting Company, LLC",
+          "confidence": 0.95,
+          "relevance_score": 1.3898499999999998,
+          "source": "Fox Broadcasting Company, LLC is an American commercial broadcast television network serving as the "
+        },
+        {
+          "subject": "Fox Broadcasting Company, LLC",
+          "relation": "launched_on",
+          "object": "October 9, 1986",
+          "confidence": 0.95,
+          "relevance_score": 1.3898499999999998,
+          "source": "Fox Broadcasting Company, LLC is an American commercial broadcast television network serving as the "
+        },
+        {
+          "subject": "Big Three television networks",
+          "relation": "includes",
+          "object": "American Broadcasting Company",
+          "confidence": 0.95,
+          "relevance_score": 1.1286,
+          "source": "by News Corporation on October 9, 1986 as a competitor to the Big Three television networks, which a"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7727272727272727,
+      "factual_grounding_score": 0.0,
+      "metadata": {
+        "num_nodes": 39,
+        "num_edges": 33,
+        "num_triplets_total": 33,
+        "num_triplets_ranked": 14,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 0,
+        "avg_triplets_per_doc": 6.6,
+        "inferred_triplets": 0,
+        "coverage_ok": true,
+        "answer_source": "baseline",
+        "grounding_backoff": true,
+        "retrieval_expansion": {
+          "extra_docs": 1,
+          "entities_used": [
+            "Waldau"
+          ],
+          "candidate_entities": [
+            "Waldau",
+            "Fox Broadcasting",
+            "Company",
+            "Fox Corporation"
+          ]
+        },
+        "graph_viz_path": "results\\figures\\knowledge_graphs\\nikolaj_coster_waldau_worked_with_the_fox_broadcasting_compa_20251125_024358.png",
+        "model": "gpt-4o-mini",
+        "context_filter": {
+          "kept": 14,
+          "dropped": 6,
+          "precision": 0.7,
+          "fallback_used": false,
+          "query_terms": [
+            "broadcasting",
+            "company",
+            "coster",
+            "fox",
+            "nikolaj",
+            "waldau",
+            "william",
+            "worked"
+          ]
+        },
+        "context_filter_precision": 0.7,
+        "question_term_coverage": 0.8571428571428571,
+        "node_term_coverage": 0.8571428571428571,
+        "triplet_density": 0.8461538461538461,
+        "query_terms_used": [
+          "broadcasting",
+          "company",
+          "coster",
+          "fox",
+          "nikolaj",
+          "waldau",
+          "william",
+          "worked"
+        ]
+      },
+      "time": 42.680633783340454
+    },
+    {
+      "query": "Roman Atwood is a content creator.",
+      "answer": "[Graph coverage low (4 facts)] Yes, Roman Atwood is a content creator, best known for his vlogs and prank videos on YouTube.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "Roman Bernard Atwood is an American YouTube personality and prankster. He is best known for his vlogs, where he posts updates about his life. His vlogging channel, \"RomanAtwoodVlogs\", has a total of 5 billion views and 15 million subscribers. He also has another YouTube channel called \"RomanAtwood\", where he used to post prank videos. The channel has been inactive since 2016. His pranks have gained over 1.4 billion views and 10.4 million subscribers. He became the second YouTuber after Germán",
+        "He became the second YouTuber after Germán Garmendia to receive two Diamond Play Buttons for his first two channels.",
+        "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singer, and actress. She is a former member of the girl groups 3LW and The Cheetah Girls. From 2013 to 2022, Bailon was a co-host of the daytime talk show The Real; for which she won a Daytime Emmy Award. From 2022 to 2023, Bailon-Houghton was a co-anchor of the entertainment news show, E! News.",
+        "painting, film, photography, and graphic arts. In recent years, technological advances have led to video art, computer art, performance art, animation, television, and videogames.",
+        "Nikolaj William Coster-Waldau is a Danish actor. He had his breakthrough role in Denmark with the film Nightwatch in 1994. He played Jaime Lannister in the HBO fantasy drama series Game of Thrones, for which he received two Primetime Emmy Award nominations for Outstanding Supporting Actor in a Drama Series."
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Roman Bernard Atwood",
+          "relation": "has_profession",
+          "object": "YouTube personality"
+        },
+        {
+          "subject": "Roman Bernard Atwood",
+          "relation": "has_profession",
+          "object": "prankster"
+        },
+        {
+          "subject": "RomanAtwoodVlogs",
+          "relation": "has_total_views",
+          "object": "5 billion"
+        },
+        {
+          "subject": "RomanAtwoodVlogs",
+          "relation": "has_subscribers",
+          "object": "15 million"
+        },
+        {
+          "subject": "RomanAtwood",
+          "relation": "has_channel_type",
+          "object": "prank videos"
+        },
+        {
+          "subject": "RomanAtwood",
+          "relation": "has_status",
+          "object": "inactive since 2016"
+        },
+        {
+          "subject": "Germán",
+          "relation": "is_second_to",
+          "object": "Roman Bernard Atwood"
+        },
+        {
+          "subject": "YouTuber",
+          "relation": "became",
+          "object": "second YouTuber"
+        },
+        {
+          "subject": "Germán Garmendia",
+          "relation": "received",
+          "object": "two Diamond Play Buttons"
+        },
+        {
+          "subject": "YouTuber",
+          "relation": "received",
+          "object": "two Diamond Play Buttons"
+        },
+        {
+          "subject": "YouTuber",
+          "relation": "has_channels",
+          "object": "first two channels"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "born_on",
+          "object": "October 24, 1983"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "has_profession",
+          "object": "television personality"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "has_profession",
+          "object": "singer"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "has_profession",
+          "object": "actress"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "was_member_of",
+          "object": "3LW"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "was_member_of",
+          "object": "The Cheetah Girls"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "was_co_host_of",
+          "object": "The Real"
+        },
+        {
+          "subject": "The Real",
+          "relation": "won",
+          "object": "Daytime Emmy Award"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "was_co_anchor_of",
+          "object": "E! News"
+        }
+      ],
+      "ranked_triplets": [
+        {
+          "subject": "Roman Bernard Atwood",
+          "relation": "has_profession",
+          "object": "YouTube personality",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "Roman Bernard Atwood is an American YouTube personality and prankster. He is best known for his vlog"
+        },
+        {
+          "subject": "Roman Bernard Atwood",
+          "relation": "has_profession",
+          "object": "prankster",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "Roman Bernard Atwood is an American YouTube personality and prankster. He is best known for his vlog"
+        },
+        {
+          "subject": "Germán",
+          "relation": "is_second_to",
+          "object": "Roman Bernard Atwood",
+          "confidence": 0.95,
+          "relevance_score": 1.4629999999999999,
+          "source": "Roman Bernard Atwood is an American YouTube personality and prankster. He is best known for his vlog"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "has_profession",
+          "object": "television personality",
+          "confidence": 0.95,
+          "relevance_score": 0.9405,
+          "source": "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singe"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7728571428571429,
+      "factual_grounding_score": 0.0,
+      "metadata": {
+        "num_nodes": 43,
+        "num_edges": 35,
+        "num_triplets_total": 35,
+        "num_triplets_ranked": 4,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 3,
+        "avg_triplets_per_doc": 7.0,
+        "inferred_triplets": 0,
+        "coverage_ok": false,
+        "answer_source": "baseline",
+        "grounding_backoff": false,
+        "retrieval_expansion": {
+          "extra_docs": 1,
+          "entities_used": [
+            "Roman Atwood"
+          ],
+          "candidate_entities": [
+            "His",
+            "YouTuber",
+            "Roman Atwood",
+            "Roman Bernard"
+          ]
+        },
+        "graph_viz_path": "results\\figures\\knowledge_graphs\\roman_atwood_is_a_content_creator_20251125_024421.png",
+        "model": "gpt-4o-mini",
+        "context_filter": {
+          "kept": 4,
+          "dropped": 16,
+          "precision": 0.2,
+          "fallback_used": false,
+          "query_terms": [
+            "atwood",
+            "bernard",
+            "content",
+            "creator",
+            "personality",
+            "prankster",
+            "roman",
+            "youtube"
+          ]
+        },
+        "context_filter_precision": 0.2,
+        "question_term_coverage": 0.5,
+        "node_term_coverage": 0.5,
+        "triplet_density": 0.813953488372093,
+        "query_terms_used": [
+          "atwood",
+          "bernard",
+          "content",
+          "creator",
+          "personality",
+          "prankster",
+          "roman",
+          "youtube"
+        ]
+      },
+      "time": 20.879980325698853
+    },
+    {
+      "query": "History of art includes architecture, dance, sculpture, music, painting, poetry literature, theatre, narrative, film, photography and graphic arts.",
+      "answer": "[Low grounding 0.00] The history of art includes various forms such as architecture, sculpture, painting, film, photography, and graphic arts, but it does not explicitly mention dance, music, poetry, literature, or theatre. Therefore, while some of these elements may be considered part of the broader cultural context of art, they are not specifically listed in the provided context.",
+      "ground_truth": "SUPPORTS",
+      "retrieved_docs": [
+        "The history of art focuses on objects made by humans for any number of spiritual, narrative, philosophical, symbolic, conceptual, documentary, decorative, and even functional and other purposes, but with a primary emphasis on its aesthetic visual form. Visual art can be classified in diverse ways, such as separating fine arts from applied arts; inclusively focusing on human creativity; or focusing on different media such as architecture, sculpture, painting, film, photography, and graphic arts.",
+        "painting, film, photography, and graphic arts. In recent years, technological advances have led to video art, computer art, performance art, animation, television, and videogames.",
+        "by News Corporation on October 9, 1986 as a competitor to the Big Three television networks, which are the American Broadcasting Company (ABC), the Columbia Broadcasting System (CBS), and the National Broadcasting Company (NBC).",
+        "He became the second YouTuber after Germán Garmendia to receive two Diamond Play Buttons for his first two channels."
+      ],
+      "graph_triplets": [
+        {
+          "subject": "history of art",
+          "relation": "focuses_on",
+          "object": "objects made by humans"
+        },
+        {
+          "subject": "history of art",
+          "relation": "emphasizes",
+          "object": "aesthetic visual form"
+        },
+        {
+          "subject": "technological advances",
+          "relation": "led_to",
+          "object": "video art"
+        },
+        {
+          "subject": "technological advances",
+          "relation": "led_to",
+          "object": "computer art"
+        },
+        {
+          "subject": "technological advances",
+          "relation": "led_to",
+          "object": "performance art"
+        },
+        {
+          "subject": "technological advances",
+          "relation": "led_to",
+          "object": "animation"
+        },
+        {
+          "subject": "technological advances",
+          "relation": "led_to",
+          "object": "television"
+        },
+        {
+          "subject": "News Corporation",
+          "relation": "created",
+          "object": "competitor to the Big Three television networks"
+        },
+        {
+          "subject": "Big Three television networks",
+          "relation": "includes",
+          "object": "American Broadcasting Company"
+        },
+        {
+          "subject": "YouTuber",
+          "relation": "became",
+          "object": "second YouTuber"
+        },
+        {
+          "subject": "Germán Garmendia",
+          "relation": "received",
+          "object": "two Diamond Play Buttons"
+        },
+        {
+          "subject": "YouTuber",
+          "relation": "received",
+          "object": "two Diamond Play Buttons"
+        },
+        {
+          "subject": "YouTuber",
+          "relation": "has_channels",
+          "object": "first two channels"
+        },
+        {
+          "subject": "visual art",
+          "relation": "classified_in",
+          "object": "diverse ways"
+        },
+        {
+          "subject": "fine arts",
+          "relation": "separated_from",
+          "object": "applied arts"
+        },
+        {
+          "subject": "architecture",
+          "relation": "is_a_type_of",
+          "object": "media"
+        },
+        {
+          "subject": "sculpture",
+          "relation": "is_a_type_of",
+          "object": "media"
+        },
+        {
+          "subject": "painting",
+          "relation": "is_a_type_of",
+          "object": "media"
+        },
+        {
+          "subject": "film",
+          "relation": "is_a_type_of",
+          "object": "media"
+        },
+        {
+          "subject": "photography",
+          "relation": "is_a_type_of",
+          "object": "media"
+        }
+      ],
+      "ranked_triplets": [
+        {
+          "subject": "history of art",
+          "relation": "focuses_on",
+          "object": "objects made by humans",
+          "confidence": 0.95,
+          "relevance_score": 1.672,
+          "source": "The history of art focuses on objects made by humans for any number of spiritual, narrative, philoso"
+        },
+        {
+          "subject": "history of art",
+          "relation": "emphasizes",
+          "object": "aesthetic visual form",
+          "confidence": 0.95,
+          "relevance_score": 1.672,
+          "source": "The history of art focuses on objects made by humans for any number of spiritual, narrative, philoso"
+        },
+        {
+          "subject": "technological advances",
+          "relation": "led_to",
+          "object": "video art",
+          "confidence": 0.95,
+          "relevance_score": 1.1912999999999998,
+          "source": "painting, film, photography, and graphic arts. In recent years, technological advances have led to v"
+        },
+        {
+          "subject": "technological advances",
+          "relation": "led_to",
+          "object": "computer art",
+          "confidence": 0.95,
+          "relevance_score": 1.1912999999999998,
+          "source": "painting, film, photography, and graphic arts. In recent years, technological advances have led to v"
+        },
+        {
+          "subject": "technological advances",
+          "relation": "led_to",
+          "object": "performance art",
+          "confidence": 0.95,
+          "relevance_score": 1.1912999999999998,
+          "source": "painting, film, photography, and graphic arts. In recent years, technological advances have led to v"
+        },
+        {
+          "subject": "visual art",
+          "relation": "classified_in",
+          "object": "diverse ways",
+          "confidence": 0.9,
+          "relevance_score": 1.1880000000000002,
+          "source": "The history of art focuses on objects made by humans for any number of spiritual, narrative, philoso"
+        },
+        {
+          "subject": "photography",
+          "relation": "is_a_type_of",
+          "object": "media",
+          "confidence": 0.9,
+          "relevance_score": 1.1880000000000002,
+          "source": "The history of art focuses on objects made by humans for any number of spiritual, narrative, philoso"
+        },
+        {
+          "subject": "graphic arts",
+          "relation": "is_a_type_of",
+          "object": "media",
+          "confidence": 0.9,
+          "relevance_score": 1.1880000000000002,
+          "source": "The history of art focuses on objects made by humans for any number of spiritual, narrative, philoso"
+        },
+        {
+          "subject": "Big Three television networks",
+          "relation": "includes",
+          "object": "American Broadcasting Company",
+          "confidence": 0.95,
+          "relevance_score": 1.1286,
+          "source": "by News Corporation on October 9, 1986 as a competitor to the Big Three television networks, which a"
+        },
+        {
+          "subject": "human creativity",
+          "relation": "focused_on",
+          "object": "visual art",
+          "confidence": 0.85,
+          "relevance_score": 1.122,
+          "source": "The history of art focuses on objects made by humans for any number of spiritual, narrative, philoso"
+        },
+        {
+          "subject": "fine arts",
+          "relation": "separated_from",
+          "object": "applied arts",
+          "confidence": 0.9,
+          "relevance_score": 0.9900000000000001,
+          "source": "The history of art focuses on objects made by humans for any number of spiritual, narrative, philoso"
+        },
+        {
+          "subject": "architecture",
+          "relation": "is_a_type_of",
+          "object": "media",
+          "confidence": 0.9,
+          "relevance_score": 0.9900000000000001,
+          "source": "The history of art focuses on objects made by humans for any number of spiritual, narrative, philoso"
+        },
+        {
+          "subject": "sculpture",
+          "relation": "is_a_type_of",
+          "object": "media",
+          "confidence": 0.9,
+          "relevance_score": 0.9900000000000001,
+          "source": "The history of art focuses on objects made by humans for any number of spiritual, narrative, philoso"
+        },
+        {
+          "subject": "painting",
+          "relation": "is_a_type_of",
+          "object": "media",
+          "confidence": 0.9,
+          "relevance_score": 0.9900000000000001,
+          "source": "The history of art focuses on objects made by humans for any number of spiritual, narrative, philoso"
+        },
+        {
+          "subject": "film",
+          "relation": "is_a_type_of",
+          "object": "media",
+          "confidence": 0.9,
+          "relevance_score": 0.9900000000000001,
+          "source": "The history of art focuses on objects made by humans for any number of spiritual, narrative, philoso"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7636363636363637,
+      "factual_grounding_score": 0.0,
+      "metadata": {
+        "num_nodes": 30,
+        "num_edges": 22,
+        "num_triplets_total": 22,
+        "num_triplets_ranked": 15,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 3,
+        "avg_triplets_per_doc": 5.5,
+        "inferred_triplets": 0,
+        "coverage_ok": true,
+        "answer_source": "baseline",
+        "grounding_backoff": true,
+        "retrieval_expansion": {
+          "extra_docs": 0,
+          "entities_used": [],
+          "candidate_entities": [
+            "History",
+            "The",
+            "Visual"
+          ]
+        },
+        "graph_viz_path": "results\\figures\\knowledge_graphs\\history_of_art_includes_architecture_dance_sculpture_music_p_20251125_024433.png",
+        "model": "gpt-4o-mini",
+        "context_filter": {
+          "kept": 15,
+          "dropped": 5,
+          "precision": 0.75,
+          "fallback_used": false,
+          "query_terms": [
+            "architecture",
+            "art",
+            "arts",
+            "dance",
+            "film",
+            "graphic",
+            "history",
+            "includes",
+            "literature",
+            "music",
+            "narrative",
+            "painting",
+            "photography",
+            "poetry",
+            "sculpture",
+            "theatre"
+          ]
+        },
+        "context_filter_precision": 0.75,
+        "question_term_coverage": 0.5625,
+        "node_term_coverage": 0.5625,
+        "triplet_density": 0.7333333333333333,
+        "query_terms_used": [
+          "architecture",
+          "art",
+          "arts",
+          "dance",
+          "film",
+          "graphic",
+          "history",
+          "includes",
+          "literature",
+          "music",
+          "narrative",
+          "painting",
+          "photography",
+          "poetry",
+          "sculpture",
+          "theatre"
+        ]
+      },
+      "time": 14.627291679382324
+    },
+    {
+      "query": "Adrienne Bailon is an accountant.",
+      "answer": "[Low grounding 0.00] The statement \"Adrienne Bailon is an accountant\" is not correct based on the provided context. She is a television personality, singer, and actress, known for her work in girl groups and as a co-host on a talk show.",
+      "ground_truth": "REFUTES",
+      "retrieved_docs": [
+        "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singer, and actress. She is a former member of the girl groups 3LW and The Cheetah Girls. From 2013 to 2022, Bailon was a co-host of the daytime talk show The Real; for which she won a Daytime Emmy Award. From 2022 to 2023, Bailon-Houghton was a co-anchor of the entertainment news show, E! News.",
+        "He became the second YouTuber after Germán Garmendia to receive two Diamond Play Buttons for his first two channels.",
+        "Roman Bernard Atwood is an American YouTube personality and prankster. He is best known for his vlogs, where he posts updates about his life. His vlogging channel, \"RomanAtwoodVlogs\", has a total of 5 billion views and 15 million subscribers. He also has another YouTube channel called \"RomanAtwood\", where he used to post prank videos. The channel has been inactive since 2016. His pranks have gained over 1.4 billion views and 10.4 million subscribers. He became the second YouTuber after Germán",
+        "Nikolaj William Coster-Waldau is a Danish actor. He had his breakthrough role in Denmark with the film Nightwatch in 1994. He played Jaime Lannister in the HBO fantasy drama series Game of Thrones, for which he received two Primetime Emmy Award nominations for Outstanding Supporting Actor in a Drama Series."
+      ],
+      "graph_triplets": [
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "born_on",
+          "object": "October 24, 1983"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "has_profession",
+          "object": "television personality"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "has_profession",
+          "object": "singer"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "has_profession",
+          "object": "actress"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "was_member_of",
+          "object": "3LW"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "was_member_of",
+          "object": "The Cheetah Girls"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "was_co_host_of",
+          "object": "The Real"
+        },
+        {
+          "subject": "The Real",
+          "relation": "won",
+          "object": "Daytime Emmy Award"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "was_co_anchor_of",
+          "object": "E! News"
+        },
+        {
+          "subject": "YouTuber",
+          "relation": "became",
+          "object": "second YouTuber"
+        },
+        {
+          "subject": "Germán Garmendia",
+          "relation": "received",
+          "object": "two Diamond Play Buttons"
+        },
+        {
+          "subject": "YouTuber",
+          "relation": "received",
+          "object": "two Diamond Play Buttons"
+        },
+        {
+          "subject": "YouTuber",
+          "relation": "has_channels",
+          "object": "first two channels"
+        },
+        {
+          "subject": "Roman Bernard Atwood",
+          "relation": "has_profession",
+          "object": "YouTube personality"
+        },
+        {
+          "subject": "Roman Bernard Atwood",
+          "relation": "has_profession",
+          "object": "prankster"
+        },
+        {
+          "subject": "RomanAtwoodVlogs",
+          "relation": "has_total_views",
+          "object": "5 billion"
+        },
+        {
+          "subject": "RomanAtwoodVlogs",
+          "relation": "has_subscribers",
+          "object": "15 million"
+        },
+        {
+          "subject": "RomanAtwood",
+          "relation": "has_channel_type",
+          "object": "prank videos"
+        },
+        {
+          "subject": "RomanAtwood",
+          "relation": "has_status",
+          "object": "inactive since 2016"
+        },
+        {
+          "subject": "Germán",
+          "relation": "is_second_to",
+          "object": "Roman Bernard Atwood"
+        }
+      ],
+      "ranked_triplets": [
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "born_on",
+          "object": "October 24, 1983",
+          "confidence": 0.95,
+          "relevance_score": 1.2539999999999998,
+          "source": "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singe"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "has_profession",
+          "object": "television personality",
+          "confidence": 0.95,
+          "relevance_score": 1.2539999999999998,
+          "source": "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singe"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "has_profession",
+          "object": "singer",
+          "confidence": 0.95,
+          "relevance_score": 1.2539999999999998,
+          "source": "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singe"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "has_profession",
+          "object": "actress",
+          "confidence": 0.95,
+          "relevance_score": 1.2539999999999998,
+          "source": "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singe"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "was_member_of",
+          "object": "3LW",
+          "confidence": 0.95,
+          "relevance_score": 1.2539999999999998,
+          "source": "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singe"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "was_member_of",
+          "object": "The Cheetah Girls",
+          "confidence": 0.95,
+          "relevance_score": 1.2539999999999998,
+          "source": "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singe"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "was_co_host_of",
+          "object": "The Real",
+          "confidence": 0.95,
+          "relevance_score": 1.2539999999999998,
+          "source": "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singe"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "was_co_anchor_of",
+          "object": "E! News",
+          "confidence": 0.95,
+          "relevance_score": 1.2539999999999998,
+          "source": "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singe"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "active_years",
+          "object": "2013 to 2023",
+          "confidence": 0.9,
+          "relevance_score": 1.1880000000000002,
+          "source": "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singe"
+        },
+        {
+          "subject": "The Real",
+          "relation": "won",
+          "object": "Daytime Emmy Award",
+          "confidence": 0.95,
+          "relevance_score": 1.045,
+          "source": "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singe"
+        },
+        {
+          "subject": "Roman Bernard Atwood",
+          "relation": "has_profession",
+          "object": "YouTube personality",
+          "confidence": 0.95,
+          "relevance_score": 0.9405,
+          "source": "Roman Bernard Atwood is an American YouTube personality and prankster. He is best known for his vlog"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.7725,
+      "factual_grounding_score": 0.0,
+      "metadata": {
+        "num_nodes": 37,
+        "num_edges": 30,
+        "num_triplets_total": 30,
+        "num_triplets_ranked": 11,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 4,
+        "avg_triplets_per_doc": 7.5,
+        "inferred_triplets": 0,
+        "coverage_ok": true,
+        "answer_source": "baseline",
+        "grounding_backoff": true,
+        "retrieval_expansion": {
+          "extra_docs": 0,
+          "entities_used": [],
+          "candidate_entities": [
+            "Bailon",
+            "Houghton",
+            "From",
+            "Adrienne Bailon"
+          ]
+        },
+        "graph_viz_path": "results\\figures\\knowledge_graphs\\adrienne_bailon_is_an_accountant_20251125_024440.png",
+        "model": "gpt-4o-mini",
+        "context_filter": {
+          "kept": 11,
+          "dropped": 9,
+          "precision": 0.55,
+          "fallback_used": false,
+          "query_terms": [
+            "1983",
+            "2013",
+            "2023",
+            "3lw",
+            "accountant",
+            "actress",
+            "adrienne",
+            "bailon",
+            "cheetah",
+            "eliza",
+            "girls",
+            "houghton",
+            "news",
+            "october",
+            "personality",
+            "real",
+            "singer",
+            "television"
+          ]
+        },
+        "context_filter_precision": 0.55,
+        "question_term_coverage": 0.6666666666666666,
+        "node_term_coverage": 0.6666666666666666,
+        "triplet_density": 0.8108108108108109,
+        "query_terms_used": [
+          "1983",
+          "2013",
+          "2023",
+          "3lw",
+          "accountant",
+          "actress",
+          "adrienne",
+          "bailon",
+          "cheetah",
+          "eliza",
+          "girls",
+          "houghton",
+          "news",
+          "october",
+          "personality",
+          "real",
+          "singer",
+          "television"
+        ]
+      },
+      "time": 5.522439002990723
+    },
+    {
+      "query": "System of a Down briefly disbanded in limbo.",
+      "answer": "[Low grounding 0.00] I don't know.",
+      "ground_truth": "NOT ENOUGH INFO",
+      "retrieved_docs": [
+        "He became the second YouTuber after Germán Garmendia to receive two Diamond Play Buttons for his first two channels.",
+        "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singer, and actress. She is a former member of the girl groups 3LW and The Cheetah Girls. From 2013 to 2022, Bailon was a co-host of the daytime talk show The Real; for which she won a Daytime Emmy Award. From 2022 to 2023, Bailon-Houghton was a co-anchor of the entertainment news show, E! News.",
+        "by News Corporation on October 9, 1986 as a competitor to the Big Three television networks, which are the American Broadcasting Company (ABC), the Columbia Broadcasting System (CBS), and the National Broadcasting Company (NBC).",
+        "Fox Broadcasting Company, LLC is an American commercial broadcast television network serving as the flagship namesake property of Fox Corporation and operated through Fox Entertainment. Fox is based at Fox Corporation's corporate headquarters at 1211 Avenue of the Americas in Midtown Manhattan, New York City, and it hosts additional offices at the Fox Network Center in Los Angeles and at the Fox Media Center in Tempe, Arizona. The channel was launched by News Corporation on October 9, 1986 as a",
+        "Roman Bernard Atwood is an American YouTube personality and prankster. He is best known for his vlogs, where he posts updates about his life. His vlogging channel, \"RomanAtwoodVlogs\", has a total of 5 billion views and 15 million subscribers. He also has another YouTube channel called \"RomanAtwood\", where he used to post prank videos. The channel has been inactive since 2016. His pranks have gained over 1.4 billion views and 10.4 million subscribers. He became the second YouTuber after Germán",
+        "painting, film, photography, and graphic arts. In recent years, technological advances have led to video art, computer art, performance art, animation, television, and videogames."
+      ],
+      "graph_triplets": [
+        {
+          "subject": "YouTuber",
+          "relation": "became",
+          "object": "second YouTuber"
+        },
+        {
+          "subject": "Germán Garmendia",
+          "relation": "received",
+          "object": "two Diamond Play Buttons"
+        },
+        {
+          "subject": "YouTuber",
+          "relation": "received",
+          "object": "two Diamond Play Buttons"
+        },
+        {
+          "subject": "YouTuber",
+          "relation": "has_channels",
+          "object": "first two channels"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "born_on",
+          "object": "October 24, 1983"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "has_profession",
+          "object": "television personality"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "has_profession",
+          "object": "singer"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "has_profession",
+          "object": "actress"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "was_member_of",
+          "object": "3LW"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "was_member_of",
+          "object": "The Cheetah Girls"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "was_co_host_of",
+          "object": "The Real"
+        },
+        {
+          "subject": "The Real",
+          "relation": "won",
+          "object": "Daytime Emmy Award"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "was_co_anchor_of",
+          "object": "E! News"
+        },
+        {
+          "subject": "News Corporation",
+          "relation": "created",
+          "object": "competitor to the Big Three television networks"
+        },
+        {
+          "subject": "Big Three television networks",
+          "relation": "includes",
+          "object": "American Broadcasting Company"
+        },
+        {
+          "subject": "Fox Broadcasting Company, LLC",
+          "relation": "is",
+          "object": "American commercial broadcast television network"
+        },
+        {
+          "subject": "Fox Broadcasting Company, LLC",
+          "relation": "serves_as",
+          "object": "flagship namesake property of Fox Corporation"
+        },
+        {
+          "subject": "Fox Broadcasting Company, LLC",
+          "relation": "operated_through",
+          "object": "Fox Entertainment"
+        },
+        {
+          "subject": "Fox Broadcasting Company, LLC",
+          "relation": "based_at",
+          "object": "Fox Corporation's corporate headquarters"
+        },
+        {
+          "subject": "Fox Corporation's corporate headquarters",
+          "relation": "located_in",
+          "object": "1211 Avenue of the Americas, Midtown Manhattan, New York City"
+        }
+      ],
+      "ranked_triplets": [
+        {
+          "subject": "Fox Broadcasting Company, LLC",
+          "relation": "serves_as",
+          "object": "flagship namesake property of Fox Corporation",
+          "confidence": 0.95,
+          "relevance_score": 1.0658999999999998,
+          "source": "Fox Broadcasting Company, LLC is an American commercial broadcast television network serving as the "
+        },
+        {
+          "subject": "Fox Corporation's corporate headquarters",
+          "relation": "located_in",
+          "object": "1211 Avenue of the Americas, Midtown Manhattan, New York City",
+          "confidence": 0.95,
+          "relevance_score": 1.0658999999999998,
+          "source": "Fox Broadcasting Company, LLC is an American commercial broadcast television network serving as the "
+        },
+        {
+          "subject": "Fox Broadcasting Company, LLC",
+          "relation": "hosts_offices_at",
+          "object": "Fox Network Center in Los Angeles",
+          "confidence": 0.95,
+          "relevance_score": 1.0658999999999998,
+          "source": "Fox Broadcasting Company, LLC is an American commercial broadcast television network serving as the "
+        },
+        {
+          "subject": "YouTuber",
+          "relation": "became",
+          "object": "second YouTuber",
+          "confidence": 0.95,
+          "relevance_score": 1.045,
+          "source": "He became the second YouTuber after Germán Garmendia to receive two Diamond Play Buttons for his fir"
+        },
+        {
+          "subject": "Germán Garmendia",
+          "relation": "received",
+          "object": "two Diamond Play Buttons",
+          "confidence": 0.95,
+          "relevance_score": 1.045,
+          "source": "He became the second YouTuber after Germán Garmendia to receive two Diamond Play Buttons for his fir"
+        },
+        {
+          "subject": "YouTuber",
+          "relation": "received",
+          "object": "two Diamond Play Buttons",
+          "confidence": 0.95,
+          "relevance_score": 1.045,
+          "source": "He became the second YouTuber after Germán Garmendia to receive two Diamond Play Buttons for his fir"
+        },
+        {
+          "subject": "YouTuber",
+          "relation": "has_channels",
+          "object": "first two channels",
+          "confidence": 0.95,
+          "relevance_score": 1.045,
+          "source": "He became the second YouTuber after Germán Garmendia to receive two Diamond Play Buttons for his fir"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "born_on",
+          "object": "October 24, 1983",
+          "confidence": 0.95,
+          "relevance_score": 0.9927499999999999,
+          "source": "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singe"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "has_profession",
+          "object": "television personality",
+          "confidence": 0.95,
+          "relevance_score": 0.9927499999999999,
+          "source": "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singe"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "has_profession",
+          "object": "singer",
+          "confidence": 0.95,
+          "relevance_score": 0.9927499999999999,
+          "source": "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singe"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "has_profession",
+          "object": "actress",
+          "confidence": 0.95,
+          "relevance_score": 0.9927499999999999,
+          "source": "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singe"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "was_member_of",
+          "object": "3LW",
+          "confidence": 0.95,
+          "relevance_score": 0.9927499999999999,
+          "source": "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singe"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "was_member_of",
+          "object": "The Cheetah Girls",
+          "confidence": 0.95,
+          "relevance_score": 0.9927499999999999,
+          "source": "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singe"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "was_co_host_of",
+          "object": "The Real",
+          "confidence": 0.95,
+          "relevance_score": 0.9927499999999999,
+          "source": "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singe"
+        },
+        {
+          "subject": "The Real",
+          "relation": "won",
+          "object": "Daytime Emmy Award",
+          "confidence": 0.95,
+          "relevance_score": 0.9927499999999999,
+          "source": "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singe"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "was_co_anchor_of",
+          "object": "E! News",
+          "confidence": 0.95,
+          "relevance_score": 0.9927499999999999,
+          "source": "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singe"
+        },
+        {
+          "subject": "News Corporation",
+          "relation": "created",
+          "object": "competitor to the Big Three television networks",
+          "confidence": 0.95,
+          "relevance_score": 0.9405,
+          "source": "by News Corporation on October 9, 1986 as a competitor to the Big Three television networks, which a"
+        },
+        {
+          "subject": "Big Three television networks",
+          "relation": "includes",
+          "object": "American Broadcasting Company",
+          "confidence": 0.95,
+          "relevance_score": 0.9405,
+          "source": "by News Corporation on October 9, 1986 as a competitor to the Big Three television networks, which a"
+        },
+        {
+          "subject": "Adrienne Eliza Bailon-Houghton",
+          "relation": "active_years",
+          "object": "2013 to 2023",
+          "confidence": 0.9,
+          "relevance_score": 0.9405,
+          "source": "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singe"
+        },
+        {
+          "subject": "E! News",
+          "relation": "located_in",
+          "object": "entertainment news",
+          "confidence": 0.85,
+          "relevance_score": 0.88825,
+          "source": "Adrienne Eliza Bailon-Houghton ; born October 24, 1983) is an American television personality, singe"
+        }
+      ],
+      "contradictions": [],
+      "inferences": [],
+      "consistency_score": 0.772972972972973,
+      "factual_grounding_score": 0.0,
+      "metadata": {
+        "num_nodes": 45,
+        "num_edges": 37,
+        "num_triplets_total": 37,
+        "num_triplets_ranked": 20,
+        "num_contradictions": 0,
+        "num_inferences": 0,
+        "cache_hits": 6,
+        "avg_triplets_per_doc": 6.166666666666667,
+        "inferred_triplets": 0,
+        "coverage_ok": true,
+        "answer_source": "baseline",
+        "grounding_backoff": true,
+        "retrieval_expansion": {
+          "extra_docs": 2,
+          "entities_used": [
+            "From",
+            "System"
+          ],
+          "candidate_entities": [
+            "Bailon",
+            "Houghton",
+            "From",
+            "System"
+          ]
+        },
+        "graph_viz_path": "results\\figures\\knowledge_graphs\\system_of_a_down_briefly_disbanded_in_limbo_20251125_024444.png",
+        "model": "gpt-4o-mini",
+        "context_filter": {
+          "kept": 20,
+          "dropped": 0,
+          "precision": 1.0,
+          "fallback_used": true,
+          "query_terms": [
+            "briefly",
+            "disbanded",
+            "down",
+            "limbo",
+            "system"
+          ]
+        },
+        "context_filter_precision": 1.0,
+        "question_term_coverage": 0.0,
+        "node_term_coverage": 0.0,
+        "triplet_density": 0.8222222222222222,
+        "query_terms_used": [
+          "briefly",
+          "disbanded",
+          "down",
+          "limbo",
+          "system"
+        ]
+      },
+      "time": 4.740581274032593
+    }
+  ],
+  "comparison": {
+    "baseline": {
+      "factual_accuracy": 0.2,
+      "logical_consistency": 0.5,
+      "hallucination_rate": 0.23348434511225208,
+      "response_coherence": 0.8666666666666666,
+      "graph_completeness": 0.0,
+      "avg_response_time": 2.950365686416626,
+      "factual_grounding": 0.0,
+      "graph_coverage": 0.0,
+      "context_precision": 0.0
+    },
+    "graph_augmented": {
+      "factual_accuracy": 0.2,
+      "logical_consistency": 1.0,
+      "hallucination_rate": 0.3137719298245614,
+      "response_coherence": 0.96,
+      "graph_completeness": 0.552,
+      "avg_response_time": 17.690185213088988,
+      "factual_grounding": 0.0,
+      "graph_coverage": 0.5172619047619047,
+      "context_precision": 0.64
+    },
+    "improvements_pct": {
+      "factual_accuracy": 0.0,
+      "logical_consistency": 100.0,
+      "hallucination_rate": -34.38671002705109,
+      "response_coherence": 10.769230769230775,
+      "graph_completeness": 0,
+      "avg_response_time": 499.5929689168344,
+      "factual_grounding": 0,
+      "graph_coverage": 0,
+      "context_precision": 0
+    },
+    "summary": {
+      "accuracy_gain": 0.0,
+      "consistency_gain": 100.0,
+      "hallucination_reduction": -34.38671002705109
+    }
+  }
+}

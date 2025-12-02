@@ -1,0 +1,11 @@
+Query_ID,Query,Baseline_Accuracy,GA_RAG_Accuracy,Baseline_Consistency,GA_RAG_Consistency,Baseline_Hallucination,GA_RAG_Hallucination,Baseline_Time,GA_RAG_Time
+1,Nikolaj Coster-Waldau worked with the Fox Broadcas...,0.000,0.000,0.500,1.000,0.000,0.000,2.03s,8.17s
+2,Roman Atwood is a content creator....,1.000,1.000,0.500,1.000,0.750,0.700,1.57s,6.92s
+3,"History of art includes architecture, dance, sculp...",0.300,1.000,0.500,1.000,0.952,0.857,3.05s,6.76s
+4,Adrienne Bailon is an accountant....,1.000,1.000,0.500,1.000,0.000,0.000,1.06s,5.74s
+5,System of a Down briefly disbanded in limbo....,1.000,1.000,0.500,1.000,0.000,0.000,1.14s,5.88s
+6,Homeland is an American television spy thriller ba...,1.000,1.000,0.500,1.000,0.818,0.818,1.40s,9.10s
+7,Beautiful reached number two on the Billboard Hot ...,1.000,1.000,0.500,1.000,0.000,0.000,2.12s,3.84s
+8,Neal Schon was named in 1954....,1.000,1.000,0.500,1.000,0.000,0.000,1.09s,5.90s
+9,The Boston Celtics play their home games at TD Gar...,0.000,0.300,0.500,1.000,0.000,0.714,1.42s,4.43s
+10,The Ten Commandments is an epic film....,1.000,1.000,0.500,1.000,1.000,1.000,1.27s,6.50s
