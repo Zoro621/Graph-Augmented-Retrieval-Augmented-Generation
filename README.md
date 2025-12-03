@@ -241,7 +241,7 @@ Contributions are welcome! Please:
 
 ## 📧 Contact
 
-For questions or feedback, please open an issue or contact [your.email@university.edu].
+For questions or feedback, please open an issue or contact i220453@nu.edu.pk
 
 ---
 
